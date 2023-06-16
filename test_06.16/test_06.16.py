@@ -1,7 +1,7 @@
 import streamlit as st
 import openai
 import os
-CHATGPT_API_KEY = os.environ["CHATGPT_API_KEY"]
+CHATGPT_API_KEY = os.environ[P8WeTPz3OZDnKtS0VCZvT3BlbkFJrWDc0X3L42gGRrbrbcag]
 openai.api_key = CHATGPT_API_KEY
 def generate_name(text,language):
     res = openai.ChatCompletion.create(
