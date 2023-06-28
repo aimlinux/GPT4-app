@@ -7,27 +7,33 @@ from tkinter import messagebox
 
 # ---- APIKey設定 ----
 #openai.api_key = os.environ["OPENAI_API_KEY"]
-openai.api_key = "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"
+openai.api_key = ""
 
 
 
+#messagebox.showinfo("title", "Say something!!")
 # r = sr.Recognizer()
 # with sr.Microphone() as source:
-#     messagebox.showinfo("title", "Say something!!")
+#     r.adjust_for_ambient_noise(source)
+#     print("Listening...")
 #     audio = r.listen(source)
-
-# try:
-#     print("Google Speech Recognition thinks you said " + r.recognize_google(audio))
-# except sr.UnknownValueError:
-#     print("Google Speech Recognition could not understand audio")
-# except sr.RequestError as e:
-#     print("Could not request results from Google Speech Recognition service; {0}".format(e))
+#     try:
+#         query = r.recognize_google(audio, language='ja-JP')
+#         print(query)
+#     except Exception:
+#         print("Error")
 
 
-role_sys = str(input("感性は？"))
-if not role_sys:
-    role_sys:str = "teacher"
 
+role_sys_1 = str(input("特徴は？"))
+if not role_sys_1:
+    role_sys_1:str = "teacher"
+
+#roleは２個目が適用されるのかな...
+# role_sys_2 = str(input("特徴は？"))
+# if not role_sys_2:
+#     role_sys_2:str = "teacher"
+    
 question_1 = str(input("質問は？"))
 if not question_1:
     question_1:str = "ご使用ありがとうございます。\nご質問されるのでしたら再起動してください。"
@@ -41,10 +47,11 @@ res = openai.ChatCompletion.create(
         # user :（チャットを使う側 = 私たち） 
         # assistant : ChatGPT側, 
         # content : メッセージ内容
-        {"role": "system", "content": role_sys}, 
-        {"role": "user", "content": question_1}, #質問１つ目
-        #{"role": "assistant", "content": "ふざけんな！"}, #返答１つ目
-        #{"role": "user", "content": "もう少し簡単に教えて！！"}, #質問２つ目
+        {"role": "system", "content": role_sys_1}, 
+        #{"role": "system", "content": role_sys_2}, 
+        {"role": "user", "content": question_1},
+        #{"role": "assistant", "content": "ふざけんな！"},
+        #{"role": "user", "content": "もう少し簡単に教えて！！"},
     ]
 )
 
