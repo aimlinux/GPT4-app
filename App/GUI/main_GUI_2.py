@@ -51,7 +51,7 @@ res = openai.ChatCompletion.create(
         {"role": "system", "content": role_sys_1}, 
         #{"role": "system", "content": role_sys_2}, 
         {"role": "user", "content": question_1},
-        {"role": "assistant", "content": "ふざけんな！"},
+        #{"role": "assistant", "content": "ふざけんな！"},
         #{"role": "user", "content": "もう少し簡単に教えて！！"},
     ]
 )
@@ -62,12 +62,20 @@ print(res_content)
 
 
 
+#テスト用（文字を変えるよう）
+#res_content = ""
+print("String : " + str(len(res_content)))
+
+#フォント500のとき, 倍率は550
+len_length = int(len(res_content)) * 550 + int(len(res_content)) ** 2 / 30
+
+
 root = tk.Tk()
 root.geometry("1200x720") #geometryだと表示サイズがminsizeより細かく調節できる
 canvas = tk.Canvas(bg = "black", width=1200, height=720) #背景を設定
 canvas.place(x=0, y=0) #背景を配置
 
-default_x = 1900 #初期x座標
+default_x = 100 #初期x座標
 default_y = 5 #初期y座標
 x=0 #リストカウント数
 text_list=[res_content] #文言リスト
@@ -86,15 +94,15 @@ def move(): #動作する関数
 
     n = len(text_list)-1 #リストの要素数を取得
 
-    if default_x <=-3000: #画面左端まで文字が到達した場合
-        default_x = 1900 #画面右に戻す
+    if default_x <=-len_length: #画面左端まで文字が到達した場合
+        default_x = 1200 #画面右に戻す
         x += 1 #取り込むリストの要素をひとつずらす
         text_st.set(text_list[x]) #StringVarに反映
         if x == n: #xが要素数+1に達した場合
             x=0 #最初にリセット
             text_st.set(text_list[len(text_list)-1]) #要素数の最大値の要素をStringVarに反映
 
-for i in range (1,19999): #スクロール繰り返し回数
-    root.after(int(i*100),move) #100ミリ秒ごとにスクロール
+for i in range (1,39999): #スクロール繰り返し回数
+    root.after(int(i*80),move) #100ミリ秒ごとにスクロール
 root.mainloop() #以上のコードの内容を繰り返す
 

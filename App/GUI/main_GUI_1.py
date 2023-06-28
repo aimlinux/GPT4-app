@@ -10,6 +10,10 @@ import sys
 
 #グローバル変数定義
 main_bg = "aqua"
+sub1_bg = "yellow"
+sub2_bg = "#ffffff"
+sub3_bg = "lightblue"
+sub4_bg = "black"
 title_font = "Arial"
 main_font = "Arial"
 
@@ -34,6 +38,9 @@ BUTTON_OPUTIONS = {
     "fill" : "tk.NONE",
     
 }
+
+
+
 
 
 
@@ -113,15 +120,15 @@ class Application(tk.Frame):
         global fm_sub1, pw_sub1
         pw_main.destroy()
         
-        pw_sub1 = tk.PanedWindow(self.master, bg="blue", orient="vertical")
+        pw_sub1 = tk.PanedWindow(self.master, bg="red", orient="vertical")
         pw_sub1.pack(expand=True, fill=tk.BOTH, side="left")
         
-        fm_sub1 = tk.Frame(bd=15, bg=main_bg, relief="ridge")
+        fm_sub1 = tk.Frame(bd=15, bg=sub1_bg, relief="ridge")
         pw_sub1.add(fm_sub1)
     
     # -------- メインフレームのオブジェクト作成 --------
         # ボタンを作成してツールバーに配置
-        fm_toolbar = tk.Frame(fm_sub1, bg=main_bg)
+        fm_toolbar = tk.Frame(fm_sub1, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
         toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
@@ -149,12 +156,12 @@ class Application(tk.Frame):
         pw_sub2 = tk.PanedWindow(self.master, bg="red", orient="vertical")
         pw_sub2.pack(expand=True, fill=tk.BOTH, side="left")
         
-        fm_sub2 = tk.Frame(bd=15, bg=main_bg, relief="ridge")
+        fm_sub2 = tk.Frame(bd=15, bg=sub2_bg, relief="ridge")
         pw_sub2.add(fm_sub2)
         
     # -------- メインフレームのオブジェクト作成 --------
     # ボタンを作成してツールバーに配置
-        fm_toolbar = tk.Frame(fm_sub2, bg=main_bg)
+        fm_toolbar = tk.Frame(fm_sub2, bg=sub2_bg)
         fm_toolbar.pack(anchor="nw")
         
         toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
@@ -182,12 +189,12 @@ class Application(tk.Frame):
         pw_sub3 = tk.PanedWindow(self.master, bg="pink", orient="vertical")
         pw_sub3.pack(expand=True, fill=tk.BOTH, side="left")
         
-        fm_sub3 = tk.Frame(bd=15, bg=main_bg, relief="ridge")
+        fm_sub3 = tk.Frame(bd=15, bg=sub3_bg, relief="ridge")
         pw_sub3.add(fm_sub3)
         
     # -------- メインフレームのオブジェクト作成 --------
         # ボタンを作成してツールバーに配置
-        fm_toolbar = tk.Frame(fm_sub3, bg=main_bg)
+        fm_toolbar = tk.Frame(fm_sub3, bg=sub3_bg)
         fm_toolbar.pack(anchor="nw")
         
         toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
@@ -215,12 +222,12 @@ class Application(tk.Frame):
         pw_sub4 = tk.PanedWindow(self.master, bg="pink", orient="vertical")
         pw_sub4.pack(expand=True, fill=tk.BOTH, side="left")
         
-        fm_sub4 = tk.Frame(bd=15, bg=main_bg, relief="ridge")
+        fm_sub4 = tk.Frame(bd=15, bg=sub4_bg, relief="ridge")
         pw_sub4.add(fm_sub4)
         
     # -------- メインフレームのオブジェクト作成 --------
         # ボタンを作成してツールバーに配置
-        fm_toolbar = tk.Frame(fm_sub4, bg=main_bg)
+        fm_toolbar = tk.Frame(fm_sub4, bg=sub4_bg)
         fm_toolbar.pack(anchor="nw")
         
         toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
@@ -275,7 +282,7 @@ screen_width = main_window.winfo_screenwidth()
 screen_height = main_window.winfo_screenheight()
 
 myapp = Application(master=main_window)
-myapp.master.title("DebianQuiz") # メインウィンドウの名前
+myapp.master.title("GPT-3.5-turbo") # メインウィンドウの名前
 myapp.master.geometry("1200x720") # ウィンドウの幅と高さピクセル単位で指定（width x height）
 #myapp.master.attributes('-fullscreen', True) # フルスクリーン（終了ボタンがなくなるので非推奨）
 myapp.mainloop()
