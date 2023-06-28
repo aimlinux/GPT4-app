@@ -10,7 +10,7 @@ content = "Hello, what can you do for me today?"
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": "‹X‚µ‚­"},
+        {"role": "system", "content": "ï¿½Xï¿½ï¿½ï¿½ï¿½"},
         {"role": "user", "content": content},
     ],
     temperature=1
