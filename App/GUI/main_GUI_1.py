@@ -18,9 +18,9 @@ title_font = "Arial"
 main_font = "Arial"
 
 button_1 = "ふぁいる"
-button_2 = "めにゅーう"
+button_2 = "せってい"
 button_3 = "たいとるへ"
-button_4 = "おぷしょんー"
+button_4 = "ろぐ"
 
 
 # ウィンドウが生成されたフラグを取得するため（各ウィンドウが開いたときTrue、閉じたときFalseへ）
@@ -37,6 +37,11 @@ BUTTON_OPUTIONS = {
     "expand" : "True",
     "fill" : "tk.NONE",
     
+}
+
+TOOLBAR_OPUTIONS = {
+    "font" : "main_font, 15",
+    "bg" : "#ffffe8",
 }
 
 
@@ -76,32 +81,32 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_main, bg=main_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, bg="#fff")
+        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, bg="#fff", command=self.return_title)
+        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, bg="#fff")
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         
         space_label = tk.Label(fm_main, text="", bg=main_bg, height=2)
         space_label.pack(side=tk.TOP)
 
-        title_label = tk.Label(fm_main, text="~~~~~ ちゃっとじーぴーてぃーのあぷり ~~~~~", bg=main_bg, font=(title_font, 30), height=2)
+        title_label = tk.Label(fm_main, text="**** ちゃっとじーぴーてぃーのあぷり ****", bg=main_bg, font=(title_font, 30), height=2)
         title_label.pack(side=tk.TOP)
         
         space_label = tk.Label(fm_main, text="", bg=main_bg, height=7)
         space_label.pack(side=tk.TOP)
     
-        start_button = tk.Button(fm_main, text=" じゆうにあそぶ ", font=(main_font, 20), width=30, command=self.create_1)
+        start_button = tk.Button(fm_main, text=" ことばでおはなし ", font=(main_font, 20), width=30, command=self.create_1)
         start_button.pack(side=tk.TOP, pady=10)
-        start_button = tk.Button(fm_main, text=" せっていしてあそぶ ", font=(main_font, 20), width=30, command=self.create_2)
+        start_button = tk.Button(fm_main, text=" てがきでおはなし", font=(main_font, 20), width=30, command=self.create_2)
         start_button.pack(side=tk.TOP, pady=10)
-        start_button = tk.Button(fm_main, text=" せんせいとあそぶ ", font=(main_font, 20), width=30, command=self.create_3)
+        start_button = tk.Button(fm_main, text=" てうちでおはなし ", font=(main_font, 20), width=30, command=self.create_3)
         start_button.pack(side=tk.TOP, pady=10)
-        start_button = tk.Button(fm_main, text=" おぷしょんだよ ", font=(main_font, 20), width=30, command=self.create_4)
+        start_button = tk.Button(fm_main, text=" せってい ", font=(main_font, 20), width=30, command=self.create_4)
         start_button.pack(side=tk.TOP, pady=10)
         
         
@@ -117,6 +122,9 @@ class Application(tk.Frame):
         count_sub1 = True
         count_main = False
         
+        global person_list_sub1
+        person_list_sub1 = None
+        
         global fm_sub1, pw_sub1
         pw_main.destroy()
         
@@ -131,14 +139,29 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub1, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, bg="#fff")
+        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, bg="#fff", command=self.return_title)
+        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, bg="#fff")
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
+        
+        space_label = tk.Label(fm_sub1, text="", bg=sub1_bg, height=2)
+        space_label.pack(side=tk.TOP)
+
+        title_label = tk.Label(fm_sub1, text="**** ことばでおはなし ****", bg=sub1_bg, font=(title_font, 50), height=2)
+        title_label.pack(side=tk.TOP)
+        
+        space_label = tk.Label(fm_sub1, text="", bg=sub1_bg, height=3)
+        space_label.pack(side=tk.TOP)
+        
+        start_button = tk.Label(fm_sub1, text=" ** 返答 ** ", font=(main_font, 40), width=30)
+        start_button.pack(side=tk.TOP, pady=10)
+        
+        start_button = tk.Button(fm_sub1, text=" ことばでしつもん ", font=(main_font, 40), width=30, command=self.ans_person_sub1)
+        start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
     
@@ -164,14 +187,29 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub2, bg=sub2_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, bg="#fff")
+        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, bg="#fff", command=self.return_title)
+        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, bg="#fff")
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
+        
+        space_label = tk.Label(fm_sub2, text="", bg=sub2_bg, height=2)
+        space_label.pack(side=tk.TOP)
+
+        title_label = tk.Label(fm_sub2, text="**** てがきでおはなし ****", bg=sub2_bg, font=(title_font, 40), height=2)
+        title_label.pack(side=tk.TOP)
+        
+        space_label = tk.Label(fm_sub2, text="", bg=sub2_bg, height=3)
+        space_label.pack(side=tk.TOP)
+        
+        start_button = tk.Label(fm_sub2, text=" ** 返答 ** ", font=(main_font, 40), width=30)
+        start_button.pack(side=tk.TOP, pady=10)
+        
+        start_button = tk.Button(fm_sub2, text=" てがきでしつもん ", font=(main_font, 40), width=30)
+        start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
         
@@ -197,13 +235,13 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub3, bg=sub3_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, bg="#fff")
+        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, bg="#fff", command=self.return_title)
+        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, bg="#fff")
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
@@ -230,19 +268,49 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub4, bg=sub4_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, bg="#fff")
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, bg="#fff")
+        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, bg="#fff", command=self.return_title)
+        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, bg="#fff")
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
         
         
     
+    #ans_person_sub1
+    def ans_person_sub1(self):
+        global person_list_sub1
+        if person_list_sub1 == None or not person_list_sub1.winfo_exists():
+            person_list_sub1 = tk.Toplevel(bg=sub1_bg, bd=2)
+            person_list_sub1.geometry("500x600")
+            person_list_sub1.title("person_list_sub1")
+            
+            list_sub1_value = tk.StringVar()
+            list_sub1_value.set(["先生", "恋人", "aimlinux"])
+            
+            space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=2)
+            space.pack()
+            label = tk.Label(person_list_sub1, text="どんなひとにしつもんする？", font=(main_font, 20), bg=sub1_bg)
+            label.pack()
+            space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
+            space.pack()
+            
+            #selectmodeの種類(single:1つだけ選択できる、multiple:複数選択できる、extended：複数選択可能＋ドラッグでも選択可能)
+            listbox = tk.Listbox(person_list_sub1, height=8, width=15, font=(main_font, 20), listvariable=list_sub1_value, selectmode="single")
+            listbox.pack()
+            space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
+            space.pack()
+            button = tk.Button(person_list_sub1, text="けってい", font=(main_font, 20), bg="#ffffe8")
+            button.pack()
+            space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
+            space.pack()
+
+
+
     # タイトルへ戻る
     def return_title(self):
         global count_main, count_sub1, count_sub2, count_sub3, count_sub4
