@@ -10,7 +10,7 @@ import sys
 
 #グローバル変数定義
 main_bg = "aqua"
-sub1_bg = "yellow"
+sub1_bg = "aqua"
 sub2_bg = "#ffffff"
 sub3_bg = "lightblue"
 sub4_bg = "black"
@@ -290,7 +290,7 @@ class Application(tk.Frame):
             person_list_sub1.title("person_list_sub1")
             
             list_sub1_value = tk.StringVar()
-            list_sub1_value.set(["先生", "恋人", "aimlinux"])
+            list_sub1_value.set(["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "アメリカのひと", "こうせんせい"])
             
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=2)
             space.pack()
@@ -300,7 +300,7 @@ class Application(tk.Frame):
             space.pack()
             
             #selectmodeの種類(single:1つだけ選択できる、multiple:複数選択できる、extended：複数選択可能＋ドラッグでも選択可能)
-            listbox = tk.Listbox(person_list_sub1, height=8, width=15, font=(main_font, 20), listvariable=list_sub1_value, selectmode="single")
+            listbox = tk.Listbox(person_list_sub1, height=12, width=15, font=(main_font, 20), listvariable=list_sub1_value, selectmode="single", relief="sunken", bd=5)
             listbox.pack()
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
@@ -308,6 +308,8 @@ class Application(tk.Frame):
             button.pack()
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
+            
+    #
 
 
 
