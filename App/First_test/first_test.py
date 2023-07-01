@@ -58,3 +58,4 @@ res = openai.ChatCompletion.create(
 #ChatGPTからの返答の内容
 res_content = res["choices"][0]["message"]["content"]
 print(res_content)
+

@@ -2,6 +2,10 @@ import tkinter as tk
 from tkinter import filedialog 
 from tkinter import messagebox 
 import tkinter.ttk as ttk
+import os
+import speech_recognition as sr
+import pyaudio
+import wave
 import time
 import random as rand
 import sys
@@ -11,7 +15,7 @@ import sys
 #グローバル変数定義
 main_bg = "aqua"
 sub1_bg = "aqua"
-sub2_bg = "#ffffff"
+sub2_bg = "#ffff8e"
 sub3_bg = "lightblue"
 sub4_bg = "black"
 title_font = "Arial"
@@ -124,6 +128,8 @@ class Application(tk.Frame):
         
         global person_list_sub1
         person_list_sub1 = None
+        global mic_window
+        mic_window = None
         
         global fm_sub1, pw_sub1
         pw_main.destroy()
@@ -151,16 +157,16 @@ class Application(tk.Frame):
         space_label = tk.Label(fm_sub1, text="", bg=sub1_bg, height=2)
         space_label.pack(side=tk.TOP)
 
-        title_label = tk.Label(fm_sub1, text="**** ことばでおはなし ****", bg=sub1_bg, font=(title_font, 50), height=2)
+        title_label = tk.Label(fm_sub1, text="**** ことばでおはなし ****", bg=sub1_bg, font=(title_font, 42), height=2)
         title_label.pack(side=tk.TOP)
         
         space_label = tk.Label(fm_sub1, text="", bg=sub1_bg, height=3)
         space_label.pack(side=tk.TOP)
         
-        start_button = tk.Label(fm_sub1, text=" ** 返答 ** ", font=(main_font, 40), width=30)
+        start_button = tk.Label(fm_sub1, text=" ** 返答 ** ", font=(main_font, 35), width=30)
         start_button.pack(side=tk.TOP, pady=10)
         
-        start_button = tk.Button(fm_sub1, text=" ことばでしつもん ", font=(main_font, 40), width=30, command=self.ans_person_sub1)
+        start_button = tk.Button(fm_sub1, text=" ことばでしつもん ", font=(main_font, 35), width=30, command=self.ans_person_sub1)
         start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
@@ -172,6 +178,11 @@ class Application(tk.Frame):
         global count_sub2, count_main
         count_sub2 = True
         count_main = False
+        
+        global person_list_sub2
+        person_list_sub2 = None
+        global paint_window
+        paint_window = None
         
         global fm_sub2, pw_sub2
         pw_main.destroy()
@@ -199,16 +210,16 @@ class Application(tk.Frame):
         space_label = tk.Label(fm_sub2, text="", bg=sub2_bg, height=2)
         space_label.pack(side=tk.TOP)
 
-        title_label = tk.Label(fm_sub2, text="**** てがきでおはなし ****", bg=sub2_bg, font=(title_font, 40), height=2)
+        title_label = tk.Label(fm_sub2, text="**** てがきでおはなし ****", bg=sub2_bg, font=(title_font, 42), height=2)
         title_label.pack(side=tk.TOP)
         
         space_label = tk.Label(fm_sub2, text="", bg=sub2_bg, height=3)
         space_label.pack(side=tk.TOP)
         
-        start_button = tk.Label(fm_sub2, text=" ** 返答 ** ", font=(main_font, 40), width=30)
+        start_button = tk.Label(fm_sub2, text=" ** 返答 ** ", font=(main_font, 35), width=30)
         start_button.pack(side=tk.TOP, pady=10)
         
-        start_button = tk.Button(fm_sub2, text=" てがきでしつもん ", font=(main_font, 40), width=30)
+        start_button = tk.Button(fm_sub2, text=" てがきでしつもん ", font=(main_font, 35), width=30, command=self.ans_person_sub2)
         start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
@@ -243,6 +254,21 @@ class Application(tk.Frame):
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
+        
+        space_label = tk.Label(fm_sub3, text="", bg=sub3_bg, height=2)
+        space_label.pack(side=tk.TOP)
+
+        title_label = tk.Label(fm_sub3, text="**** てうちでおはなし ****", bg=sub3_bg, font=(title_font, 42), height=2)
+        title_label.pack(side=tk.TOP)
+        
+        space_label = tk.Label(fm_sub3, text="", bg=sub3_bg, height=3)
+        space_label.pack(side=tk.TOP)
+        
+        start_button = tk.Label(fm_sub3, text=" ** 返答 ** ", font=(main_font, 35), width=30)
+        start_button.pack(side=tk.TOP, pady=10)
+        
+        start_button = tk.Button(fm_sub3, text=" てうちでしつもん ", font=(main_font, 35), width=30)
+        start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
     
@@ -281,6 +307,7 @@ class Application(tk.Frame):
         
         
     
+    
     #ans_person_sub1
     def ans_person_sub1(self):
         global person_list_sub1
@@ -304,12 +331,112 @@ class Application(tk.Frame):
             listbox.pack()
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
-            button = tk.Button(person_list_sub1, text="けってい", font=(main_font, 20), bg="#ffffe8")
+            button = tk.Button(person_list_sub1, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.mic_on)
             button.pack()
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
             
-    #
+
+    #マイクの音声を取得
+    def mic_now(self):
+        global mic_text_label
+        global query
+        
+        r = sr.Recognizer()
+        mic = sr.Microphone()
+        with mic as source:
+            #r.adjust_for_ambient_noise(source)
+            print("Listening...")
+            #audio = r.listen(source)
+            try:
+                #query = r.recognize_google(audio, language='ja-JP')
+                query = "test"
+                print(query)
+                mic_text_label.config(text=query)
+            except Exception:
+                print("Error")
+                mic_text_label.config(text="音声が認識できませんでした。")
+        
+        self.mic_on()
+        #return query
+
+
+    #音声を聞く
+    def mic_on(self):
+        person_list_sub1.destroy()
+        global mic_window
+        global mic_text_label
+        
+        if mic_window == None or not mic_window.winfo_exists():
+            mic_window= tk.Toplevel(bg=sub1_bg, bd=2)
+            mic_window.geometry("600x600")
+            mic_window.title("mic_window")
+            space = tk.Label(mic_window, text="", bg=sub1_bg, height=2)
+            space.pack()
+            label = tk.Label(mic_window, text="～～マイクにむかってしつもんしてね～～", font=(main_font, 20), bg=sub1_bg)
+            label.pack()
+            space = tk.Label(mic_window, text="", bg=sub1_bg, height=1)
+            space.pack()
+            label = tk.Label(mic_window, text="しつもんじかんは10びょうだよ", font=(main_font, 20), bg=sub1_bg)
+            label.pack()
+            space = tk.Label(mic_window, text="", bg=sub1_bg, height=2)
+            space.pack()
+            button = tk.Button(mic_window, text="しつもんすたーと", font=(main_font, 20), bg="#ffff8e", command=self.mic_now)
+            button.pack()
+            space = tk.Label(mic_window, text="", bg=sub1_bg, height=3)
+            space.pack()
+            label = tk.Label(mic_window, text=" **** しつもんないよう **** ", font=(main_font, 20), bg=sub1_bg)
+            label.pack()
+            space = tk.Label(mic_window, text="", bg=sub1_bg, height=2)
+            space.pack()
+            mic_text_label = tk.Label(mic_window, text="", font=(main_font, 20), fg=main_bg, bg=sub1_bg)
+            mic_text_label.pack()
+            space = tk.Label(mic_window, text="", bg=sub1_bg, height=4)
+            space.pack()
+            button = tk.Button(mic_window, text="これにきめた！！", font=(main_font, 20), bg="#ffff8e")
+            button.pack()
+            
+            
+
+    #ans_person_sub2
+    def ans_person_sub2(self):
+        global person_list_sub2
+        if person_list_sub2 == None or not person_list_sub2.winfo_exists():
+            person_list_sub2 = tk.Toplevel(bg=sub2_bg, bd=2)
+            person_list_sub2.geometry("500x600")
+            person_list_sub2.title("person_list_sub1")
+            
+            list_sub2_value = tk.StringVar()
+            list_sub2_value.set(["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "アメリカのひと", "こうせんせい"])
+            
+            space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=2)
+            space.pack()
+            label = tk.Label(person_list_sub2, text="どんなひとにしつもんする？", font=(main_font, 20), bg=sub2_bg)
+            label.pack()
+            space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=1)
+            space.pack()
+            
+            #selectmodeの種類(single:1つだけ選択できる、multiple:複数選択できる、extended：複数選択可能＋ドラッグでも選択可能)
+            listbox = tk.Listbox(person_list_sub2, height=12, width=15, font=(main_font, 20), listvariable=list_sub2_value, selectmode="single", relief="sunken", bd=5)
+            listbox.pack()
+            space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=1)
+            space.pack()
+            button = tk.Button(person_list_sub2, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.paint_now)
+            button.pack()
+            space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=1)
+            space.pack()
+
+
+    #おえかき
+    def paint_now(self):
+        person_list_sub2.destroy()
+        global paint_window
+        
+        if paint_window == None or not paint_window.winfo_exists():
+            paint_window= tk.Toplevel(bg=sub2_bg, bd=2)
+            paint_window.geometry("600x600")
+            paint_window.title("paint_window")
+        
 
 
 
