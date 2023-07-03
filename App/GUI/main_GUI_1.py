@@ -49,7 +49,8 @@ TOOLBAR_OPUTIONS = {
 }
 
 
-
+global all_person_list
+all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "みあ", "アメリカのひと", "こうせんせい"]
 
 
 
@@ -232,6 +233,9 @@ class Application(tk.Frame):
         count_sub3 = True
         count_main = False
         
+        global person_list_sub3
+        person_list_sub3 = None
+        
         global fm_sub3, pw_sub3
         pw_main.destroy()
         
@@ -267,7 +271,7 @@ class Application(tk.Frame):
         start_button = tk.Label(fm_sub3, text=" ** 返答 ** ", font=(main_font, 35), width=30)
         start_button.pack(side=tk.TOP, pady=10)
         
-        start_button = tk.Button(fm_sub3, text=" てうちでしつもん ", font=(main_font, 35), width=30)
+        start_button = tk.Button(fm_sub3, text=" てうちでしつもん ", font=(main_font, 35), width=30, command=self.ans_person_sub3)
         start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
@@ -305,19 +309,26 @@ class Application(tk.Frame):
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
         
-        
-    
+
+
+
+    #on_select_sub1
+    def on_select_sub1(event):
+        #選択された値を取得する
+        selected_value_sub1 = listbox_sub1.get(listbox_sub1.curselection())
+        print(selected_value_sub1)
     
     #ans_person_sub1
     def ans_person_sub1(self):
         global person_list_sub1
+        global listbox_sub1
         if person_list_sub1 == None or not person_list_sub1.winfo_exists():
             person_list_sub1 = tk.Toplevel(bg=sub1_bg, bd=2)
             person_list_sub1.geometry("500x600")
             person_list_sub1.title("person_list_sub1")
             
             list_sub1_value = tk.StringVar()
-            list_sub1_value.set(["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "アメリカのひと", "こうせんせい"])
+            list_sub1_value.set(all_person_list)
             
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=2)
             space.pack()
@@ -327,8 +338,8 @@ class Application(tk.Frame):
             space.pack()
             
             #selectmodeの種類(single:1つだけ選択できる、multiple:複数選択できる、extended：複数選択可能＋ドラッグでも選択可能)
-            listbox = tk.Listbox(person_list_sub1, height=12, width=15, font=(main_font, 20), listvariable=list_sub1_value, selectmode="single", relief="sunken", bd=5)
-            listbox.pack()
+            listbox_sub1 = tk.Listbox(person_list_sub1, height=12, width=15, font=(main_font, 20), listvariable=list_sub1_value, selectmode="single", relief="sunken", bd=5)
+            listbox_sub1.pack()
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
             button = tk.Button(person_list_sub1, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.mic_on)
@@ -336,6 +347,7 @@ class Application(tk.Frame):
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
             
+            listbox_sub1.bind('<<ListboxSelect>>', lambda e: self.on_select_sub1())
 
     #マイクの音声を取得
     def mic_now(self):
@@ -397,17 +409,24 @@ class Application(tk.Frame):
             button.pack()
             
             
+            
+    #on_select_sub2
+    def on_select_sub2(event):
+        #選択された値を取得する
+        selected_value_sub2 = listbox_sub2.get(listbox_sub2.curselection())
+        print(selected_value_sub2)
 
     #ans_person_sub2
     def ans_person_sub2(self):
         global person_list_sub2
+        global listbox_sub2
         if person_list_sub2 == None or not person_list_sub2.winfo_exists():
             person_list_sub2 = tk.Toplevel(bg=sub2_bg, bd=2)
             person_list_sub2.geometry("500x600")
-            person_list_sub2.title("person_list_sub1")
+            person_list_sub2.title("person_list_sub2")
             
             list_sub2_value = tk.StringVar()
-            list_sub2_value.set(["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "アメリカのひと", "こうせんせい"])
+            list_sub2_value.set(all_person_list)
             
             space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=2)
             space.pack()
@@ -417,14 +436,16 @@ class Application(tk.Frame):
             space.pack()
             
             #selectmodeの種類(single:1つだけ選択できる、multiple:複数選択できる、extended：複数選択可能＋ドラッグでも選択可能)
-            listbox = tk.Listbox(person_list_sub2, height=12, width=15, font=(main_font, 20), listvariable=list_sub2_value, selectmode="single", relief="sunken", bd=5)
-            listbox.pack()
+            listbox_sub2 = tk.Listbox(person_list_sub2, height=12, width=15, font=(main_font, 20), listvariable=list_sub2_value, selectmode="single", relief="sunken", bd=5)
+            listbox_sub2.pack()
             space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=1)
             space.pack()
             button = tk.Button(person_list_sub2, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.paint_now)
             button.pack()
             space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=1)
             space.pack()
+
+            listbox_sub2.bind("<<ListboxSelect>>", lambda e: self.on_select_sub2())
 
 
     #おえかき
@@ -437,8 +458,44 @@ class Application(tk.Frame):
             paint_window.geometry("600x600")
             paint_window.title("paint_window")
         
+        
+        
+    #on_select_sub3
+    def on_select_sub3(event):
+        #選択された値を取得する
+        selected_value_sub3 = listbox_sub3.get(listbox_sub3.curselection())
+        print(selected_value_sub3)
+        
+    #ans_person_sub3
+    def ans_person_sub3(self):
+        global person_list_sub3
+        global listbox_sub3
+        if person_list_sub3 == None or not person_list_sub3.winfo_exists():
+            person_list_sub3 = tk.Toplevel(bg=sub3_bg, bd=2)
+            person_list_sub3.geometry("500x600")
+            person_list_sub3.title("person_list_sub3")
+            
+            list_sub3_value = tk.StringVar()
+            list_sub3_value.set(all_person_list)
+            
+            space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=2)
+            space.pack()
+            label = tk.Label(person_list_sub3, text="どんなひとにしつもんする？", font=(main_font, 20), bg=sub3_bg)
+            label.pack()
+            space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=1)
+            space.pack()
+            
+            #selectmodeの種類(single:1つだけ選択できる、multiple:複数選択できる、extended：複数選択可能＋ドラッグでも選択可能)
+            listbox_sub3 = tk.Listbox(person_list_sub3, height=12, width=15, font=(main_font, 20), listvariable=list_sub3_value, selectmode="single", relief="sunken", bd=5)
+            listbox_sub3.pack()
+            space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=1)
+            space.pack()
+            button = tk.Button(person_list_sub3, text="けってい", font=(main_font, 20), bg="#ffffe8", command=lambda: self.on_select_sub3())
+            button.pack()
+            space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=1)
+            space.pack()
 
-
+            listbox_sub3.bind("<<ListboxSelect>>", lambda e: self.on_select_sub3())
 
     # タイトルへ戻る
     def return_title(self):

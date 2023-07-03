@@ -45,7 +45,7 @@ BUTTON_OPUTIONS = {
 
 
 root = tk.Tk()
-root.title("UIonly")
+root.title("UI_only")
 root.geometry("1200x720")
 
 
