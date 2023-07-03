@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog 
-from tkinter import messagebox 
+from tkinter import messagebox
+from tkinter import scrolledtext 
 import tkinter.ttk as ttk
 import os
 import speech_recognition as sr
@@ -13,11 +14,11 @@ import sys
 
 
 #グローバル変数定義
-main_bg = "aqua"
-sub1_bg = "aqua"
-sub2_bg = "#ffff8e"
-sub3_bg = "lightblue"
-sub4_bg = "black"
+main_bg = "#00ced1"
+sub1_bg = "#00ced1"
+sub2_bg = "#00ced1"
+sub3_bg = "#00ced1"
+sub4_bg = "#00ced1"
 title_font = "Arial"
 main_font = "Arial"
 
@@ -34,6 +35,7 @@ count_sub1 = False
 count_sub2 = False
 count_sub3 = False
 count_sub4 = False
+count_type = False
 
 
 
@@ -45,13 +47,15 @@ BUTTON_OPUTIONS = {
 
 TOOLBAR_OPUTIONS = {
     "font" : "main_font, 15",
-    "bg" : "#ffffe8",
+    "bg" : "#d8bfd8",
 }
 
 
 global all_person_list
 all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "みあ", "アメリカのひと", "こうせんせい"]
 
+global all_person_list_window_size
+all_person_list_window_size = "500x600+400+100"
 
 
 #アプリケーション（GUI）クラス
@@ -72,11 +76,11 @@ class Application(tk.Frame):
         
         
         #メインウィンドウ作成
-        pw_main = tk.PanedWindow(self.master, bg="blue", orient="vertical")
+        pw_main = tk.PanedWindow(self.master, bg=main_bg, orient="vertical")
         pw_main.pack(expand=True, fill=tk.BOTH, side="left")
         
         #メインフレーム作成
-        fm_main = tk.Frame(pw_main, bd=15, bg="aqua", relief="ridge")
+        fm_main = tk.Frame(pw_main, bd=15, bg=main_bg, relief="ridge")
         pw_main.add(fm_main)
         
     # -------- メインフレームのオブジェクト作成 --------
@@ -135,7 +139,7 @@ class Application(tk.Frame):
         global fm_sub1, pw_sub1
         pw_main.destroy()
         
-        pw_sub1 = tk.PanedWindow(self.master, bg="red", orient="vertical")
+        pw_sub1 = tk.PanedWindow(self.master, bg=sub1_bg, orient="vertical")
         pw_sub1.pack(expand=True, fill=tk.BOTH, side="left")
         
         fm_sub1 = tk.Frame(bd=15, bg=sub1_bg, relief="ridge")
@@ -188,7 +192,7 @@ class Application(tk.Frame):
         global fm_sub2, pw_sub2
         pw_main.destroy()
         
-        pw_sub2 = tk.PanedWindow(self.master, bg="red", orient="vertical")
+        pw_sub2 = tk.PanedWindow(self.master, bg=sub2_bg, orient="vertical")
         pw_sub2.pack(expand=True, fill=tk.BOTH, side="left")
         
         fm_sub2 = tk.Frame(bd=15, bg=sub2_bg, relief="ridge")
@@ -239,7 +243,7 @@ class Application(tk.Frame):
         global fm_sub3, pw_sub3
         pw_main.destroy()
         
-        pw_sub3 = tk.PanedWindow(self.master, bg="pink", orient="vertical")
+        pw_sub3 = tk.PanedWindow(self.master, bg=sub3_bg, orient="vertical")
         pw_sub3.pack(expand=True, fill=tk.BOTH, side="left")
         
         fm_sub3 = tk.Frame(bd=15, bg=sub3_bg, relief="ridge")
@@ -287,7 +291,7 @@ class Application(tk.Frame):
         global fm_sub4, pw_sub4
         pw_main.destroy()
         
-        pw_sub4 = tk.PanedWindow(self.master, bg="pink", orient="vertical")
+        pw_sub4 = tk.PanedWindow(self.master, bg=sub4_bg, orient="vertical")
         pw_sub4.pack(expand=True, fill=tk.BOTH, side="left")
         
         fm_sub4 = tk.Frame(bd=15, bg=sub4_bg, relief="ridge")
@@ -315,6 +319,7 @@ class Application(tk.Frame):
     #on_select_sub1
     def on_select_sub1(event):
         #選択された値を取得する
+        global selected_value_sub1
         selected_value_sub1 = listbox_sub1.get(listbox_sub1.curselection())
         print(selected_value_sub1)
     
@@ -324,7 +329,7 @@ class Application(tk.Frame):
         global listbox_sub1
         if person_list_sub1 == None or not person_list_sub1.winfo_exists():
             person_list_sub1 = tk.Toplevel(bg=sub1_bg, bd=2)
-            person_list_sub1.geometry("500x600")
+            person_list_sub1.geometry(all_person_list_window_size)
             person_list_sub1.title("person_list_sub1")
             
             list_sub1_value = tk.StringVar()
@@ -413,6 +418,7 @@ class Application(tk.Frame):
     #on_select_sub2
     def on_select_sub2(event):
         #選択された値を取得する
+        global selected_value_sub2
         selected_value_sub2 = listbox_sub2.get(listbox_sub2.curselection())
         print(selected_value_sub2)
 
@@ -422,7 +428,7 @@ class Application(tk.Frame):
         global listbox_sub2
         if person_list_sub2 == None or not person_list_sub2.winfo_exists():
             person_list_sub2 = tk.Toplevel(bg=sub2_bg, bd=2)
-            person_list_sub2.geometry("500x600")
+            person_list_sub2.geometry(all_person_list_window_size)
             person_list_sub2.title("person_list_sub2")
             
             list_sub2_value = tk.StringVar()
@@ -463,6 +469,7 @@ class Application(tk.Frame):
     #on_select_sub3
     def on_select_sub3(event):
         #選択された値を取得する
+        global selected_value_sub3
         selected_value_sub3 = listbox_sub3.get(listbox_sub3.curselection())
         print(selected_value_sub3)
         
@@ -472,7 +479,7 @@ class Application(tk.Frame):
         global listbox_sub3
         if person_list_sub3 == None or not person_list_sub3.winfo_exists():
             person_list_sub3 = tk.Toplevel(bg=sub3_bg, bd=2)
-            person_list_sub3.geometry("500x600")
+            person_list_sub3.geometry(all_person_list_window_size)
             person_list_sub3.title("person_list_sub3")
             
             list_sub3_value = tk.StringVar()
@@ -490,16 +497,81 @@ class Application(tk.Frame):
             listbox_sub3.pack()
             space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=1)
             space.pack()
-            button = tk.Button(person_list_sub3, text="けってい", font=(main_font, 20), bg="#ffffe8", command=lambda: self.on_select_sub3())
+            button = tk.Button(person_list_sub3, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.type_now)
             button.pack()
             space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=1)
             space.pack()
 
             listbox_sub3.bind("<<ListboxSelect>>", lambda e: self.on_select_sub3())
 
+
+    #タイピング
+    def type_now(self):
+        
+        person_list_sub3.destroy()
+        
+        global count_type, count_sub3
+        count_type = True
+        count_sub3 = False
+        
+        global fm_type, pw_type
+        pw_sub3.destroy()
+        
+        pw_type = tk.PanedWindow(self.master, bg=sub3_bg, orient="vertical")
+        pw_type.pack(expand=True, fill=tk.BOTH, side="left")
+        
+        fm_type = tk.Frame(bd=15, bg=sub3_bg, relief="ridge")
+        pw_type.add(fm_type)
+        
+    # -------- メインフレームのオブジェクト作成 --------
+        # ボタンを作成してツールバーに配置
+        fm_toolbar = tk.Frame(fm_type, bg=sub3_bg)
+        fm_toolbar.pack(anchor="nw")
+        
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS)
+        toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
+        toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
+        toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
+        
+        space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
+        space.pack()
+        label = tk.Label(fm_type, text=f"\"{selected_value_sub3}\"にしつもんしたいことを↓ににゅうりょくしてね！", font=(main_font, 23), bg=sub3_bg)
+        label.pack()
+        space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
+        space.pack()
+        text_input = scrolledtext.ScrolledText(fm_type, width=80, height=7, font=(main_font, 15))
+        text_input.pack()
+        space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
+        space.pack()
+        button = tk.Button(fm_type, text="けってい", font=(main_font, 20), bg="#ffffe8")
+        button.pack()
+        
+        space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
+        space.pack()
+        #state --- tk.NORMAL：編集できる・tk.DISABLED：編集できない 
+        text_output = tk.Text(fm_type, width=80, height=9, state=tk.DISABLED, font=(main_font, 15), bg="#ffffff")
+        text_output.pack()
+        space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
+        space.pack()
+        button = tk.Button(fm_type, text="おわる", font=(main_font, 20), bg="#ffffe8")
+        button.pack(side=tk.RIGHT, padx=30, pady=10)
+        button = tk.Button(fm_type, text="もういちど", font=(main_font, 20), bg="#ffffe8")
+        button.pack(side=tk.RIGHT, padx=10, pady=10)
+        space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
+        space.pack()
+        
+        print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
+
+
+
+
     # タイトルへ戻る
     def return_title(self):
-        global count_main, count_sub1, count_sub2, count_sub3, count_sub4
+        global count_main, count_sub1, count_sub2, count_sub3, count_sub4, count_type
         
         if count_main == True:
             pw_main.destroy()
@@ -511,6 +583,8 @@ class Application(tk.Frame):
             pw_sub3.destroy()
         elif count_sub4 == True:
             pw_sub4.destroy()
+        elif count_type == True:
+            pw_type.destroy()
         else:
             print("Error")
         
@@ -535,8 +609,13 @@ main_window = tk.Tk()
 screen_width = main_window.winfo_screenwidth()
 screen_height = main_window.winfo_screenheight()
 
+window_width = 1200
+window_height = 720
+x = (screen_width // 2) - (window_width // 2)
+y = (screen_height // 3) - (window_height // 3)
+
 myapp = Application(master=main_window)
 myapp.master.title("GPT-3.5-turbo") # メインウィンドウの名前
-myapp.master.geometry("1200x720") # ウィンドウの幅と高さピクセル単位で指定（width x height）
+myapp.master.geometry(f"{window_width}x{window_height}+{x}+{y}") # ウィンドウの幅と高さピクセル単位で指定（width x height）
 #myapp.master.attributes('-fullscreen', True) # フルスクリーン（終了ボタンがなくなるので非推奨）
 myapp.mainloop()
