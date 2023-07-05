@@ -25,18 +25,14 @@ openai.api_key = ""
 
 
 
-role_sys_1 = str(input("特徴は？"))
-if not role_sys_1:
-    role_sys_1:str = "teacher"
-
+role_sys_1 = "先生"
 #roleは２個目が適用されるのかな...
 # role_sys_2 = str(input("特徴は？"))
 # if not role_sys_2:
 #     role_sys_2:str = "teacher"
     
-question_1 = str(input("質問は？"))
-if not question_1:
-    question_1:str = "ご使用ありがとうございます。\nご質問されるのでしたら再起動してください。"
+question_1 = "僕のこと好き？"
+
 
 
 res = openai.ChatCompletion.create(

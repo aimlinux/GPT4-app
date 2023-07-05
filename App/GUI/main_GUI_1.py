@@ -3,6 +3,7 @@ from tkinter import filedialog
 from tkinter import messagebox
 from tkinter import scrolledtext 
 import tkinter.ttk as ttk
+import openai
 import os
 import speech_recognition as sr
 import pyaudio
@@ -11,7 +12,9 @@ import time
 import random as rand
 import sys
 
-
+# ---- APIKey設定 ----
+#openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_key = ""
 
 #グローバル変数定義
 main_bg = "#00ced1"
@@ -555,6 +558,7 @@ class Application(tk.Frame):
         self.text_input.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
+        
         button = tk.Button(fm_type, text="けってい", font=(main_font, 20), bg=sub3_btn_bg, command=self.ai_answer)
         button.pack()
         
@@ -562,8 +566,8 @@ class Application(tk.Frame):
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
         #state --- tk.NORMAL：編集できる・tk.DISABLED：編集できない 
-        text_output = tk.Text(fm_type, width=80, height=9, state=tk.DISABLED, font=(main_font, 15), bg="#ffffff")
-        text_output.pack()
+        self.text_output = tk.Text(fm_type, width=80, height=9, state=tk.DISABLED, font=(main_font, 15), bg="#ffffff")
+        self.text_output.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
         button = tk.Button(fm_type, text="おわる", font=(main_font, 20), bg=sub3_btn_bg)
@@ -578,9 +582,43 @@ class Application(tk.Frame):
         
     #sub3で入力された質問へのAIの回答
     def ai_answer(self):
-        global type_text_value
-        type_text_value = self.text_input.get( "1.0", "end-1c")
-        print(type_text_value)
+        global type_text_value_sub3
+        global selected_value_sub3
+        type_text_value_sub3 = self.text_input.get( "1.0", "end-1c")
+        print("AnswerPerson : " + selected_value_sub3)
+        print("TypeQuestion : " + type_text_value_sub3)
+
+        #エラー調整
+        time.sleep(0.2)
+        
+        
+        role_sys_1 = str(selected_value_sub3)
+        if not role_sys_1:
+            role_sys_1:str = "先生"
+            
+        question_sub3 = "「" + str(type_text_value_sub3) + "」という質問についてひらがなで教えて"
+        if not question_sub3:
+            question_sub3:str = ""
+
+        res = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo", 
+            messages=[
+                #role : 役割, 
+                # system :（このチャットのシステム） 
+                # user :（チャットを使う側 = 私たち） 
+                # assistant : ChatGPT側, 
+                # content : メッセージ内容
+                {"role": "system", "content": question_sub3}, 
+                {"role": "user", "content": role_sys_1},
+                #{"role": "assistant", "content": "ふざけんな！"},
+                #{"role": "user", "content": "もう少し簡単に教えて！！"},
+            ]
+        )
+        
+        #ChatGPTからの返答の内容
+        res_content = res["choices"][0]["message"]["content"]
+        print("AI_Answer : " + res_content)
+        
 
 
 

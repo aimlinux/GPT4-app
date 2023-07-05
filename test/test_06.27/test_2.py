@@ -1,7 +1,7 @@
 import openai
 import os
 
-openai.api_key = os.environ['uBulLxdhNUxkWjw7x3veT3BlbkFJGBD21ioNk3j5wNEnDFV6']
+openai.api_key = os.environ['']
 
 
 response = openai.ChatCompletion.create(

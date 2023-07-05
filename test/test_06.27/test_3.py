@@ -2,7 +2,7 @@ import openai
 import os
 
 #openai.api_key = os.environ["OPENAI_API_KEY"]
-openai.api_key = "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"
+openai.api_key = ""
 
 
 content = "Hello, what can you do for me today?"

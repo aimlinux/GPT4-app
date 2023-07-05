@@ -1,16 +1,16 @@
 import openai
 
-# APIƒL[‚ğİ’è‚µ‚Ä‚­‚¾‚³‚¢B—á: 'your-api-key'
+# APIï¿½Lï¿½[ï¿½ï¿½İ’è‚µï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bï¿½ï¿½: 'your-api-key'
 #api_key = 'uBulLxdhNUxkWjw7x3veT3BlbkFJGBD21ioNk3j5wNEnDFV6'
 #openai.api_key = api_key
 
-openai.api_key = "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"
+openai.api_key = ""
 
 def generate_text(prompt, role, conversation_history):
-    # ƒ†[ƒU[‚Ì¿–â‚ğ‰ï˜b—š—ğ‚É’Ç‰Á
+    # ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bï¿½ï¿½ï¿½ï¿½ï¿½É’Ç‰ï¿½
     conversation_history.append({"role": "user", "content": prompt})
     
-    # GPT-4ƒ‚ƒfƒ‹‚ğg—p‚µ‚ÄƒeƒLƒXƒg‚ğ¶¬
+    # GPT-4ï¿½ï¿½ï¿½fï¿½ï¿½ï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Äƒeï¿½Lï¿½Xï¿½gï¿½ğ¶ï¿½
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[{"role": "system", "content": f"You are a {role}."}] + conversation_history,
@@ -20,28 +20,28 @@ def generate_text(prompt, role, conversation_history):
     )
     message = response.choices[0].message['content'].strip()
     
-    # ƒAƒVƒXƒ^ƒ“ƒg‚Ì‰ñ“š‚ğ‰ï˜b—š—ğ‚É’Ç‰Á
+    # ï¿½Aï¿½Vï¿½Xï¿½^ï¿½ï¿½ï¿½gï¿½Ì‰ñ“š‚ï¿½ï¿½ï¿½bï¿½ï¿½ï¿½ï¿½ï¿½É’Ç‰ï¿½
     conversation_history.append({"role": "assistant", "content": message})
     
     return message
 
 if __name__ == "__main__":
-    # ƒ[ƒ‹ƒvƒŒƒC‚Ìƒ‚ƒfƒ‹‚ğƒ†[ƒU[‚É“ü—Í‚³‚¹‚é
-    role = input("ƒ[ƒ‹ƒvƒŒƒC‚Ìƒ‚ƒfƒ‹‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢i—á: helpful assistantj: ")
+    # ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Cï¿½Ìƒï¿½ï¿½fï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½É“ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½
+    role = input("ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Cï¿½Ìƒï¿½ï¿½fï¿½ï¿½ï¿½ï¿½ï¿½wï¿½è‚µï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½: helpful assistantï¿½j: ")
     
-    # ‰ï˜b—š—ğ‚ğŠi”[‚·‚é‚½‚ß‚ÌƒŠƒXƒg‚ğ‰Šú‰»
+    # ï¿½ï¿½bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½[ï¿½ï¿½ï¿½é‚½ï¿½ß‚Ìƒï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     conversation_history = []
     
     while True:
-        # ƒ†[ƒU[‚É¿–â‚ğ“ü—Í‚³‚¹‚é
-        input_prompt = input("¿–â‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢iI—¹‚·‚é‚É‚Í'q'‚ğ“ü—Íj: ")
+        # ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½
+        input_prompt = input("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½'q'ï¿½ï¿½ï¿½ï¿½Íj: ")
         
-        # I—¹ğŒ‚ÌŠm”F
+        # ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌŠmï¿½F
         if input_prompt.lower() == 'q':
             break
         
-        # GPT-4‚©‚ç‚Ì‰ñ“š‚ğ¶¬
+        # GPT-4ï¿½ï¿½ï¿½ï¿½Ì‰ñ“š‚ğ¶ï¿½
         generated_text = generate_text(input_prompt, role, conversation_history)
         
-        # ‰ñ“š‚ğ•\¦
-        print("GPT-4‚©‚ç‚Ì‰ñ“š:", generated_text)
+        # ï¿½ñ“š‚ï¿½\ï¿½ï¿½
+        print("GPT-4ï¿½ï¿½ï¿½ï¿½Ì‰ï¿½:", generated_text)
