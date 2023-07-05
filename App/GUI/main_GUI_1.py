@@ -19,6 +19,11 @@ sub1_bg = "#00ced1"
 sub2_bg = "#00ced1"
 sub3_bg = "#00ced1"
 sub4_bg = "#00ced1"
+title_btn_bg = "#cfd6e6"
+sub1_btn_bg = "#cfd6e6"
+sub2_btn_bg = "#cfd6e6"
+sub3_btn_bg = "#cfd6e6"
+sub4_btn_bg = "#191970"
 title_font = "Arial"
 main_font = "Arial"
 
@@ -42,23 +47,23 @@ count_type = False
 BUTTON_OPUTIONS = {
     "expand" : "True",
     "fill" : "tk.NONE",
-    
 }
 
 TOOLBAR_OPUTIONS = {
     "font" : "main_font, 15",
-    "bg" : "#d8bfd8",
+    "bg" : "#cfe2e6",
+    "fg" : "#00334d"
 }
 
-
+# 各person_list_windowに表示するリストの初期値
 global all_person_list
 all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "みあ", "アメリカのひと", "こうせんせい"]
-
+# 各person_list_windowの大きさと初期配置を決める（メインウィンドウに関してはコード最下部）
 global all_person_list_window_size
 all_person_list_window_size = "500x600+400+100"
 
 
-#アプリケーション（GUI）クラス
+# アプリケーション（GUI）クラス
 class Application(tk.Frame):
     DEBUG_LOG = True
     def __init__(self, master=None):
@@ -109,13 +114,13 @@ class Application(tk.Frame):
         space_label = tk.Label(fm_main, text="", bg=main_bg, height=7)
         space_label.pack(side=tk.TOP)
     
-        start_button = tk.Button(fm_main, text=" ことばでおはなし ", font=(main_font, 20), width=30, command=self.create_1)
+        start_button = tk.Button(fm_main, text=" ことばでおはなし ", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_1)
         start_button.pack(side=tk.TOP, pady=10)
-        start_button = tk.Button(fm_main, text=" てがきでおはなし", font=(main_font, 20), width=30, command=self.create_2)
+        start_button = tk.Button(fm_main, text=" てがきでおはなし", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_2)
         start_button.pack(side=tk.TOP, pady=10)
-        start_button = tk.Button(fm_main, text=" てうちでおはなし ", font=(main_font, 20), width=30, command=self.create_3)
+        start_button = tk.Button(fm_main, text=" てうちでおはなし ", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_3)
         start_button.pack(side=tk.TOP, pady=10)
-        start_button = tk.Button(fm_main, text=" せってい ", font=(main_font, 20), width=30, command=self.create_4)
+        start_button = tk.Button(fm_main, text=" せってい ", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_4)
         start_button.pack(side=tk.TOP, pady=10)
         
         
@@ -168,10 +173,10 @@ class Application(tk.Frame):
         space_label = tk.Label(fm_sub1, text="", bg=sub1_bg, height=3)
         space_label.pack(side=tk.TOP)
         
-        start_button = tk.Label(fm_sub1, text=" ** 返答 ** ", font=(main_font, 35), width=30)
-        start_button.pack(side=tk.TOP, pady=10)
+        label = tk.Label(fm_sub1, text=" ** 返答 ** ", font=(main_font, 35), width=30)
+        label.pack(side=tk.TOP, pady=10)
         
-        start_button = tk.Button(fm_sub1, text=" ことばでしつもん ", font=(main_font, 35), width=30, command=self.ans_person_sub1)
+        start_button = tk.Button(fm_sub1, text=" ことばでしつもん ", font=(main_font, 35), bg=sub1_btn_bg, width=30, command=self.ans_person_sub1)
         start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
@@ -221,10 +226,10 @@ class Application(tk.Frame):
         space_label = tk.Label(fm_sub2, text="", bg=sub2_bg, height=3)
         space_label.pack(side=tk.TOP)
         
-        start_button = tk.Label(fm_sub2, text=" ** 返答 ** ", font=(main_font, 35), width=30)
-        start_button.pack(side=tk.TOP, pady=10)
+        label = tk.Label(fm_sub2, text=" ** 返答 ** ", font=(main_font, 35), width=30)
+        label.pack(side=tk.TOP, pady=10)
         
-        start_button = tk.Button(fm_sub2, text=" てがきでしつもん ", font=(main_font, 35), width=30, command=self.ans_person_sub2)
+        start_button = tk.Button(fm_sub2, text=" てがきでしつもん ", font=(main_font, 35), bg=sub2_btn_bg, width=30, command=self.ans_person_sub2)
         start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
@@ -269,13 +274,16 @@ class Application(tk.Frame):
         title_label = tk.Label(fm_sub3, text="**** てうちでおはなし ****", bg=sub3_bg, font=(title_font, 42), height=2)
         title_label.pack(side=tk.TOP)
         
-        space_label = tk.Label(fm_sub3, text="", bg=sub3_bg, height=3)
+        space_label = tk.Label(fm_sub3, text="", bg=sub3_bg, height=2)
         space_label.pack(side=tk.TOP)
+        label = tk.Label(fm_sub3, text="ぱそこんのきーぼーどから\nことばをにゅうりょくしてね", bg=sub3_bg, font=(main_font, 25), width=30)
+        label.pack(side=tk.TOP, pady=10)
+        space_label = tk.Label(fm_sub3, text="", bg=sub3_bg, height=1)
+        space_label.pack(side=tk.TOP)
+        label = tk.Label(fm_sub3, text="しょうがくせいにはむずかしいかも", bg=sub3_bg, font=(main_font, 25), width=30)
+        label.pack(side=tk.TOP, pady=10)
         
-        start_button = tk.Label(fm_sub3, text=" ** 返答 ** ", font=(main_font, 35), width=30)
-        start_button.pack(side=tk.TOP, pady=10)
-        
-        start_button = tk.Button(fm_sub3, text=" てうちでしつもん ", font=(main_font, 35), width=30, command=self.ans_person_sub3)
+        start_button = tk.Button(fm_sub3, text=" てうちでしつもん ", font=(main_font, 35), bg=sub3_btn_bg, width=30, command=self.ans_person_sub3)
         start_button.pack(side=tk.BOTTOM, pady=50)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
@@ -347,7 +355,7 @@ class Application(tk.Frame):
             listbox_sub1.pack()
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
-            button = tk.Button(person_list_sub1, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.mic_on)
+            button = tk.Button(person_list_sub1, text="けってい", font=(main_font, 20), bg=sub1_btn_bg, command=self.mic_on)
             button.pack()
             space = tk.Label(person_list_sub1, text="", bg=sub1_bg, height=1)
             space.pack()
@@ -398,7 +406,7 @@ class Application(tk.Frame):
             label.pack()
             space = tk.Label(mic_window, text="", bg=sub1_bg, height=2)
             space.pack()
-            button = tk.Button(mic_window, text="しつもんすたーと", font=(main_font, 20), bg="#ffff8e", command=self.mic_now)
+            button = tk.Button(mic_window, text="しつもんすたーと", font=(main_font, 20), bg=sub1_btn_bg, command=self.mic_now)
             button.pack()
             space = tk.Label(mic_window, text="", bg=sub1_bg, height=3)
             space.pack()
@@ -410,7 +418,7 @@ class Application(tk.Frame):
             mic_text_label.pack()
             space = tk.Label(mic_window, text="", bg=sub1_bg, height=4)
             space.pack()
-            button = tk.Button(mic_window, text="これにきめた！！", font=(main_font, 20), bg="#ffff8e")
+            button = tk.Button(mic_window, text="これにきめた！！", font=(main_font, 20), bg=sub1_btn_bg)
             button.pack()
             
             
@@ -446,7 +454,7 @@ class Application(tk.Frame):
             listbox_sub2.pack()
             space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=1)
             space.pack()
-            button = tk.Button(person_list_sub2, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.paint_now)
+            button = tk.Button(person_list_sub2, text="けってい", font=(main_font, 20), bg=sub2_btn_bg, command=self.paint_now)
             button.pack()
             space = tk.Label(person_list_sub2, text="", bg=sub2_bg, height=1)
             space.pack()
@@ -497,7 +505,7 @@ class Application(tk.Frame):
             listbox_sub3.pack()
             space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=1)
             space.pack()
-            button = tk.Button(person_list_sub3, text="けってい", font=(main_font, 20), bg="#ffffe8", command=self.type_now)
+            button = tk.Button(person_list_sub3, text="けってい", font=(main_font, 20), bg=sub3_btn_bg, command=self.type_now)
             button.pack()
             space = tk.Label(person_list_sub3, text="", bg=sub3_bg, height=1)
             space.pack()
@@ -547,7 +555,7 @@ class Application(tk.Frame):
         text_input.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
-        button = tk.Button(fm_type, text="けってい", font=(main_font, 20), bg="#ffffe8")
+        button = tk.Button(fm_type, text="けってい", font=(main_font, 20), bg=sub3_btn_bg)
         button.pack()
         
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
@@ -557,9 +565,9 @@ class Application(tk.Frame):
         text_output.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
-        button = tk.Button(fm_type, text="おわる", font=(main_font, 20), bg="#ffffe8")
+        button = tk.Button(fm_type, text="おわる", font=(main_font, 20), bg=sub3_btn_bg)
         button.pack(side=tk.RIGHT, padx=30, pady=10)
-        button = tk.Button(fm_type, text="もういちど", font=(main_font, 20), bg="#ffffe8")
+        button = tk.Button(fm_type, text="もういちど", font=(main_font, 20), bg=sub3_btn_bg)
         button.pack(side=tk.RIGHT, padx=10, pady=10)
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
