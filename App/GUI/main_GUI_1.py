@@ -12,6 +12,7 @@ import time
 import random as rand
 import sys
 
+
 # ---- APIKey設定 ----
 #openai.api_key = os.environ["OPENAI_API_KEY"]
 openai.api_key = ""
@@ -60,7 +61,7 @@ TOOLBAR_OPUTIONS = {
 
 # 各person_list_windowに表示するリストの初期値
 global all_person_list
-all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "みあ", "アメリカのひと", "こうせんせい"]
+all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "アスファルト", "アメリカのひと", "こうせんせい"]
 # 各person_list_windowの大きさと初期配置を決める（メインウィンドウに関してはコード最下部）
 global all_person_list_window_size
 all_person_list_window_size = "500x600+400+100"
@@ -596,7 +597,7 @@ class Application(tk.Frame):
         if not role_sys_1:
             role_sys_1:str = "先生"
             
-        question_sub3 = "「" + str(type_text_value_sub3) + "」という質問についてひらがなで教えて"
+        question_sub3 = str(type_text_value_sub3)
         if not question_sub3:
             question_sub3:str = ""
 
@@ -619,6 +620,8 @@ class Application(tk.Frame):
         res_content = res["choices"][0]["message"]["content"]
         print("AI_Answer : " + res_content)
         
+        #ウィンドウのテキストを表示
+        self.text_output.insert('1.0', res_content)
 
 
 
