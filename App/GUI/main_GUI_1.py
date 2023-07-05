@@ -551,12 +551,13 @@ class Application(tk.Frame):
         label.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
-        text_input = scrolledtext.ScrolledText(fm_type, width=80, height=7, font=(main_font, 15))
-        text_input.pack()
+        self.text_input = scrolledtext.ScrolledText(fm_type, width=80, height=7, font=(main_font, 15), bg="#fff", state="normal")
+        self.text_input.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
-        button = tk.Button(fm_type, text="けってい", font=(main_font, 20), bg=sub3_btn_bg)
+        button = tk.Button(fm_type, text="けってい", font=(main_font, 20), bg=sub3_btn_bg, command=self.ai_answer)
         button.pack()
+        
         
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
@@ -573,7 +574,13 @@ class Application(tk.Frame):
         space.pack()
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
-
+        
+        
+    #sub3で入力された質問へのAIの回答
+    def ai_answer(self):
+        global type_text_value
+        type_text_value = self.text_input.get( "1.0", "end-1c")
+        print(type_text_value)
 
 
 
