@@ -61,7 +61,7 @@ TOOLBAR_OPUTIONS = {
 
 # 各person_list_windowに表示するリストの初期値
 global all_person_list
-all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "アスファルト", "アメリカのひと", "こうせんせい"]
+all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "サッカー選手", "アメリカのひと", "こうせんせい"]
 # 各person_list_windowの大きさと初期配置を決める（メインウィンドウに関してはコード最下部）
 global all_person_list_window_size
 all_person_list_window_size = "500x600+400+100"
@@ -567,7 +567,8 @@ class Application(tk.Frame):
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
         #state --- tk.NORMAL：編集できる・tk.DISABLED：編集できない 
-        self.text_output = tk.Text(fm_type, width=80, height=9, state=tk.DISABLED, font=(main_font, 15), bg="#ffffff")
+        self.text_output = scrolledtext.ScrolledText(fm_type, width=80, height=7, font=(main_font, 15), bg="#fff", state="normal")
+        #self.text_output = tk.Text(fm_type, width=80, height=9, state=tk.DISABLED, font=(main_font, 15), bg="#ffffff")
         self.text_output.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
@@ -585,6 +586,16 @@ class Application(tk.Frame):
     def ai_answer(self):
         global type_text_value_sub3
         global selected_value_sub3
+        
+        #質問する対象を選んでなかった場合
+        if len(selected_value_sub3) == 0:
+            selected_value_sub3 = "せんせい"
+            res = messagebox.showerror("Error", "しつもんするひとがえらばれていないよ。\n たいとるへもどるよ。")
+            print(res, "Error : No PersonList")
+            
+            self.return_title()            
+            
+            
         type_text_value_sub3 = self.text_input.get( "1.0", "end-1c")
         print("AnswerPerson : " + selected_value_sub3)
         print("TypeQuestion : " + type_text_value_sub3)
@@ -592,11 +603,12 @@ class Application(tk.Frame):
         #エラー調整
         time.sleep(0.2)
         
+        selected_value_sub3 = 
         
         role_sys_1 = str(selected_value_sub3)
         if not role_sys_1:
-            role_sys_1:str = "先生"
-            
+            role_sys_1:str = "あなた"
+        
         question_sub3 = str(type_text_value_sub3)
         if not question_sub3:
             question_sub3:str = ""
@@ -609,8 +621,8 @@ class Application(tk.Frame):
                 # user :（チャットを使う側 = 私たち） 
                 # assistant : ChatGPT側, 
                 # content : メッセージ内容
-                {"role": "system", "content": question_sub3}, 
-                {"role": "user", "content": role_sys_1},
+                {"role": "system", "content": role_sys_1}, 
+                {"role": "user", "content": type_text_value_sub3},
                 #{"role": "assistant", "content": "ふざけんな！"},
                 #{"role": "user", "content": "もう少し簡単に教えて！！"},
             ]
@@ -620,8 +632,25 @@ class Application(tk.Frame):
         res_content = res["choices"][0]["message"]["content"]
         print("AI_Answer : " + res_content)
         
+        global new_answer
+        new_answer = f"{role_sys_1}：{res_content}"
+        print(new_answer)
+        
+        #エラー調整
+        time.sleep(0.5)
+        
         #ウィンドウのテキストを表示
-        self.text_output.insert('1.0', res_content)
+        self.text_output.delete("0.0", tk.END) 
+        self.text_output.insert(tk.END, new_answer)
+        
+        self.output_now()
+
+    def output_now(self):
+        print("output_now_TEST")
+        #ウィンドウのテキストを表示
+        self.text_output.delete("0.0", tk.END) 
+        self.text_output.insert(tk.END, new_answer)
+
 
 
 
