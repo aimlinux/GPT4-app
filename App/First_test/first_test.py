@@ -11,17 +11,17 @@ openai.api_key = ""
 
 
 
-#messagebox.showinfo("title", "Say something!!")
-# r = sr.Recognizer()
-# with sr.Microphone() as source:
-#     r.adjust_for_ambient_noise(source)
-#     print("Listening...")
-#     audio = r.listen(source)
-#     try:
-#         query = r.recognize_google(audio, language='ja-JP')
-#         print(query)
-#     except Exception:
-#         print("Error")
+messagebox.showinfo("title", "Say something!!")
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    r.adjust_for_ambient_noise(source)
+    print("Listening...")
+    audio = r.listen(source)
+    try:
+        query = r.recognize_google(audio, language='ja-JP')
+        print(query)
+    except Exception:
+        print("Error")
 
 
 
@@ -31,7 +31,7 @@ role_sys_1 = "先生"
 # if not role_sys_2:
 #     role_sys_2:str = "teacher"
     
-question_1 = "僕のこと好き？"
+question_1 = "わたしはだーれ？"
 
 
 

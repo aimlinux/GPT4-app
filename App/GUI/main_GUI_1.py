@@ -36,6 +36,8 @@ button_2 = "せってい"
 button_3 = "たいとるへ"
 button_4 = "ろぐ"
 
+#ひらがなON, OFF
+hiragana_on = True
 
 # ウィンドウが生成されたフラグを取得するため（各ウィンドウが開いたときTrue、閉じたときFalseへ）
 #global count_main, count_sub1, count_sub2, count_sub3
@@ -61,7 +63,7 @@ TOOLBAR_OPUTIONS = {
 
 # 各person_list_windowに表示するリストの初期値
 global all_person_list
-all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "サッカー選手", "アメリカのひと", "こうせんせい"]
+all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "サッカー選手", "アメリカのひと", "こうせんせい", "関西弁"]
 # 各person_list_windowの大きさと初期配置を決める（メインウィンドウに関してはコード最下部）
 global all_person_list_window_size
 all_person_list_window_size = "500x600+400+100"
@@ -555,7 +557,7 @@ class Application(tk.Frame):
         label.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
-        self.text_input = scrolledtext.ScrolledText(fm_type, width=80, height=7, font=(main_font, 15), bg="#fff", state="normal")
+        self.text_input = scrolledtext.ScrolledText(fm_type, width=60, height=5, font=(main_font, 20), bg="#fff", state="normal")
         self.text_input.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
@@ -567,14 +569,14 @@ class Application(tk.Frame):
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
         #state --- tk.NORMAL：編集できる・tk.DISABLED：編集できない 
-        self.text_output = scrolledtext.ScrolledText(fm_type, width=80, height=7, font=(main_font, 15), bg="#fff", state="normal")
+        self.text_output = scrolledtext.ScrolledText(fm_type, width=60, height=5, font=(main_font, 20), bg="#fff", state="normal")
         #self.text_output = tk.Text(fm_type, width=80, height=9, state=tk.DISABLED, font=(main_font, 15), bg="#ffffff")
         self.text_output.pack()
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
-        button = tk.Button(fm_type, text="おわる", font=(main_font, 20), bg=sub3_btn_bg)
+        button = tk.Button(fm_type, text="おわる", font=(main_font, 20), bg=sub3_btn_bg, command=self.return_title)
         button.pack(side=tk.RIGHT, padx=30, pady=10)
-        button = tk.Button(fm_type, text="もういちど", font=(main_font, 20), bg=sub3_btn_bg)
+        button = tk.Button(fm_type, text="もういちど", font=(main_font, 20), bg=sub3_btn_bg, command=self.return_sub3)
         button.pack(side=tk.RIGHT, padx=10, pady=10)
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
         space.pack()
@@ -601,18 +603,19 @@ class Application(tk.Frame):
         print("TypeQuestion : " + type_text_value_sub3)
 
         #エラー調整
-        time.sleep(0.2)
-        
-        selected_value_sub3 = 
+        time.sleep(0.2) 
         
         role_sys_1 = str(selected_value_sub3)
         if not role_sys_1:
             role_sys_1:str = "あなた"
         
-        question_sub3 = str(type_text_value_sub3)
+        question_sub3 = str(type_text_value_sub3) + "という質問についてひらがなのみで解答して"
         if not question_sub3:
             question_sub3:str = ""
 
+        if hiragana_on == True:
+            role_sys_1 = role_sys_1
+                        
         res = openai.ChatCompletion.create(
             model="gpt-3.5-turbo", 
             messages=[
@@ -633,15 +636,15 @@ class Application(tk.Frame):
         print("AI_Answer : " + res_content)
         
         global new_answer
-        new_answer = f"{role_sys_1}：{res_content}"
+        new_answer = f"{selected_value_sub3}：{res_content}"
         print(new_answer)
         
         #エラー調整
         time.sleep(0.5)
         
         #ウィンドウのテキストを表示
-        self.text_output.delete("0.0", tk.END) 
-        self.text_output.insert(tk.END, new_answer)
+        #self.text_output.delete("0.0", tk.END) 
+        #self.text_output.insert(tk.END, new_answer)
         
         self.output_now()
 
@@ -652,7 +655,37 @@ class Application(tk.Frame):
         self.text_output.insert(tk.END, new_answer)
 
 
-
+    #もう一度（sub3）
+    def return_sub3(self):
+        global count_main, count_sub1, count_sub2, count_sub3, count_sub4, count_type
+        
+        if count_main == True:
+            pw_main.destroy()
+        elif count_sub1 == True:
+            pw_sub1.destroy()
+        elif count_sub2 == True:
+            pw_sub2.destroy()
+        elif count_sub3 == True:
+            pw_sub3.destroy()
+        elif count_sub4 == True:
+            pw_sub4.destroy()
+        elif count_type == True:
+            pw_type.destroy()
+        else:
+            print("Error")
+        
+        print(str(count_main) + " : " + str(count_sub1) + " : " + str(count_sub2) + " : " + str(count_sub3))
+        
+        count_main = False
+        count_sub1 = False
+        count_sub2 = False
+        count_sub3 = False
+        
+        self.create_3()
+        
+        return 0
+    
+    
 
     # タイトルへ戻る
     def return_title(self):
