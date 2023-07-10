@@ -21,7 +21,7 @@ from mic_now import voice_to_text
 openai.api_key = ""
 
 #グローバル変数定義
-main_bg = "#00ced1"
+main_bg = "#00ced1" 
 sub1_bg = "#00ced1"
 sub2_bg = "#00ced1"
 sub3_bg = "#00ced1"
