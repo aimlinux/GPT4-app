@@ -3,22 +3,59 @@ from tkinter import filedialog
 from tkinter import messagebox
 from tkinter import scrolledtext 
 import tkinter.ttk as ttk
+import PySimpleGUI as sg
+#import pyautogui as pg
 import openai
 from io import BytesIO
 import os
+import logging
 import speech_recognition as sr
 import pyaudio
+import requests
+#import simpleaudio
 import wave
+import json
 import time
 import random as rand
 import sys
+import atexit
 #カレントディレクトリ内
 from mic_now import voice_to_text
+from voicevox import text_to_voice
 
 
-# ---- APIKey設定 ----
-#openai.api_key = os.environ["OPENAI_API_KEY"]
+# -------- APIKey設定 --------
+#openai.api_key = os.environ["OPENAI_API_KEY"] #環境変数に指定する場合
 openai.api_key = ""
+
+
+
+# -------- Logの各設定 --------
+#logの出力名を設定
+logger = logging.getLogger('Log')
+#logLevelを設定
+logger.setLevel(10)
+#logをコンソール出力するための設定
+sh = logging.StreamHandler()
+logger.addHandler(sh)
+#logのファイル出力先設定
+fh = logging.FileHandler('./log/test.log')
+logger.addHandler(fh)
+#全てのフォーマットオプションとその役割
+# %(asctime)s	実行時刻
+# %(filename)s	ファイル名
+# %(funcName)s	行番号
+# %(levelname)s	ログの定義
+# %(lineno)d	ログレベル名
+# %(message)s	ログメッセージ
+# %(module)s	モジュール名
+# %(name)s	関数名
+# %(process)d	プロセスID
+# %(thread)d	スレッドID
+formatter = logging.Formatter('%(asctime)s --- process : %(process)d --- message : %(message)s')
+fh.setFormatter(formatter)
+sh.setFormatter(formatter)
+
 
 #グローバル変数定義
 main_bg = "#00ced1" 
@@ -34,13 +71,15 @@ sub4_btn_bg = "#191970"
 title_font = "Arial"
 main_font = "Arial"
 
-button_1 = "ふぁいる"
+button_1 = "オプション"
 button_2 = "せってい"
 button_3 = "たいとるへ"
 button_4 = "ろぐ"
 
 #ひらがなON, OFF
 hiragana_on = True
+
+#音声ON, OFF
 
 # ウィンドウが生成されたフラグを取得するため（各ウィンドウが開いたときTrue、閉じたときFalseへ）
 #global count_main, count_sub1, count_sub2, count_sub3, .....
@@ -72,8 +111,21 @@ all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こい
 # 各person_list_windowの大きさと初期配置を決める（メインウィンドウに関してはコード最下部）
 global all_person_list_window_size
 all_person_list_window_size = "500x600+400+100"
+# 設定ウィンドウの大きさと初期配置を決める
 global config_window_size
-config_window_size = "500x600+400+100"
+config_window_size = "500x450+400+100"
+# オプション or 右クリックウィンドウの大きさと初期配置
+option_window_size = "800x500"
+# def option_window_open():
+#     posi_x, posi_y = pg.position()
+#     print(posi_x, posi_y)
+#     global option_window_size
+#     posi_x_str = str(posi_x)
+#     posi_y_str = str(posi_y)
+#     option_window_size = f"800x500+{posi_x_str}+{posi_y_str}"
+#     print("option_window_size : " + option_window_size)
+    
+#     return 0
 
 
 # アプリケーション（GUI）クラス
@@ -86,6 +138,11 @@ class Application(tk.Frame):
         self.create_widgets()
         
     def create_widgets(self):
+        
+        #Logファイルに記録を残す
+        logger.log(100, "App Start")
+        
+        print(f"{window_width}x{window_height}+{x}+{y}")
         
         global count_main
         count_main = True
@@ -108,7 +165,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_main, bg=main_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -136,8 +193,6 @@ class Application(tk.Frame):
         start_button = tk.Button(fm_main, text=" せってい ", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_4)
         start_button.pack(side=tk.TOP, pady=10)
         
-        
-
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
 
 
@@ -166,7 +221,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub1, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -222,7 +277,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub2, bg=sub2_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -276,7 +331,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub3, bg=sub3_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -327,7 +382,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub4, bg=sub4_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -343,7 +398,7 @@ class Application(tk.Frame):
         
         space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), width=30, height=1)
         space.pack(side=tk.TOP)
-        label = tk.Label(fm_sub4, text="---- おんせいのON OFF ----", bg=sub4_bg, font=(main_font, 25), width=30, height=3)
+        label = tk.Label(fm_sub4, text="---- おとのおおきさ ----", bg=sub4_bg, font=(main_font, 25), width=30, height=3)
         label.pack(side=tk.TOP, pady=10)
         
         
@@ -356,17 +411,90 @@ class Application(tk.Frame):
         config_window.geometry(config_window_size)
         config_window.title("config_window")
         
-        space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=1)
-        space.pack(side=tk.TOP)
-        label = tk.Label(config_window, text="---- ひらがなのみモード ----", bg=sub4_bg, font=(main_font, 25), width=30, height=3)
-        label.pack(side=tk.TOP, pady=10)
+        space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
+        label = tk.Label(config_window, text="---- おとのおおきさ ----", bg=sub4_bg, font=(main_font, 25), width=30)
+        label.pack()
+        space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
+        
+        #サウンドバー
+        self.sound_var = tk.DoubleVar()
+        soundH = tk.Scale(
+            config_window, 
+            variable=self.sound_var, 
+            orient=tk.HORIZONTAL, 
+            bg="#e6e6fa",
+            fg="#191970", 
+            font=(main_font, 10),
+            length=400, 
+            width=30, 
+            sliderlength=20, 
+            from_=0, 
+            to=10,
+            resolution=1, 
+            tickinterval=2,
+            command=self.slider_scroll
+        )
+        soundH.pack()
+        
+        space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=4)
+        space.pack()
+        label = tk.Label(config_window, text="---- ひらがなのみモード ----", bg=sub4_bg, font=(main_font, 25), width=30)
+        label.pack(pady=1)
+        space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        #space.pack()
+        
+        hiragana_off_button = tk.Button(config_window, text=" OFF ", font=(main_font, 18), bg="#e6e6fa", command=self.hiragana_off)
+        hiragana_off_button.pack(side=tk.RIGHT, padx=50)
+        hiragana_on_button = tk.Button(config_window, text=" ON ", font=(main_font, 18), bg="#e6e6fa", command=self.hiragana_on)
+        hiragana_on_button.pack(side=tk.RIGHT, padx=10)
         
         space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=1)
-        space.pack(side=tk.TOP)
-        label = tk.Label(config_window, text="---- おんせいのON OFF ----", bg=sub4_bg, font=(main_font, 25), width=30, height=3)
-        label.pack(side=tk.TOP, pady=10)
+        space.pack()
         
         return 0
+    
+    
+    #ひらがなON
+    def hiragana_on(self, event=None):
+        global hiragana_on
+        hiragana_on = True
+        print("hiragana_on : " + str(hiragana_on))
+        
+        return hiragana_on
+    
+    
+    #ひらがなOFF
+    def hiragana_off(self, event=None):
+        global hiragana_on
+        hiragana_on = False
+        print("hiragana_on : " + str(hiragana_on))
+        
+        return hiragana_on
+    
+    
+    #sound_varが動かされたとき
+    def slider_scroll(self, event=None):
+        #sound_valueの大きさをリアルタイムで取得する
+        sound_value = self.sound_var.get()
+        print(sound_value)
+        
+    
+    
+    
+    #オプション or 右クリックウィンドウ
+    def show_option(self, e):
+        option_window = tk.Toplevel(bg=main_bg, bd=2)
+        option_window.geometry(option_window_size)
+        option_window.title("option_window")
+        
+        
+        
+        pmenu = tk.Menu(option_window)
+        pmenu.post()
+        
+        
     
     
     
@@ -433,7 +561,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_mic, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -515,7 +643,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_ans_sub1, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -579,6 +707,8 @@ class Application(tk.Frame):
             
             self.return_title()            
             
+        logger.log(100, f"AnswerPerson_sub1 : {selected_value_sub1}")
+        logger.log(100, f"TypeQuestion_sub1 : {new_question_sub1}")
         print("AnswerPerson : " + selected_value_sub1)
         print("TypeQuestion : " + new_question_sub1)
 
@@ -594,9 +724,10 @@ class Application(tk.Frame):
         question_sub1 = new_question_sub1
         if not question_sub1:
             question_sub1:str = "しつもんがにゅうりょくされていなかったみたいだね。\n もういっかいしつもんしたかったら「もういちど」ボタンをおしてね！"
-        #ひらがなだけで解答する場合
+        #ひらがなだけで解答
         if hiragana_on == True:
-            question_sub1 = str(question_sub1) + "という質問について分かりやすくひらがなで解答して"
+            question_sub1 = question_sub1 + "という質問について分かりやすくひらがなだけで解答して"
+            print(question_sub1)
         else:
             pass
                         
@@ -616,11 +747,13 @@ class Application(tk.Frame):
         )
         
         #ChatGPTからの返答の内容
-        res_content = res["choices"][0]["message"]["content"]
-        print("AI_Answer : " + res_content)
+        global res_content_sub1
+        res_content_sub1 = res["choices"][0]["message"]["content"]
+        print("AI_answer : " + res_content_sub1)
+        logger.log(100, f"AI_answer : {res_content_sub1}")
         
         global new_answer
-        new_answer = f"{selected_value_sub1}：{res_content}"
+        new_answer = f"{selected_value_sub1}：{res_content_sub1}"
         print(new_answer)
         
         #エラー防止
@@ -634,6 +767,10 @@ class Application(tk.Frame):
         #ウィンドウのテキストを表示
         self.text_output_sub1.delete("0.0", tk.END) 
         self.text_output_sub1.insert(tk.END, new_answer)
+        
+        #Voicevoxで音声を読み上げる
+        print(res_content_sub1)
+        text_to_voice(res_content_sub1)
         
         return 0
             
@@ -751,7 +888,7 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_type, bg=sub3_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS)
+        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
         toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
@@ -811,6 +948,8 @@ class Application(tk.Frame):
         type_text_value_sub3 = self.text_input.get( "1.0", "end-1c")
         print("AnswerPerson : " + selected_value_sub3)
         print("TypeQuestion : " + type_text_value_sub3)
+        logger.log(100, f"AnswerPerson_sub3 : {selected_value_sub3}")
+        logger.log(100, f"TypeQuestion_sub3 : {type_text_value_sub3}")
 
         #エラー防止
         time.sleep(0.1) 
@@ -826,7 +965,8 @@ class Application(tk.Frame):
             question_sub3:str = "しつもんがにゅうりょくされていなかったみたいだね。\n もういっかいしつもんしたかったら「もういちど」ボタンをおしてね！"
         #ひらがなだけで解答
         if hiragana_on == True:
-            question_sub3 = question_sub3 + "という質問について分かりやすくひらがなで解答して"
+            question_sub3 = question_sub3 + "という質問について分かりやすくひらがなだけで解答して"
+            print(question_sub3)
         else:
             pass
                         
@@ -846,11 +986,13 @@ class Application(tk.Frame):
         )
         
         #ChatGPTからの返答の内容
-        res_content = res["choices"][0]["message"]["content"]
-        print("AI_Answer : " + res_content)
+        global res_content_sub3
+        res_content_sub3 = res["choices"][0]["message"]["content"]
+        print("AI_Answer : " + res_content_sub3)
+        logger.log(100, f"AI_answer : {res_content_sub3}")
         
         global new_answer
-        new_answer = f"{selected_value_sub3}：{res_content}"
+        new_answer = f"{selected_value_sub3}：{res_content_sub3}"
         print(new_answer)
         
         #エラー防止
@@ -985,6 +1127,39 @@ class Application(tk.Frame):
         
         return 0
 
+
+#アプリケーションが終了されたとき
+def goodbye():
+    popup = sg.popup_ok_cancel('アプリケーションを終了しますか？', font=(main_font, 14), text_color='#ff1493', background_color=main_bg)
+    print(popup)
+    
+    if popup == "OK":
+        exit_message = "App Exit"
+        #messagebox.showinfo("App Exit", "アプリケーションを終了しました。")
+        logger.log(100, exit_message)
+        print(exit_message)
+        pass
+    
+    elif popup == "Cancel":
+        restart_message = "continue" 
+        # 「continue」を引数と捨て再起動関数を実行
+        restart(restart_message)
+        
+        
+#再起動
+def restart(restart_message):
+    
+    if restart_message == "continue":
+        print("continue... ")
+        logger.log(100, "continue")
+    
+    #Restart python script itself
+    os.execv(sys.executable, ['python'] + sys.argv)
+    
+
+#pythonプログラムが終了したことを取得してgoodbye関数を実行
+atexit.register(goodbye)
+
         
         
 # 実行
@@ -999,6 +1174,9 @@ window_height = 720
 x = (screen_width // 2) - (window_width // 2)
 y = (screen_height // 3) - (window_height // 3)
 
+#pyautoguiとモジュールが干渉するためFHDの時（1200x720+168+48）
+#x = 168
+#y = 48
 myapp = Application(master=main_window)
 myapp.master.title("GPT-3.5-turbo") # メインウィンドウの名前
 myapp.master.geometry(f"{window_width}x{window_height}+{x}+{y}") # ウィンドウの幅と高さピクセル単位で指定（width x height）
