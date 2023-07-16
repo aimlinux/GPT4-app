@@ -287,3 +287,18 @@ Bさん：おはようございます。
 2023-07-14 18:51:39,442 --- process : 17780 --- message : AnswerPerson_sub1 : おこってるひと
 2023-07-14 18:51:39,459 --- process : 17780 --- message : TypeQuestion_sub1 : わたしはだーれ
 2023-07-14 18:51:41,540 --- process : 17780 --- message : AI_answer : わ た し
+2023-07-16 14:34:53,431 --- process : 7408 --- message : App Start
+2023-07-16 14:34:59,207 --- process : 7408 --- message : App Start
+2023-07-16 14:38:38,404 --- process : 7408 --- message : AnswerPerson_sub1 : アメリカ人
+2023-07-16 14:38:38,425 --- process : 7408 --- message : TypeQuestion_sub1 : よなごこうせんのとくちょうはなに
+2023-07-16 14:39:17,255 --- process : 7408 --- message : AnswerPerson_sub1 : アメリカ人
+2023-07-16 14:39:17,255 --- process : 7408 --- message : TypeQuestion_sub1 : よなごこうせんのとくちょうはなに
+2023-07-16 14:39:18,320 --- process : 7408 --- message : AnswerPerson_sub1 : アメリカ人
+2023-07-16 14:39:18,321 --- process : 7408 --- message : TypeQuestion_sub1 : よなごこうせんのとくちょうはなに
+2023-07-16 14:40:15,913 --- process : 19896 --- message : App Start
+2023-07-16 14:40:28,747 --- process : 19896 --- message : AnswerPerson_sub3 : せんせい
+2023-07-16 14:40:28,747 --- process : 19896 --- message : TypeQuestion_sub3 : おはようございます。
+2023-07-16 14:45:19,048 --- process : 4856 --- message : App Start
+2023-07-16 14:47:37,013 --- process : 4856 --- message : AnswerPerson_sub3 : こうせんせい
+2023-07-16 14:47:37,013 --- process : 4856 --- message : TypeQuestion_sub3 : わたしはだれ？
+2023-07-16 14:47:42,795 --- process : 4856 --- message : App Exit
