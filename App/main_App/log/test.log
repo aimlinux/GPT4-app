@@ -6,38 +6,38 @@
 2023-07-11 08:17:36,040 --- process : 7388 --- message : App Start
 time : 2023-07-12 12:15:18,660 ----- process : 16164 ----- message : App Start
 time : 2023-07-12 12:17:02,915 ----- process : 8880 ----- message : App Start
-time : 2023-07-12 12:17:15,300 ----- process : 8880 ----- message : AnswerPerson_sub1 : ƒAƒƒŠƒJl
-time : 2023-07-12 12:17:15,315 ----- process : 8880 ----- message : TypeQuestion_sub1 : ‚í‚½‚µ‚Í‚¾[‚ê
-time : 2023-07-12 12:17:16,813 ----- process : 8880 ----- message : AI_answer : ‚í‚½‚µ‚ÍƒAƒƒŠƒJl
+time : 2023-07-12 12:17:15,300 ----- process : 8880 ----- message : AnswerPerson_sub1 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+time : 2023-07-12 12:17:15,315 ----- process : 8880 ----- message : TypeQuestion_sub1 : ï¿½í‚½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½[ï¿½ï¿½
+time : 2023-07-12 12:17:16,813 ----- process : 8880 ----- message : AI_answer : ï¿½í‚½ï¿½ï¿½ï¿½ÍƒAï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
 time : 2023-07-12 12:18:18,202 ----- process : 8880 ----- message : App Exit
  2023-07-12 12:18:22,594 --- process : 15392 --- message : App Start
- 2023-07-12 12:18:46,549 --- process : 15392 --- message : AnswerPerson_sub3 : ‚¨‚©‚ ‚³‚ñ
- 2023-07-12 12:18:46,549 --- process : 15392 --- message : TypeQuestion_sub3 : ’¹ŽæŒ§‚Á‚Äl‹C‚È‚ÌH
- 2023-07-12 12:18:49,866 --- process : 15392 --- message : AI_answer : ‚Æ‚Á‚Æ‚è‚¯‚ñ‚ÍA‚Ð‚Æ‚¯‚ñ‚µ‚°‚ñ‚ª‚·‚­‚È‚¢‚Å‚·‚ªA‚µ‚ñ‚¹‚«‚ª‚©‚¸‚©‚¸‚¢‚ë‚ñ‚È‚Æ‚±‚ë‚©‚ç‚«‚Ü‚·B‚Æ‚­‚ÉA‚Æ‚è‚ð‚©‚ñ‚ª‚¦‚Ä‚¢‚é‚Ð‚Æ‚É‚Æ‚Á‚ÄA‚Æ‚Á‚Æ‚è‚¯‚ñ‚Í‚¢‚¢‚Æ‚±‚ë‚Å‚·B‚µ‚½‚ª‚Á‚ÄA‚Æ‚Á‚Æ‚è‚¯‚ñ‚Í‚É‚ñ‚«‚ª‚ ‚é‚Æ‚¢‚¦‚Ü‚·B
+ 2023-07-12 12:18:46,549 --- process : 15392 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ 2023-07-12 12:18:46,549 --- process : 15392 --- message : TypeQuestion_sub3 : ï¿½ï¿½ï¿½æŒ§ï¿½ï¿½ï¿½Älï¿½Cï¿½È‚ÌH
+ 2023-07-12 12:18:49,866 --- process : 15392 --- message : AI_answer : ï¿½Æ‚ï¿½ï¿½Æ‚è‚¯ï¿½ï¿½ÍAï¿½Ð‚Æ‚ï¿½ï¿½ñ‚µ‚ï¿½ï¿½ñ‚ª‚ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ñ‚¹‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚Æ‚ï¿½ï¿½ë‚©ï¿½ç‚«ï¿½Ü‚ï¿½ï¿½Bï¿½Æ‚ï¿½ï¿½ÉAï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ñ‚ª‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Ð‚Æ‚É‚Æ‚ï¿½ï¿½ÄAï¿½Æ‚ï¿½ï¿½Æ‚è‚¯ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÄAï¿½Æ‚ï¿½ï¿½Æ‚è‚¯ï¿½ï¿½Í‚É‚ñ‚«‚ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
  2023-07-12 12:21:35,171 --- process : 15392 --- message : App Exit
 2023-07-12 12:34:12,928 --- process : 18068 --- message : App Start
-2023-07-12 12:34:27,401 --- process : 18068 --- message : AnswerPerson_sub1 : ŠÖ¼l
-2023-07-12 12:34:27,402 --- process : 18068 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-12 12:34:32,263 --- process : 18068 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·‚Æ‚ÍA’©‚Ìˆ¥ŽA‚Ìˆê‚Â‚ÅA“ú–{‚Ì•¶‰»‚Å‚æ‚­Žg‚í‚ê‚é•\Œ»‚Å‚·BŽžŠÔ‘Ñ‚ÉŠÖŒW‚È‚­A’©‚É‰ï‚Á‚½l‚É‘Î‚µ‚ÄŽg‚í‚ê‚Ü‚·B‚Ü‚½A‚æ‚è’š”J‚È•\Œ»‚Æ‚µ‚Äu‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·v‚Æ‚¢‚¤Œ¾—t‚à‚ ‚è‚Ü‚·B‚±‚Ìˆ¥ŽA‚ÍA‘ŠŽè‚É‘Î‚µ‚Ä’©‚ÌˆÀ‘S‚âŒ’N‚ðŠè‚¢A‹CŽ‚¿—Ç‚¢ˆê“ú‚ð‰ß‚²‚¹‚é‚æ‚¤‚ÉŠè‚¤ˆÓ–¡‚ªž‚ß‚ç‚ê‚Ä‚¢‚Ü‚·B
-2023-07-12 12:34:36,527 --- process : 18068 --- message : AnswerPerson_sub1 : ŠÖ¼l
-2023-07-12 12:34:36,527 --- process : 18068 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-12 12:34:40,681 --- process : 18068 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·B
+2023-07-12 12:34:27,401 --- process : 18068 --- message : AnswerPerson_sub1 : ï¿½Öï¿½ï¿½l
+2023-07-12 12:34:27,402 --- process : 18068 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-12 12:34:32,263 --- process : 18068 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Æ‚ÍAï¿½ï¿½ï¿½Ìˆï¿½ï¿½Aï¿½Ìˆï¿½Â‚ÅAï¿½ï¿½ï¿½{ï¿½Ì•ï¿½ï¿½ï¿½ï¿½Å‚æ‚­ï¿½gï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½Ô‘Ñ‚ÉŠÖŒWï¿½È‚ï¿½ï¿½Aï¿½ï¿½ï¿½É‰ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½É‘Î‚ï¿½ï¿½ÄŽgï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Ü‚ï¿½ï¿½Aï¿½ï¿½è’šï¿½Jï¿½È•\ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Äuï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½Ìˆï¿½ï¿½Aï¿½ÍAï¿½ï¿½ï¿½ï¿½É‘Î‚ï¿½ï¿½Ä’ï¿½ï¿½Ìˆï¿½ï¿½Sï¿½âŒ’ï¿½Nï¿½ï¿½ï¿½è‚¢ï¿½Aï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½ÉŠè‚¤ï¿½Ó–ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B
+2023-07-12 12:34:36,527 --- process : 18068 --- message : AnswerPerson_sub1 : ï¿½Öï¿½ï¿½l
+2023-07-12 12:34:36,527 --- process : 18068 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-12 12:34:40,681 --- process : 18068 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-‚¨ (o)FŒhÌ‚â’š”J‚³‚ð•\‚·Ú“ªŒê‚Å‚·B
-‚Í (ha)Fu‚Ív‚Í“ú–{Œê‚Ì•ŽŒ‚ÅAŽåŒê‚ª‰½‚©‚ðŽ¦‚·–ðŠ„‚ðŽ‚¿‚Ü‚·B
-‚æ‚¤ (you)Fu‚æ‚¤v‚Íu—lvi‚³‚Üj‚ÌŒhŒêŒ`‚Å‚·Bˆ¥ŽA‚â’š”J‚È•\Œ»‚ÉŽg‚í‚ê‚Ü‚·B
-‚²‚´‚¢‚Ü‚· (gozaimasu)Fu‚²‚´‚¢‚Ü‚·v‚Í’š”J‚È•\Œ»‚ÅAu‚ ‚è‚Ü‚·v‚ÌŒhŒêŒ`‚Å‚·B
+ï¿½ï¿½ (o)ï¿½Fï¿½hï¿½Ì‚â’šï¿½Jï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½Ú“ï¿½ï¿½ï¿½Å‚ï¿½ï¿½B
+ï¿½ï¿½ (ha)ï¿½Fï¿½uï¿½Ívï¿½Í“ï¿½ï¿½{ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ÅAï¿½ï¿½ê‚ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+ï¿½æ‚¤ (you)ï¿½Fï¿½uï¿½æ‚¤ï¿½vï¿½Íuï¿½lï¿½vï¿½iï¿½ï¿½ï¿½Üjï¿½ÌŒhï¿½ï¿½`ï¿½Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½Aï¿½â’šï¿½Jï¿½È•\ï¿½ï¿½ï¿½ÉŽgï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ (gozaimasu)ï¿½Fï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½vï¿½Í’ï¿½ï¿½Jï¿½È•\ï¿½ï¿½ï¿½ÅAï¿½uï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½vï¿½ÌŒhï¿½ï¿½`ï¿½Å‚ï¿½ï¿½B
 
-u‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·v‚Æ‚ÍA’©‚Ìˆ¥ŽA‚Ìˆê‚Â‚ÅAu‚¨‚Í‚æ‚¤v‚Æ‚¢‚¤ˆÓ–¡‚Å‚·B
+ï¿½uï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½vï¿½Æ‚ÍAï¿½ï¿½ï¿½Ìˆï¿½ï¿½Aï¿½Ìˆï¿½Â‚ÅAï¿½uï¿½ï¿½ï¿½Í‚æ‚¤ï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Ó–ï¿½ï¿½Å‚ï¿½ï¿½B
 2023-07-12 12:38:50,450 --- process : 18068 --- message : App Exit
 2023-07-12 12:38:52,983 --- process : 17036 --- message : App Start
 2023-07-12 12:39:35,874 --- process : 17036 --- message : App Start
-2023-07-12 12:39:47,196 --- process : 17036 --- message : AnswerPerson_sub1 : ‚¨‚±‚Á‚Ä‚é‚Ð‚Æ
-2023-07-12 12:39:47,196 --- process : 17036 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-12 12:39:50,057 --- process : 17036 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·‚Æ‚ÍA’©‚Éˆ¥ŽA‚ð‚·‚éÛ‚ÉŽg—p‚³‚ê‚éŒ¾—t‚Å‚·B’©‚Ì‚ ‚¢‚³‚Â‚Ìˆê‚Â‚Å‚ ‚èA‘ŠŽè‚É’©‚ÌŒ’N‚ð‹F‚éˆÓ–¡‚ªž‚ß‚ç‚ê‚Ä‚¢‚Ü‚·B
-2023-07-12 12:40:02,951 --- process : 17036 --- message : AnswerPerson_sub1 : ‚¨‚±‚Á‚Ä‚é‚Ð‚Æ
-2023-07-12 12:40:02,951 --- process : 17036 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-12 12:40:07,043 --- process : 17036 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·‚ÍA’©‚Ìˆ¥ŽA‚Å‚·B’©‹N‚«‚½‚çA‘¼‚Ìl‚Éˆ¥ŽA‚·‚é‚Æ‚«‚ÉŽg‚¢‚Ü‚·B‘ŠŽè‚É‘Î‚µ‚ÄA—Ç‚¢’©‚ðŒ}‚¦‚é‚æ‚¤‚ÉŠè‚Á‚Ä‚¢‚éˆÓ–¡‚ª‚ ‚è‚Ü‚·B
+2023-07-12 12:39:47,196 --- process : 17036 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½Ð‚ï¿½
+2023-07-12 12:39:47,196 --- process : 17036 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-12 12:39:50,057 --- process : 17036 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Æ‚ÍAï¿½ï¿½ï¿½Éˆï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û‚ÉŽgï¿½pï¿½ï¿½ï¿½ï¿½éŒ¾ï¿½tï¿½Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚Ìˆï¿½Â‚Å‚ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½É’ï¿½ï¿½ÌŒï¿½ï¿½Nï¿½ï¿½ï¿½Fï¿½ï¿½Ó–ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B
+2023-07-12 12:40:02,951 --- process : 17036 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½Ð‚ï¿½
+2023-07-12 12:40:02,951 --- process : 17036 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-12 12:40:07,043 --- process : 17036 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ÍAï¿½ï¿½ï¿½Ìˆï¿½ï¿½Aï¿½Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Ìlï¿½Éˆï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ÉŽgï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½É‘Î‚ï¿½ï¿½ÄAï¿½Ç‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½ÉŠï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Ó–ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 2023-07-12 12:40:32,395 --- process : 17036 --- message : App Start
 2023-07-12 12:42:36,798 --- process : 17036 --- message : App Exit
 2023-07-12 14:47:12,728 --- process : 8152 --- message : App Start
@@ -95,20 +95,20 @@ time : 2023-07-12 12:18:18,202 ----- process : 8880 ----- message : App Exit
 2023-07-12 15:47:09,253 --- process : 2136 --- message : App Start
 2023-07-12 15:47:22,621 --- process : 2136 --- message : App Exit
 2023-07-12 15:51:03,638 --- process : 16128 --- message : App Start
-2023-07-12 15:51:22,237 --- process : 16128 --- message : AnswerPerson_sub1 : ‚ ‚©‚¿‚á‚ñ
-2023-07-12 15:51:22,237 --- process : 16128 --- message : TypeQuestion_sub1 : ‚æ‚È‚²‚±‚¤‚¹‚ñ‚Ì‚Æ‚­‚¿‚å‚¤‚Í‚È‚É
-2023-07-12 15:51:27,325 --- process : 16128 --- message : AI_answer : ‚æ‚È‚²‚±‚¤‚¹‚ñ‚Ì‚Æ‚­‚¿‚å‚¤‚ÍA‚ ‚©‚¿‚á‚ñ‚ª’a¶‚µ‚Ä‚©‚ç1Î‚Ü‚Å‚ÌŽžŠú‚Å‚·B‚ ‚©‚¿‚á‚ñ‚ÍA‹ƒ‚­‚±‚Æ‚âÎ‚¤‚±‚Æ‚ª‚æ‚­‚ ‚è‚Ü‚·B‚Ü‚½A‚¤‚Â‚Ô‚¹‚©‚ç‚¤‚Â•š‚¹‚É‚È‚é‚±‚Æ‚âAŽñ‚ªÀ‚é‚æ‚¤‚É‚È‚é‚±‚Æ‚à“Á’¥‚Å‚·B‚æ‚¾‚ê‚ð‚½‚­‚³‚ñ‚‚ç‚·‚±‚Æ‚à‚ ‚è‚Ü‚·‚µA‚¨‚µ‚á‚×‚è‚È‚Ç‚ÌŒ¾—t‚Ì”­’B‚ài‚Ý‚Ü‚·B‚±‚ê‚ª‚æ‚È‚²‚±‚¤‚¹‚ñ‚Ì“Á’¥‚Å‚·B
+2023-07-12 15:51:22,237 --- process : 16128 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2023-07-12 15:51:22,237 --- process : 16128 --- message : TypeQuestion_sub1 : ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Æ‚ï¿½ï¿½ï¿½ï¿½å‚¤ï¿½Í‚È‚ï¿½
+2023-07-12 15:51:27,325 --- process : 16128 --- message : AI_answer : ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Æ‚ï¿½ï¿½ï¿½ï¿½å‚¤ï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ñ‚ª’aï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½1ï¿½Î‚Ü‚Å‚ÌŽï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½Î‚ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½æ‚­ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Ü‚ï¿½ï¿½Aï¿½ï¿½ï¿½Â‚Ô‚ï¿½ï¿½ï¿½ï¿½ç‚¤ï¿½Â•ï¿½ï¿½ï¿½ï¿½É‚È‚é‚±ï¿½Æ‚ï¿½Aï¿½ñ‚ªï¿½ï¿½ï¿½æ‚¤ï¿½É‚È‚é‚±ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Bï¿½æ‚¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ñ‚‚ç‚·ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×‚ï¿½È‚Ç‚ÌŒï¿½ï¿½tï¿½Ì”ï¿½ï¿½Bï¿½ï¿½ï¿½iï¿½Ý‚Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ê‚ªï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì“ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½B
 2023-07-12 15:52:39,847 --- process : 16128 --- message : App Exit
 2023-07-14 16:50:22,169 --- process : 18212 --- message : App Start
-2023-07-14 16:50:31,860 --- process : 18212 --- message : AnswerPerson_sub1 : ‚¨‚±‚Á‚Ä‚é‚Ð‚Æ
-2023-07-14 16:50:31,894 --- process : 18212 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-14 16:50:36,056 --- process : 18212 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·‚ÍA’©‚Ìˆ¥ŽA‚Å‚·Bu‚¨‚Í‚æ‚¤v‚ÍA‘ŠŽè‚É‘Î‚µ‚Ä’©‚Ì‚ ‚¢‚³‚Â‚ð‚·‚éŽž‚ÉŽg‚¢‚Ü‚·Bu‚²‚´‚¢‚Ü‚·v‚ÍA’š”J‚È˜b‚µ•û‚Å‚·B
+2023-07-14 16:50:31,860 --- process : 18212 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½Ð‚ï¿½
+2023-07-14 16:50:31,894 --- process : 18212 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-14 16:50:36,056 --- process : 18212 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ÍAï¿½ï¿½ï¿½Ìˆï¿½ï¿½Aï¿½Å‚ï¿½ï¿½Bï¿½uï¿½ï¿½ï¿½Í‚æ‚¤ï¿½vï¿½ÍAï¿½ï¿½ï¿½ï¿½É‘Î‚ï¿½ï¿½Ä’ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ï¿½éŽžï¿½ÉŽgï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½vï¿½ÍAï¿½ï¿½ï¿½Jï¿½È˜bï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½B
 
-—áF
-A‚³‚ñF‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·B
-B‚³‚ñF‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·B
+ï¿½ï¿½F
+Aï¿½ï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+Bï¿½ï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-‚±‚Ì‚æ‚¤‚ÉŽg‚í‚ê‚Ü‚·B
+ï¿½ï¿½ï¿½Ì‚æ‚¤ï¿½ÉŽgï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 2023-07-14 16:50:49,247 --- process : 18212 --- message : App Exit
 2023-07-14 16:53:47,695 --- process : 11524 --- message : App Start
 2023-07-14 16:55:18,970 --- process : 11592 --- message : App Start
@@ -168,233 +168,122 @@ B‚³‚ñF‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·B
 2023-07-14 18:26:19,319 --- process : 17740 --- message : App Start
 2023-07-14 18:26:34,253 --- process : 17740 --- message : App Exit
 2023-07-14 18:34:05,382 --- process : 17432 --- message : App Start
-2023-07-14 18:34:25,067 --- process : 17432 --- message : AnswerPerson_sub3 : ‚¿‚ã‚¤‚ª‚­‚¹‚¢
-2023-07-14 18:34:25,098 --- process : 17432 --- message : TypeQuestion_sub3 : ‚í‚½‚µ‚Í‚¾[‚ê
-2023-07-14 18:34:27,055 --- process : 17432 --- message : AI_answer : Ž„‚ÍAIƒ`ƒƒƒbƒgƒ{ƒbƒg‚Å‚·B‚Ç‚Ì‚æ‚¤‚É‚¨Žè“`‚¢‚Å‚«‚Ü‚·‚©H
+2023-07-14 18:34:25,067 --- process : 17432 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ã‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2023-07-14 18:34:25,098 --- process : 17432 --- message : TypeQuestion_sub3 : ï¿½í‚½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½[ï¿½ï¿½
+2023-07-14 18:34:27,055 --- process : 17432 --- message : AI_answer : ï¿½ï¿½ï¿½ï¿½AIï¿½`ï¿½ï¿½ï¿½bï¿½gï¿½{ï¿½bï¿½gï¿½Å‚ï¿½ï¿½Bï¿½Ç‚Ì‚æ‚¤ï¿½É‚ï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½H
 2023-07-14 18:34:30,293 --- process : 17432 --- message : App Start
-2023-07-14 18:34:47,499 --- process : 17432 --- message : AnswerPerson_sub3 : ƒAƒƒŠƒJl
-2023-07-14 18:34:47,499 --- process : 17432 --- message : TypeQuestion_sub3 : ‚í‚½‚µ‚Í‚¾[‚êH
-2023-07-14 18:34:48,952 --- process : 17432 --- message : AI_answer : ‚ ‚È‚½‚ÍƒAƒƒŠƒJl‚Å‚·B
-2023-07-14 18:34:57,400 --- process : 17432 --- message : AnswerPerson_sub3 : ƒAƒƒŠƒJl
-2023-07-14 18:34:57,400 --- process : 17432 --- message : TypeQuestion_sub3 : ‚í‚½‚µ‚Í‚¾[‚êH
-2023-07-14 18:34:58,372 --- process : 17432 --- message : AI_answer : ‚ ‚È‚½‚Í‚¾‚êH
-2023-07-14 18:34:59,293 --- process : 17432 --- message : AnswerPerson_sub3 : ƒAƒƒŠƒJl
-2023-07-14 18:34:59,293 --- process : 17432 --- message : TypeQuestion_sub3 : ‚í‚½‚µ‚Í‚¾[‚êH
-2023-07-14 18:35:00,723 --- process : 17432 --- message : AI_answer : ‚ ‚È‚½‚Í‚í‚½‚µ‚ÉŽ¿–â‚µ‚Ä‚¢‚él‚Å‚·B
-2023-07-14 18:35:19,638 --- process : 17432 --- message : AnswerPerson_sub3 : ƒAƒƒŠƒJl
-2023-07-14 18:35:19,638 --- process : 17432 --- message : TypeQuestion_sub3 : •ÄŽq‚ê‚Á‚Ä‚Ç‚ñ‚È‚Æ‚±‚ëH
-2023-07-14 18:35:29,605 --- process : 17432 --- message : AI_answer : ‚ÎA•ÄŽq‚ê‚Í“ú–{‚É‚ ‚é‚“™ê–åŠwZ‚Ì‚Ð‚Æ‚Â‚Å‚·B•ÄŽqŽs‚ÉˆÊ’u‚µ‚Ä‚¢‚ÄAHŠw‚âî•ñ‹Zp‚È‚Ç‚Ìê–å’mŽ¯‚ðŠw‚Ô‚±‚Æ‚ª‚Å‚«‚Ü‚·BŠw¶‚½‚¿‚ÍŽÀK‚âŽÀŒ±‚ð’†S‚ÉŠw‚ÑAŽÀ‘H“I‚ÈƒXƒLƒ‹‚ðg‚É‚Â‚¯‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B‚Ü‚½AƒNƒ‰ƒuŠˆ“®‚â•¶‰»Õ‚È‚Ç‚ÌƒCƒxƒ“ƒg‚à‚ ‚èA[ŽÀ‚µ‚½Šw¶¶Šˆ‚ð‘—‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·BƒLƒƒƒ“ƒpƒX‚à‚«‚ê‚¢‚ÅÝ”õ‚ª®‚Á‚Ä‚¢‚ÄAŠwKŠÂ‹«‚à‚æ‚¢‚Å‚·BŒoÏ—Í‚â‹Zp—Í‚ðŽ‚Á‚½ŠwZ‚ÅA‘²‹ÆŒã‚ÍŽY‹ÆŠE‚âŒ¤‹†‹@ŠÖ‚È‚Ç‚ÅŠˆ–ô‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+2023-07-14 18:34:47,499 --- process : 17432 --- message : AnswerPerson_sub3 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+2023-07-14 18:34:47,499 --- process : 17432 --- message : TypeQuestion_sub3 : ï¿½í‚½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½[ï¿½ï¿½H
+2023-07-14 18:34:48,952 --- process : 17432 --- message : AI_answer : ï¿½ï¿½ï¿½È‚ï¿½ï¿½ÍƒAï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½lï¿½Å‚ï¿½ï¿½B
+2023-07-14 18:34:57,400 --- process : 17432 --- message : AnswerPerson_sub3 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+2023-07-14 18:34:57,400 --- process : 17432 --- message : TypeQuestion_sub3 : ï¿½í‚½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½[ï¿½ï¿½H
+2023-07-14 18:34:58,372 --- process : 17432 --- message : AI_answer : ï¿½ï¿½ï¿½È‚ï¿½ï¿½Í‚ï¿½ï¿½ï¿½H
+2023-07-14 18:34:59,293 --- process : 17432 --- message : AnswerPerson_sub3 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+2023-07-14 18:34:59,293 --- process : 17432 --- message : TypeQuestion_sub3 : ï¿½í‚½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½[ï¿½ï¿½H
+2023-07-14 18:35:00,723 --- process : 17432 --- message : AI_answer : ï¿½ï¿½ï¿½È‚ï¿½ï¿½Í‚í‚½ï¿½ï¿½ï¿½ÉŽï¿½ï¿½â‚µï¿½Ä‚ï¿½ï¿½ï¿½lï¿½Å‚ï¿½ï¿½B
+2023-07-14 18:35:19,638 --- process : 17432 --- message : AnswerPerson_sub3 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+2023-07-14 18:35:19,638 --- process : 17432 --- message : TypeQuestion_sub3 : ï¿½ÄŽqï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚Ç‚ï¿½È‚Æ‚ï¿½ï¿½ï¿½H
+2023-07-14 18:35:29,605 --- process : 17432 --- message : AI_answer : ï¿½ÎAï¿½ÄŽqï¿½ï¿½ï¿½ï¿½Í“ï¿½ï¿½{ï¿½É‚ï¿½ï¿½é‚ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½Zï¿½Ì‚Ð‚Æ‚Â‚Å‚ï¿½ï¿½Bï¿½ÄŽqï¿½sï¿½ÉˆÊ’uï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ÄAï¿½Hï¿½wï¿½ï¿½ï¿½ï¿½Zï¿½pï¿½È‚Ç‚Ìï¿½ï¿½mï¿½ï¿½ï¿½ï¿½ï¿½wï¿½Ô‚ï¿½ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍŽï¿½ï¿½Kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ð’†Sï¿½ÉŠwï¿½ÑAï¿½ï¿½ï¿½Hï¿½Iï¿½ÈƒXï¿½Lï¿½ï¿½ï¿½ï¿½gï¿½É‚Â‚ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Ü‚ï¿½ï¿½Aï¿½Nï¿½ï¿½ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½â•¶ï¿½ï¿½ï¿½Õ‚È‚Ç‚ÌƒCï¿½xï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ð‘—‚é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½pï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ê‚¢ï¿½ÅÝ”ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ÄAï¿½wï¿½Kï¿½Â‹ï¿½ï¿½ï¿½ï¿½æ‚¢ï¿½Å‚ï¿½ï¿½Bï¿½oï¿½Ï—Í‚ï¿½Zï¿½pï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½Zï¿½ÅAï¿½ï¿½ï¿½ÆŒï¿½ÍŽYï¿½ÆŠEï¿½âŒ¤ï¿½ï¿½ï¿½@ï¿½Ö‚È‚Ç‚ÅŠï¿½ï¿½ô‚·‚é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 2023-07-14 18:35:35,267 --- process : 17432 --- message : App Start
-2023-07-14 18:36:11,925 --- process : 17432 --- message : AnswerPerson_sub3 : ƒAƒƒŠƒJl
-2023-07-14 18:36:11,925 --- process : 17432 --- message : TypeQuestion_sub3 : ˆÔ‚ß‚Ä
-2023-07-14 18:36:20,077 --- process : 17432 --- message : AI_answer : ‚ ‚È‚½‚ª”ß‚µ‚¢‹CŽ‚¿‚â¢‚Á‚Ä‚¢‚éŽžAŽ„‚Í‚ ‚È‚½‚ðˆÔ‚ß‚½‚¢‚ÆŽv‚¢‚Ü‚·BˆÔ‚ß‚é‚Æ‚ÍA‘ŠŽè‚ª¢‚Á‚Ä‚¢‚é‚Æ‚«‚ÉAS‚ÌŽx‚¦‚âˆÀSŠ´‚ð—^‚¦‚é‚±‚Æ‚Å‚·BŽ„‚Í‚ ‚È‚½‚Ì‘¤‚É‚¢‚ÄA‚ ‚È‚½‚ÌŠ´î‚âó‹µ‚ð—‰ð‚µA‹¤Š´‚µ‚Ü‚·BŽ„‚Í‚ ‚È‚½‚Ì˜b‚ð•·‚«A‚ ‚È‚½‚ÌŠ´‚¶‚Ä‚¢‚é‚±‚Æ‚ðŽó‚¯Ž~‚ß‚Ü‚·Bˆê‚É”ß‚µ‚ñ‚¾‚èA–â‘è‰ðŒˆ‚ÌŽè•‚¯‚ð‚µ‚½‚èA•K—v‚ÈƒTƒ|[ƒg‚ð’ñ‹Ÿ‚µ‚Ü‚·B‚ ‚È‚½‚Íˆêl‚Å‚Í‚È‚­AŽ„‚Í‚ ‚È‚½‚Ì–¡•û‚Å‚·B‚Ç‚ñ‚È‚±‚Æ‚ª‚ ‚Á‚Ä‚àAŽ„‚Í‚ ‚È‚½‚ðŽx‚¦‚Ü‚·B
+2023-07-14 18:36:11,925 --- process : 17432 --- message : AnswerPerson_sub3 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+2023-07-14 18:36:11,925 --- process : 17432 --- message : TypeQuestion_sub3 : ï¿½Ô‚ß‚ï¿½
+2023-07-14 18:36:20,077 --- process : 17432 --- message : AI_answer : ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½â¢ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½éŽžï¿½Aï¿½ï¿½ï¿½Í‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½Ô‚ß‚ï¿½ï¿½ï¿½ï¿½ÆŽvï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Ô‚ß‚ï¿½Æ‚ÍAï¿½ï¿½ï¿½è‚ªï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ÉAï¿½Sï¿½ÌŽxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Sï¿½ï¿½ï¿½ï¿½^ï¿½ï¿½ï¿½é‚±ï¿½Æ‚Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½Í‚ï¿½ï¿½È‚ï¿½ï¿½Ì‘ï¿½ï¿½É‚ï¿½ï¿½ÄAï¿½ï¿½ï¿½È‚ï¿½ï¿½ÌŠï¿½ï¿½ï¿½ï¿½ó‹µ‚ð—‰ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½Í‚ï¿½ï¿½È‚ï¿½ï¿½Ì˜bï¿½ð•·‚ï¿½ï¿½Aï¿½ï¿½ï¿½È‚ï¿½ï¿½ÌŠï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½ó‚¯Ž~ï¿½ß‚Ü‚ï¿½ï¿½Bï¿½êï¿½É”ß‚ï¿½ï¿½ñ‚¾‚ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌŽè•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Kï¿½vï¿½ÈƒTï¿½|ï¿½[ï¿½gï¿½ï¿½ñ‹Ÿ‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½È‚ï¿½ï¿½Íˆï¿½lï¿½Å‚Í‚È‚ï¿½ï¿½Aï¿½ï¿½ï¿½Í‚ï¿½ï¿½È‚ï¿½ï¿½Ì–ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Bï¿½Ç‚ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Aï¿½ï¿½ï¿½Í‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 2023-07-14 18:36:33,102 --- process : 17432 --- message : App Start
 2023-07-14 18:36:38,390 --- process : 17432 --- message : App Exit
 2023-07-14 18:36:40,465 --- process : 12060 --- message : App Start
-2023-07-14 18:36:50,631 --- process : 12060 --- message : AnswerPerson_sub3 : ‚±‚¢‚Ñ‚Æ
-2023-07-14 18:36:50,631 --- process : 12060 --- message : TypeQuestion_sub3 : ˆÔ‚ß‚Ä
+2023-07-14 18:36:50,631 --- process : 12060 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ï¿½ï¿½Ñ‚ï¿½
+2023-07-14 18:36:50,631 --- process : 12060 --- message : TypeQuestion_sub3 : ï¿½Ô‚ß‚ï¿½
 
-2023-07-14 18:37:10,576 --- process : 12060 --- message : AI_answer : ‚±‚¢‚Ñ‚Æ‚³‚ñA‚¨”Y‚Ý‚Ì‚æ‚¤‚Å‚·‚ËBˆÔ‚ß‚é‚±‚Æ‚ÍA‘ŠŽè‚ÌS‚ð—Ž‚¿’…‚©‚¹‚½‚è‹CŽ‚¿‚ð–ü‚·‚½‚ß‚És‚¤‚±‚Æ‚Å‚·B
+2023-07-14 18:37:10,576 --- process : 12060 --- message : AI_answer : ï¿½ï¿½ï¿½ï¿½ï¿½Ñ‚Æ‚ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Yï¿½Ý‚Ì‚æ‚¤ï¿½Å‚ï¿½ï¿½ËBï¿½Ô‚ß‚é‚±ï¿½Æ‚ÍAï¿½ï¿½ï¿½ï¿½ÌSï¿½ð—Ž‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚Ésï¿½ï¿½ï¿½ï¿½ï¿½Æ‚Å‚ï¿½ï¿½B
 
-‚Ü‚¸‚Í‘ŠŽè‚Ì˜b‚ð‚æ‚­•·‚¢‚Ä‚ ‚°‚Ü‚µ‚å‚¤Bu‚Ç‚¤‚µ‚½‚ÌHv‚âu‚Ç‚¤‚µ‚Ä‚»‚ñ‚È‚Éh‚»‚¤‚È‚ÌHv‚Æq‚Ë‚Ä‚Ý‚Ä‚­‚¾‚³‚¢B‘ŠŽè‚ªŽ©•ª‚Ì‹CŽ‚¿‚ð˜b‚·‚±‚Æ‚ÅAS‚ªŒy‚­‚È‚é‚±‚Æ‚ª‚ ‚è‚Ü‚·B
+ï¿½Ü‚ï¿½ï¿½Í‘ï¿½ï¿½ï¿½Ì˜bï¿½ï¿½ï¿½æ‚­ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½å‚¤ï¿½Bï¿½uï¿½Ç‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌHï¿½vï¿½ï¿½uï¿½Ç‚ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½È‚Éhï¿½ï¿½ï¿½ï¿½ï¿½È‚ÌHï¿½vï¿½Æqï¿½Ë‚Ä‚Ý‚Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½è‚ªï¿½ï¿½ï¿½ï¿½ï¿½Ì‹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ÅAï¿½Sï¿½ï¿½ï¿½yï¿½ï¿½ï¿½È‚é‚±ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-ŽŸ‚ÉA‘ŠŽè‚ÌŠ´î‚É‹¤Š´‚ðŽ¦‚·‚±‚Æ‚ª‘åØ‚Å‚·B‘ŠŽè‚Ì‹CŽ‚¿‚ð—‰ð‚µA‹¤Š´‚·‚é‚±‚Æ‚ÅAuŽ„‚Í‚ ‚È‚½‚Ì–¡•û‚¾‚æv‚Æ‚¢‚¤ƒƒbƒZ[ƒW‚ð“`‚¦‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ï¿½ï¿½ï¿½ÉAï¿½ï¿½ï¿½ï¿½ÌŠï¿½ï¿½ï¿½É‹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½Ø‚Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½Ì‹Cï¿½ï¿½ï¿½ï¿½ï¿½ð—‰ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ÅAï¿½uï¿½ï¿½ï¿½Í‚ï¿½ï¿½È‚ï¿½ï¿½Ì–ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bï¿½Zï¿½[ï¿½Wï¿½ï¿½`ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-‚Ü‚½A—ã‚Ü‚µ‚ÌŒ¾—t‚ð‚©‚¯‚é‚±‚Æ‚à—LŒø‚Å‚·Bu‚ª‚ñ‚Î‚Á‚Ä‚¢‚é‚Ëvu‘åä•vA‚«‚Á‚Ææ‚è‰z‚¦‚ç‚ê‚é‚æv‚Æ‚¢‚¤‚æ‚¤‚ÉA‘ŠŽè‚ÌS‚ð—E‹C‚Ã‚¯‚éŒ¾—t‚ð“`‚¦‚Ä‚ ‚°‚Ü‚µ‚å‚¤B‘ŠŽè‚ÌŒoŒ±‚â“w—Í‚ð”F‚ß‚é‚±‚Æ‚à‘åØ‚Å‚·B
+ï¿½Ü‚ï¿½ï¿½Aï¿½ï¿½Ü‚ï¿½ï¿½ÌŒï¿½ï¿½tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Lï¿½ï¿½ï¿½Å‚ï¿½ï¿½Bï¿½uï¿½ï¿½ï¿½ï¿½Î‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Ëvï¿½uï¿½ï¿½ï¿½vï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Æï¿½ï¿½zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½ÉAï¿½ï¿½ï¿½ï¿½ÌSï¿½ï¿½Eï¿½Cï¿½Ã‚ï¿½ï¿½éŒ¾ï¿½tï¿½ï¿½`ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½å‚¤ï¿½Bï¿½ï¿½ï¿½ï¿½ÌŒoï¿½ï¿½ï¿½ï¿½wï¿½Í‚ï¿½Fï¿½ß‚é‚±ï¿½Æ‚ï¿½ï¿½ï¿½Ø‚Å‚ï¿½ï¿½B
 
-ÅŒã‚ÉA‘ŠŽè‚ª‹‚ß‚éŒ`‚ÅƒTƒ|[ƒg‚ð’ñ‹Ÿ‚·‚é‚±‚Æ‚àˆÔ‚ß‚Ìˆê‚Â‚Å‚·Bˆê‚É˜b‚µ‚½‚èAˆê‚És“®‚µ‚½‚èA•K—v‚ÈŽx‰‡‚ð’ñ‹Ÿ‚·‚é‚±‚Æ‚ÅA‘ŠŽè‚É—Š‚é‚±‚Æ‚ª‚Å‚«‚é‚æ‚¤‚ÈŠÂ‹«‚ðì‚è‚Ü‚µ‚å‚¤B
+ï¿½ÅŒï¿½ÉAï¿½ï¿½ï¿½è‚ªï¿½ï¿½ï¿½ß‚ï¿½`ï¿½ÅƒTï¿½|ï¿½[ï¿½gï¿½ï¿½ñ‹Ÿ‚ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Ô‚ß‚Ìˆï¿½Â‚Å‚ï¿½ï¿½Bï¿½êï¿½É˜bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½êï¿½Ésï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Kï¿½vï¿½ÈŽxï¿½ï¿½ï¿½ï¿½ñ‹Ÿ‚ï¿½ï¿½é‚±ï¿½Æ‚ÅAï¿½ï¿½ï¿½ï¿½É—ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½ï¿½æ‚¤ï¿½ÈŠÂ‹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½å‚¤ï¿½B
 
-‚±‚¢‚Ñ‚Æ‚³‚ñAl‚Íˆêl‚Å‚Í‚¤‚Ü‚­‚¢‚©‚È‚¢Žž‚à‚ ‚è‚Ü‚·‚ªA‚ ‚È‚½‚ª‚»‚Î‚É‚¢‚ÄŽx‚¦‚Ä‚ ‚°‚é‚±‚Æ‚ÅA‘ŠŽè‚àˆÀSŠ´‚ðŠ´‚¶‚é‚Å‚µ‚å‚¤B‘ŠŽè‚ÌS‚ðŽèŒú‚­ƒTƒ|[ƒg‚µA—D‚µ‚­ˆÔ‚ß‚Ä‚ ‚°‚Ä‚­‚¾‚³‚¢‚ËB
+ï¿½ï¿½ï¿½ï¿½ï¿½Ñ‚Æ‚ï¿½ï¿½ï¿½Aï¿½lï¿½Íˆï¿½lï¿½Å‚Í‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î‚É‚ï¿½ï¿½ÄŽxï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ÅAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½å‚¤ï¿½Bï¿½ï¿½ï¿½ï¿½ÌSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½|ï¿½[ï¿½gï¿½ï¿½ï¿½Aï¿½Dï¿½ï¿½ï¿½ï¿½ï¿½Ô‚ß‚Ä‚ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËB
 2023-07-14 18:37:21,770 --- process : 12060 --- message : App Exit
 2023-07-14 18:39:00,777 --- process : 5232 --- message : App Start
-2023-07-14 18:39:12,186 --- process : 5232 --- message : AnswerPerson_sub3 : ‚¤‚Ü
-2023-07-14 18:39:12,187 --- process : 5232 --- message : TypeQuestion_sub3 : ˆÔ‚ß‚Ä
-2023-07-14 18:39:25,440 --- process : 5232 --- message : AI_answer : uˆÔ‚ß‚év‚Æ‚¢‚¤Œ¾—t‚ÍA‘ŠŽè‚Ì”ß‚µ‚Ý‚âS‚Ì’É‚Ý‚ð˜a‚ç‚°A—ã‚Ü‚µ‚âˆÀSŠ´‚ð—^‚¦‚é‚±‚Æ‚ðŽw‚µ‚Ü‚·B
+2023-07-14 18:39:12,186 --- process : 5232 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ï¿½
+2023-07-14 18:39:12,187 --- process : 5232 --- message : TypeQuestion_sub3 : ï¿½Ô‚ß‚ï¿½
+2023-07-14 18:39:25,440 --- process : 5232 --- message : AI_answer : ï¿½uï¿½Ô‚ß‚ï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ÍAï¿½ï¿½ï¿½ï¿½Ì”ß‚ï¿½ï¿½Ý‚ï¿½Sï¿½Ì’É‚Ý‚ï¿½aï¿½ç‚°ï¿½Aï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½Sï¿½ï¿½ï¿½ï¿½^ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½wï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-—á‚¦‚ÎAˆÔ‚ß‚é‚½‚ß‚É‚ÍˆÈ‰º‚Ì‚æ‚¤‚È‚±‚Æ‚ª‚ ‚è‚Ü‚·B
+ï¿½á‚¦ï¿½ÎAï¿½Ô‚ß‚é‚½ï¿½ß‚É‚ÍˆÈ‰ï¿½ï¿½Ì‚æ‚¤ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-1. ˜b‚ð•·‚­F‘ŠŽè‚Ì‹CŽ‚¿‚â˜b‚ð’š”J‚É•·‚¢‚Ä‚ ‚°‚é‚±‚Æ‚ÅA‹¤Š´‚â—‰ð‚ðŽ¦‚µ‚Ü‚·B
-2. Žx‚¦‚éFâ–]“I‚È‹CŽ‚¿‚É‚È‚Á‚Ä‚¢‚é‘ŠŽè‚É‘Î‚µA•‚¯‚éŽè‚ð·‚µL‚×‚é‚±‚Æ‚ÅŽx‚¦‚ðŽ¦‚µ‚Ü‚·B
-3. —ã‚Ü‚·Fƒ|ƒWƒeƒBƒu‚ÈŒ¾—t‚âŠó–]‚ð‚à‚½‚ç‚·‚±‚Æ‚ÅA‘ŠŽè‚ÌˆÓ—~‚âŒ³‹C‚ðˆø‚«o‚µ‚Ü‚·B
-4. ˆê‚É‚¢‚é‚±‚ÆFS‚ÌŽx‚¦‚É‚È‚é‚½‚ß‚ÉA‘ŠŽè‚Æˆê‚É‚¢‚éŽžŠÔ‚ð‘åØ‚É‚µAŒÇ“ÆŠ´‚ðŽæ‚èœ‚«‚Ü‚·B
+1. ï¿½bï¿½ð•·‚ï¿½ï¿½Fï¿½ï¿½ï¿½ï¿½Ì‹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bï¿½ð’š”Jï¿½É•ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ÅAï¿½ï¿½ï¿½ï¿½ï¿½â—ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+2. ï¿½xï¿½ï¿½ï¿½ï¿½Fï¿½ï¿½]ï¿½Iï¿½È‹Cï¿½ï¿½ï¿½ï¿½ï¿½É‚È‚ï¿½ï¿½Ä‚ï¿½ï¿½é‘Šï¿½ï¿½É‘Î‚ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½×‚é‚±ï¿½Æ‚ÅŽxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+3. ï¿½ï¿½Ü‚ï¿½ï¿½Fï¿½|ï¿½Wï¿½eï¿½Bï¿½uï¿½ÈŒï¿½ï¿½tï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç‚·ï¿½ï¿½ï¿½Æ‚ÅAï¿½ï¿½ï¿½ï¿½ÌˆÓ—~ï¿½âŒ³ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+4. ï¿½êï¿½É‚ï¿½ï¿½é‚±ï¿½ÆFï¿½Sï¿½ÌŽxï¿½ï¿½ï¿½É‚È‚é‚½ï¿½ß‚ÉAï¿½ï¿½ï¿½ï¿½Æˆêï¿½É‚ï¿½ï¿½éŽžï¿½Ô‚ï¿½ï¿½Ø‚É‚ï¿½ï¿½Aï¿½Ç“ÆŠï¿½ï¿½ï¿½ï¿½ï¿½èœï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-‚±‚ê‚ç‚Ìs“®‚ÍA‘ŠŽè‚ÌS‚ÉŠñ‚è“Y‚¢AŽv‚¢‚â‚è‚â‰·‚©‚³‚ð“`‚¦‚é‚±‚Æ‚ª‘åØ‚Å‚·B‚½‚¾‚µAl‚É‚æ‚Á‚ÄˆÔ‚ß‚ç‚ê•û‚âŽó‚¯Žæ‚è•û‚ÍˆÙ‚È‚é‚½‚ßA‘ŠŽè‚Ì‹CŽ‚¿‚â‹‚ß‚Ä‚¢‚é‚à‚Ì‚ÉŠñ‚è“Y‚Á‚Äs“®‚·‚é‚±‚Æ‚ªd—v‚Å‚·B
+ï¿½ï¿½ï¿½ï¿½ï¿½Ìsï¿½ï¿½ï¿½ÍAï¿½ï¿½ï¿½ï¿½ÌSï¿½ÉŠï¿½ï¿½Yï¿½ï¿½ï¿½Aï¿½vï¿½ï¿½ï¿½ï¿½ï¿½â‰·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½ï¿½Ø‚Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½lï¿½É‚ï¿½ï¿½ï¿½ÄˆÔ‚ß‚ï¿½ï¿½ï¿½ï¿½ï¿½ó‚¯Žï¿½ï¿½ï¿½ï¿½ÍˆÙ‚È‚é‚½ï¿½ßAï¿½ï¿½ï¿½ï¿½Ì‹Cï¿½ï¿½ï¿½ï¿½ï¿½â‹ï¿½ß‚Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ÉŠï¿½ï¿½Yï¿½ï¿½ï¿½Äsï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½dï¿½vï¿½Å‚ï¿½ï¿½B
 2023-07-14 18:40:01,313 --- process : 608 --- message : App Start
-2023-07-14 18:40:12,553 --- process : 608 --- message : AnswerPerson_sub3 : ‚¤‚Ü
-2023-07-14 18:40:12,553 --- process : 608 --- message : TypeQuestion_sub3 : ‚í‚½‚µ‚Í‚¾[‚êH
-2023-07-14 18:40:17,555 --- process : 608 --- message : AI_answer : ‚ ‚È‚½‚Í’N‚©‚ðŠm”F‚·‚é‚½‚ß‚ÉŽ¿–â‚µ‚Ä‚¢‚Ü‚·B‚µ‚©‚µA‚ ‚È‚½‚ÉŠÖ‚·‚éî•ñ‚ª‚È‚¢‚½‚ßAŽ„‚Í‹ï‘Ì“I‚È“š‚¦‚ð’ñ‹Ÿ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB‚à‚Á‚Æî•ñ‚ð’ñ‹Ÿ‚µ‚Ä‚¢‚½‚¾‚¯‚ê‚ÎA‹ï‘Ì“I‚È‰ñ“š‚ª‚Å‚«‚é‚©‚à‚µ‚ê‚Ü‚¹‚ñB‚Ç‚Ì‚æ‚¤‚Èî•ñ‚ð‚¨Ž‚¿‚Å‚·‚©H
+2023-07-14 18:40:12,553 --- process : 608 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ï¿½
+2023-07-14 18:40:12,553 --- process : 608 --- message : TypeQuestion_sub3 : ï¿½í‚½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½[ï¿½ï¿½H
+2023-07-14 18:40:17,555 --- process : 608 --- message : AI_answer : ï¿½ï¿½ï¿½È‚ï¿½ï¿½Í’Nï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Fï¿½ï¿½ï¿½é‚½ï¿½ß‚ÉŽï¿½ï¿½â‚µï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½ï¿½ñ‚ª‚È‚ï¿½ï¿½ï¿½ï¿½ßAï¿½ï¿½ï¿½Í‹ï¿½Ì“Iï¿½È“ï¿½ï¿½ï¿½ï¿½ï¿½ñ‹Ÿ‚ï¿½ï¿½é‚±ï¿½Æ‚Í‚Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Æï¿½ï¿½ï¿½ñ‹Ÿ‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎAï¿½ï¿½Ì“Iï¿½È‰ñ“š‚ï¿½ï¿½Å‚ï¿½ï¿½é‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Bï¿½Ç‚Ì‚æ‚¤ï¿½Èï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½H
 2023-07-14 18:41:21,287 --- process : 2488 --- message : App Start
-2023-07-14 18:41:42,291 --- process : 2488 --- message : AnswerPerson_sub3 : ‚¹‚ñ‚¹‚¢
-2023-07-14 18:41:42,292 --- process : 2488 --- message : TypeQuestion_sub3 : —‰È‚ðŠwK‚·‚éƒƒŠƒbƒg‚Í‚È‚ÉH
-2023-07-14 18:42:01,829 --- process : 2488 --- message : AI_answer : u‚è‚©‚ð‚ª‚­‚µ‚ã‚¤‚·‚é‚ß‚è‚Á‚Æ‚Í‚È‚ÉHv‚Æ‚¢‚¤‚µ‚Â‚à‚ñ‚É‚Â‚¢‚ÄA‚í‚©‚è‚â‚·‚­‚Ð‚ç‚ª‚È‚¾‚¯‚Å‚©‚¢‚¹‚«‚µ‚Ä‚Ý‚Ü‚·B
+2023-07-14 18:41:42,291 --- process : 2488 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ñ‚¹‚ï¿½
+2023-07-14 18:41:42,292 --- process : 2488 --- message : TypeQuestion_sub3 : ï¿½ï¿½ï¿½È‚ï¿½ï¿½wï¿½Kï¿½ï¿½ï¿½éƒï¿½ï¿½ï¿½bï¿½gï¿½Í‚È‚ÉH
+2023-07-14 18:42:01,829 --- process : 2488 --- message : AI_answer : ï¿½uï¿½è‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½Æ‚Í‚È‚ÉHï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½É‚Â‚ï¿½ï¿½ÄAï¿½í‚©ï¿½ï¿½â‚·ï¿½ï¿½ï¿½Ð‚ç‚ªï¿½È‚ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚Ý‚Ü‚ï¿½ï¿½B
 
-‚è‚©‚ð‚ª‚­‚µ‚ã‚¤‚·‚é‚Æ‚¤‚ñ‚Ä‚ñ
+ï¿½è‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½Ä‚ï¿½
 
-1. ‚¹‚ñ‚µ‚ñ‚³‚¹‚¢: ‚è‚©‚ÍA‚©‚ª‚­‚Ä‚«‚È‚©‚ñ‚»‚¤‚ð‚ß‚®‚èA‚¶‚²‚­‚â‚Ä‚ñ‚²‚­A‚½‚¢‚æ‚¤‚â‚Ã‚«A‚è‚­‚¿‚è‚ð‚©‚¢‚ß‚¢‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B‚¹‚©‚¢‚Ì‚Ó‚µ‚¬‚È‚É‚¨‚¢‚â‚µ‚«‚Ô‚ñ‚ð‚Æ‚ç‚¦‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+1. ï¿½ï¿½ï¿½ñ‚µ‚ñ‚³‚ï¿½ï¿½ï¿½: ï¿½è‚©ï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ñ‚»‚ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ñ‚²‚ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½ï¿½Ã‚ï¿½ï¿½Aï¿½è‚­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ó‚ï¿½ï¿½ï¿½ï¿½È‚É‚ï¿½ï¿½ï¿½ï¿½â‚µï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½Æ‚ç‚¦ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-2. ‚³‚ñ‚©‚¹‚¢: ‚è‚©‚Ì‚ª‚­‚µ‚ã‚¤‚ÍA‚¯‚ñ‚«‚ã‚¤‚ð‚·‚é‚¤‚¦‚Å‚Ì‚³‚ñ‚©‚ð‚¦‚é‚æ‚¤‚É‚µ‚Ü‚·B‚è‚©‚Í‚¶‚Á‚¯‚ñ‚±‚¤‚ª‚­‚Ì‚±‚¤‚è‚ã‚¤‚É‚Â‚È‚ª‚è‚Ü‚·B
+2. ï¿½ï¿½ï¿½ñ‚©‚ï¿½ï¿½ï¿½: ï¿½è‚©ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ÍAï¿½ï¿½ï¿½ñ‚«‚ã‚¤ï¿½ï¿½ï¿½ï¿½ï¿½é‚¤ï¿½ï¿½ï¿½Å‚Ì‚ï¿½ï¿½ñ‚©‚ï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½è‚©ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ñ‚±‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½É‚Â‚È‚ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-3. ‚è‚©‚Ä‚«‚Ö‚ñ‚©: ‚è‚©‚Ì‚ª‚­‚µ‚ã‚¤‚ÍA‚µ‚ñ‚©‚ª‚­‚µ‚ñ‚É‚Æ‚Á‚Ä‚à‚¢‚¿‚¶‚ñ‚Ä‚«‚È‚Ö‚ñ‚©‚ð‚Ä‚«‚¹‚Â‚·‚é‚æ‚¤‚É‚µ‚Ü‚·B‚·‚é‚Ç‚¢‚è‚©‚Ì‚è‚©‚¢‚Å‚¹‚©‚¢‚ð‚©‚¢‚Â‚¤‚·‚é‚½‚ß‚Ì‚×‚ñ‚«‚å‚¤‚É‚È‚è‚Ü‚·B
+3. ï¿½è‚©ï¿½Ä‚ï¿½ï¿½Ö‚ï¿½: ï¿½è‚©ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ÍAï¿½ï¿½ï¿½ñ‚©‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚Æ‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚Ö‚ñ‚©‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½è‚©ï¿½Ì‚è‚©ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ß‚Ì‚×‚ñ‚«‚å‚¤ï¿½É‚È‚ï¿½Ü‚ï¿½ï¿½B
 
-4. ‚¿‚å‚¤‚³‚Ä‚«‚È‚µ‚ñ‚è‚å‚¤: ‚è‚©‚ÍA‚¿‚å‚¤‚³‚ð‚¨‚±‚È‚¢A‚µ‚Â‚Ì‚Ù‚¤‚¹‚«‚â‚±‚ñ‚È‚ñ‚ð‚©‚¢‚ß‚¢‚·‚é‚½‚ß‚Ì‚è‚å‚¤‚ð‚Ð‚å‚¤‚©‚·‚é‚½‚ß‚É‚à‚Æ‚Ä‚à‚ä‚¤‚è‚å‚­‚Å‚·B
+4. ï¿½ï¿½ï¿½å‚¤ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½å‚¤: ï¿½è‚©ï¿½ÍAï¿½ï¿½ï¿½å‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Aï¿½ï¿½ï¿½Â‚Ì‚Ù‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚±ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ß‚Ì‚ï¿½å‚¤ï¿½ï¿½ï¿½Ð‚å‚¤ï¿½ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ß‚É‚ï¿½ï¿½Æ‚Ä‚ï¿½ï¿½ä‚¤ï¿½ï¿½å‚­ï¿½Å‚ï¿½ï¿½B
 
-5. ‚¯‚ñ‚«‚ã‚¤‚µ‚Â‚¬‚å‚¤: ‚è‚©‚Ì‚ª‚­‚µ‚ã‚¤‚ÍA‚ª‚­‚µ‚ã‚¤‚è‚å‚­‚ð‚½‚©‚ßA‚¯‚ñ‚«‚ã‚¤‚ð‚Â‚Ã‚¯A‚µ‚«‚¬‚å‚¤‚©‚ñ‚Å‚Ì‚µ‚ñ‚Ë‚ñ‚É‚Â‚È‚ª‚è‚Ü‚·B
+5. ï¿½ï¿½ï¿½ñ‚«‚ã‚¤ï¿½ï¿½ï¿½Â‚ï¿½ï¿½å‚¤: ï¿½è‚©ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ï¿½å‚­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßAï¿½ï¿½ï¿½ñ‚«‚ã‚¤ï¿½ï¿½ï¿½Â‚Ã‚ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å‚¤ï¿½ï¿½ï¿½ï¿½Å‚Ì‚ï¿½ï¿½ï¿½Ë‚ï¿½É‚Â‚È‚ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-‚è‚©‚Ì‚ª‚­‚µ‚ã‚¤‚ÍA‚µ‚ñ‚è‚ª‚­‚É‚àA‚µ‚ñ‚©‚ª‚­‚µ‚ñ‚É‚à‚½‚¢‚µ‚Ä‚¢‚ß‚¢‚È‚µ‚¦‚¢‚ð‚à‚½‚ç‚µ‚Ü‚·B
-2023-07-14 18:42:20,635 --- process : 2488 --- message : AnswerPerson_sub3 : ‚¹‚ñ‚¹‚¢
-2023-07-14 18:42:20,635 --- process : 2488 --- message : TypeQuestion_sub3 : —‰È‚ðŠwK‚·‚éƒƒŠƒbƒg‚Í‚È‚ÉH
-2023-07-14 18:42:50,743 --- process : 2488 --- message : AI_answer : —‰È‚ðŠwK‚·‚éƒƒŠƒbƒg‚Í‚½‚­‚³‚ñ‚ ‚è‚Ü‚·BˆÈ‰º‚É‚¢‚­‚Â‚©‚ÌƒƒŠƒbƒg‚ð‹“‚°‚Ä‚Ý‚Ü‚·B
+ï¿½è‚©ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ÍAï¿½ï¿½ï¿½ï¿½è‚ªï¿½ï¿½ï¿½É‚ï¿½ï¿½Aï¿½ï¿½ï¿½ñ‚©‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ß‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç‚µï¿½Ü‚ï¿½ï¿½B
+2023-07-14 18:42:20,635 --- process : 2488 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ñ‚¹‚ï¿½
+2023-07-14 18:42:20,635 --- process : 2488 --- message : TypeQuestion_sub3 : ï¿½ï¿½ï¿½È‚ï¿½ï¿½wï¿½Kï¿½ï¿½ï¿½éƒï¿½ï¿½ï¿½bï¿½gï¿½Í‚È‚ÉH
+2023-07-14 18:42:50,743 --- process : 2488 --- message : AI_answer : ï¿½ï¿½ï¿½È‚ï¿½ï¿½wï¿½Kï¿½ï¿½ï¿½éƒï¿½ï¿½ï¿½bï¿½gï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ñ‚ ‚ï¿½Ü‚ï¿½ï¿½Bï¿½È‰ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½Ìƒï¿½ï¿½ï¿½ï¿½bï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚Ý‚Ü‚ï¿½ï¿½B
 
-1. ’mŽ¯‚ÌŠl“¾: —‰È‚ðŠw‚Ô‚±‚Æ‚ÅAŽ©‘R‰ÈŠw‚ÉŠÖ‚·‚éŠî–{“I‚È’mŽ¯‚ðŠl“¾‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B¶•¨ŠwA•¨—ŠwA‰»Šw‚È‚Ç‚Ì‚³‚Ü‚´‚Ü‚È•ª–ì‚É‚Â‚¢‚ÄŠw‚ÑA—‰ð‚·‚é‚±‚Æ‚ÅA¢ŠE‚ÌŽd‘g‚Ý‚â‰ÈŠw“I‚ÈŒ»Û‚É‚Â‚¢‚Ä‚Ì’mŽ¯‚ª[‚Ü‚è‚Ü‚·B
+1. ï¿½mï¿½ï¿½ï¿½ÌŠlï¿½ï¿½: ï¿½ï¿½ï¿½È‚ï¿½ï¿½wï¿½Ô‚ï¿½ï¿½Æ‚ÅAï¿½ï¿½ï¿½Rï¿½ÈŠwï¿½ÉŠÖ‚ï¿½ï¿½ï¿½ï¿½{ï¿½Iï¿½È’mï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½wï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½wï¿½Aï¿½ï¿½ï¿½wï¿½È‚Ç‚Ì‚ï¿½ï¿½Ü‚ï¿½ï¿½Ü‚È•ï¿½ï¿½ï¿½É‚Â‚ï¿½ï¿½ÄŠwï¿½ÑAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ÅAï¿½ï¿½ï¿½Eï¿½ÌŽdï¿½gï¿½Ý‚ï¿½ÈŠwï¿½Iï¿½ÈŒï¿½ï¿½Û‚É‚Â‚ï¿½ï¿½Ä‚Ì’mï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Ü‚ï¿½Ü‚ï¿½ï¿½B
 
-2. –â‘è‰ðŒˆ”\—Í‚ÌŒüã: —‰È‚ÌŠwK‚ÍAŠÏŽ@AŽÀŒ±A‹K‘¥‚Ì—‰ðAƒf[ƒ^‚Ì•ªÍ‚È‚Ç‚ÌƒXƒLƒ‹‚ð—{‚¢‚Ü‚·B‚±‚ê‚ç‚ÌƒXƒLƒ‹‚ÍA–â‘è‰ðŒˆ‚É‚à–ð—§‚¿‚Ü‚·B—‰È‚ÌŠwK‚ð’Ê‚¶‚ÄA˜_—“IŽvl‚â‰ÈŠw“I•û–@‚ðŽg‚Á‚½–â‘è‰ðŒˆ‚Ì”\—Í‚ªŒüã‚µ‚Ü‚·B
+2. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½Í‚ÌŒï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½È‚ÌŠwï¿½Kï¿½ÍAï¿½ÏŽ@ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Kï¿½ï¿½ï¿½Ì—ï¿½ï¿½ï¿½ï¿½Aï¿½fï¿½[ï¿½^ï¿½Ì•ï¿½ï¿½Í‚È‚Ç‚ÌƒXï¿½Lï¿½ï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ÌƒXï¿½Lï¿½ï¿½ï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ð—§‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½È‚ÌŠwï¿½Kï¿½ï¿½Ê‚ï¿½ï¿½ÄAï¿½_ï¿½ï¿½ï¿½Iï¿½vï¿½lï¿½ï¿½ÈŠwï¿½Iï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì”\ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ã‚µï¿½Ü‚ï¿½ï¿½B
 
-3. ‰ÈŠw“IŽvl‚Ì”­’B: —‰È‚ÌŠwK‚ÍAŽ–ŽÀ‚ÉŠî‚Ã‚«AØ‹’‚ÉŠî‚Ã‚¢‚½„˜_‚ðs‚¤‰ÈŠw“IŽvl‚ð”­’B‚³‚¹‚Ü‚·Bª‹’‚Ì‚ ‚éˆÓŒ©‚âŒ‹˜_‚ð“±‚«o‚·”\—Í‚ªg‚É‚Â‚«‚Ü‚·B‚Ü‚½A‰¼à‚ð—§‚ÄAŽÀŒ±‚âŠÏŽ@‚ÉŠî‚Ã‚¢‚ÄŒŸØ‚·‚éƒvƒƒZƒX‚ðŠw‚Ô‚±‚Æ‚ÅATd‚ÈŽvl‚â–â‘è‚Ì[Œ@‚è”\—Í‚àŒüã‚µ‚Ü‚·B
+3. ï¿½ÈŠwï¿½Iï¿½vï¿½lï¿½Ì”ï¿½ï¿½B: ï¿½ï¿½ï¿½È‚ÌŠwï¿½Kï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ÉŠï¿½Ã‚ï¿½ï¿½Aï¿½Ø‹ï¿½ï¿½ÉŠï¿½Ã‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ÈŠwï¿½Iï¿½vï¿½lï¿½ð”­’Bï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ÓŒï¿½ï¿½âŒ‹ï¿½_ï¿½ð“±‚ï¿½ï¿½oï¿½ï¿½ï¿½\ï¿½Í‚ï¿½ï¿½gï¿½É‚Â‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Ü‚ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ð—§‚ÄAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏŽ@ï¿½ÉŠï¿½Ã‚ï¿½ï¿½ÄŒï¿½ï¿½Ø‚ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½wï¿½Ô‚ï¿½ï¿½Æ‚ÅAï¿½Tï¿½dï¿½ÈŽvï¿½lï¿½ï¿½ï¿½ï¿½Ì[ï¿½@ï¿½ï¿½\ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ã‚µï¿½Ü‚ï¿½ï¿½B
 
-4. ƒvƒ‰ƒNƒeƒBƒJƒ‹‚ÈƒXƒLƒ‹‚ÌK“¾: —‰È‚ÌŠwK‚ÍAŽÀ¶Šˆ‚Å‰ž—p‚Å‚«‚é‚³‚Ü‚´‚Ü‚ÈƒXƒLƒ‹‚ðK“¾‚·‚é‹@‰ï‚ð’ñ‹Ÿ‚µ‚Ü‚·B—á‚¦‚ÎA‰ÈŠw“I‚ÈŽÀŒ±‚âŠÏŽ@‚Ì•û–@‚ðŠw‚Ô‚±‚Æ‚ÅAŽ©ŒÈŠwK‚ÌƒXƒLƒ‹‚âŽÀŒ±ƒf[ƒ^‚Ì•ªÍ”\—Í‚ªŒüã‚µ‚Ü‚·B‚Ü‚½AŠÂ‹«–â‘è‚âŒ’N‚ÉŠÖ‚·‚é’mŽ¯‚àg‚É‚Â‚¯‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+4. ï¿½vï¿½ï¿½ï¿½Nï¿½eï¿½Bï¿½Jï¿½ï¿½ï¿½ÈƒXï¿½Lï¿½ï¿½ï¿½ÌKï¿½ï¿½: ï¿½ï¿½ï¿½È‚ÌŠwï¿½Kï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‰ï¿½ï¿½pï¿½Å‚ï¿½ï¿½é‚³ï¿½Ü‚ï¿½ï¿½Ü‚ÈƒXï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½ñ‹Ÿ‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½á‚¦ï¿½ÎAï¿½ÈŠwï¿½Iï¿½ÈŽï¿½ï¿½ï¿½ï¿½ï¿½ÏŽ@ï¿½Ì•ï¿½ï¿½@ï¿½ï¿½ï¿½wï¿½Ô‚ï¿½ï¿½Æ‚ÅAï¿½ï¿½ï¿½ÈŠwï¿½Kï¿½ÌƒXï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^ï¿½Ì•ï¿½ï¿½Í”\ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ã‚µï¿½Ü‚ï¿½ï¿½Bï¿½Ü‚ï¿½ï¿½Aï¿½Â‹ï¿½ï¿½ï¿½ï¿½âŒ’ï¿½Nï¿½ÉŠÖ‚ï¿½ï¿½ï¿½mï¿½ï¿½ï¿½ï¿½ï¿½gï¿½É‚Â‚ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-5. STEM•ª–ì‚Ö‚Ì‹»–¡‚ð‘£i: —‰È‚ÌŠwK‚ÍA‰ÈŠwA‹ZpAHŠwA”ŠwiSTEMj‚Ì•ª–ì‚Ö‚Ì‹»–¡‚ð‘£i‚·‚é–ðŠ„‚à‰Ê‚½‚µ‚Ü‚·BSTEM•ª–ì‚ÍAŒ»‘ãŽÐ‰ï‚Å‹‚ß‚ç‚ê‚éE‹Æ‚âƒCƒmƒx[ƒVƒ‡ƒ“‚Éd—v‚È–ðŠ„‚ð‰Ê‚½‚µ‚Ä‚¢‚Ü‚·B—‰È‚ÌŠwK‚ÍA«—ˆ‚ÌƒLƒƒƒŠƒA‘I‘ð‚Ì•‚ðL‚°‚é‚±‚Æ‚à‰Â”\‚Å‚·B
+5. STEMï¿½ï¿½ï¿½ï¿½Ö‚Ì‹ï¿½ï¿½ï¿½ï¿½ð‘£i: ï¿½ï¿½ï¿½È‚ÌŠwï¿½Kï¿½ÍAï¿½ÈŠwï¿½Aï¿½Zï¿½pï¿½Aï¿½Hï¿½wï¿½Aï¿½ï¿½ï¿½wï¿½iSTEMï¿½jï¿½Ì•ï¿½ï¿½ï¿½Ö‚Ì‹ï¿½ï¿½ï¿½ï¿½ð‘£iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½BSTEMï¿½ï¿½ï¿½ï¿½ÍAï¿½ï¿½ï¿½ï¿½Ð‰ï¿½Å‹ï¿½ï¿½ß‚ï¿½ï¿½ï¿½Eï¿½Æ‚ï¿½Cï¿½mï¿½xï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Édï¿½vï¿½È–ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê‚ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½È‚ÌŠwï¿½Kï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ÌƒLï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Iï¿½ï¿½ï¿½Ì•ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Â”\ï¿½Å‚ï¿½ï¿½B
 
-‚±‚ê‚ç‚Í—‰È‚ðŠwK‚·‚éƒƒŠƒbƒg‚Ìˆê•”‚Å‚·‚ªA‚³‚Ü‚´‚Ü‚È“ÆŽ©‚ÌƒƒŠƒbƒg‚ª‘¶Ý‚µ‚Ü‚·BŽ©‘RŠE‚â‰ÈŠw‚ÌŽd‘g‚Ý‚É‚Â‚¢‚Ä‚Ì—‰ð‚ð[‚ß‚é‚±‚Æ‚ÅA¢ŠE‚Ì•¡ŽG‚³‚â”ü‚µ‚³‚ðŠ´‚¶‚é‚±‚Æ‚à‚Å‚«‚Ü‚·B
-2023-07-14 18:44:22,292 --- process : 2488 --- message : AnswerPerson_sub3 : ‚¹‚ñ‚¹‚¢
-2023-07-14 18:44:22,293 --- process : 2488 --- message : TypeQuestion_sub3 : —‰È‚ðŠwK‚·‚éƒƒŠƒbƒg‚Í‚È‚ÉH
-2023-07-14 18:44:32,113 --- process : 2488 --- message : AI_answer : ‚è‚©‚ð‚ª‚­‚µ‚ã‚¤‚·‚é‚ÆA‚µ‚º‚ñ‚Ì‚©‚ñ‚¯‚¢‚ð‚è‚©‚¢‚Å‚«‚é‚æ‚¤‚É‚È‚éB‚½‚Æ‚¦‚ÎA‚¹‚ñ‚µ‚Â‚Ì‚¶‚±‚¤‚©‚ð‚è‚©‚¢‚·‚é‚±‚Æ‚ª‚Å‚«‚éB‚¹‚ñ‚µ‚Ä‚Â‚¬‚Ì‚­‚Ç‚«‚É‚Ç‚¤‚æ‚¤‚·‚é‚±‚Æ‚à‚Å‚«‚éB
+ï¿½ï¿½ï¿½ï¿½ï¿½Í—ï¿½ï¿½È‚ï¿½ï¿½wï¿½Kï¿½ï¿½ï¿½éƒï¿½ï¿½ï¿½bï¿½gï¿½Ìˆê•”ï¿½Å‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Ü‚È“ÆŽï¿½ï¿½Ìƒï¿½ï¿½ï¿½ï¿½bï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Ý‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½Rï¿½Eï¿½ï¿½ÈŠwï¿½ÌŽdï¿½gï¿½Ý‚É‚Â‚ï¿½ï¿½Ä‚Ì—ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½ß‚é‚±ï¿½Æ‚ÅAï¿½ï¿½ï¿½Eï¿½Ì•ï¿½ï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½B
+2023-07-14 18:44:22,292 --- process : 2488 --- message : AnswerPerson_sub3 : ï¿½ï¿½ï¿½ñ‚¹‚ï¿½
+2023-07-14 18:44:22,293 --- process : 2488 --- message : TypeQuestion_sub3 : ï¿½ï¿½ï¿½È‚ï¿½ï¿½wï¿½Kï¿½ï¿½ï¿½éƒï¿½ï¿½ï¿½bï¿½gï¿½Í‚È‚ÉH
+2023-07-14 18:44:32,113 --- process : 2488 --- message : AI_answer : ï¿½è‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ï¿½ï¿½ï¿½ÆAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ñ‚¯‚ï¿½ï¿½ï¿½ï¿½è‚©ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½æ‚¤ï¿½É‚È‚ï¿½Bï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ÎAï¿½ï¿½ï¿½ñ‚µ‚Â‚Ì‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è‚©ï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½ñ‚µ‚Ä‚Â‚ï¿½ï¿½Ì‚ï¿½ï¿½Ç‚ï¿½ï¿½É‚Ç‚ï¿½ï¿½æ‚¤ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½ï¿½B
 
-‚è‚©‚ð‚ª‚­‚µ‚ã‚¤‚·‚é‚±‚Æ‚ÅA‚Ù‚©‚Ì‚Ô‚ñ‚©‚Ì‚¿A‚è‚±‚¤‚â‚è‚¯‚ñ‚Û‚ð‚è‚©‚¢‚µ‚â‚·‚­‚È‚éB‚¹‚ñ‚µ‚Â‚â‚Ñ‚¶‚ã‚Â‚Ì‚è‚©‚¢‚ª‚Ð‚Â‚æ‚¤‚È‚Æ‚«‚à‚ ‚éB
+ï¿½è‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ÅAï¿½Ù‚ï¿½ï¿½Ì‚Ô‚ñ‚©‚Ì‚ï¿½ï¿½Aï¿½è‚±ï¿½ï¿½ï¿½ï¿½è‚¯ï¿½ï¿½Û‚ï¿½ï¿½è‚©ï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½ï¿½È‚ï¿½Bï¿½ï¿½ï¿½ñ‚µ‚Â‚ï¿½Ñ‚ï¿½ï¿½ï¿½Â‚Ì‚è‚©ï¿½ï¿½ï¿½ï¿½ï¿½Ð‚Â‚æ‚¤ï¿½È‚Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 
-‚è‚©‚Í‚±‚ê‚©‚ç‚Ì‚µ‚á‚©‚¢‚Å‚Ð‚Â‚æ‚¤‚È‚·‚¤‚è‚å‚¤‚Ä‚«‚È‚¯‚ñ‚à‚ñ‚Æ‚È‚é‚©‚à‚µ‚ê‚È‚¢B‚Ð‚Â‚æ‚¤‚È‚¯‚ñ‚à‚ñ‚ð‚è‚©‚¢‚µ‚è‚¤‚±‚¤‚·‚é‚½‚ß‚É‚è‚©‚ð‚ª‚­‚µ‚ã‚¤‚·‚é‚±‚Æ‚Í‚Æ‚Ä‚à‚¶‚ã‚¤‚æ‚¤‚Å‚ ‚éB
+ï¿½è‚©ï¿½Í‚ï¿½ï¿½ê‚©ï¿½ï¿½Ì‚ï¿½ï¿½á‚©ï¿½ï¿½ï¿½Å‚Ð‚Â‚æ‚¤ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½å‚¤ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚È‚é‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Bï¿½Ð‚Â‚æ‚¤ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è‚©ï¿½ï¿½ï¿½ï¿½ï¿½è‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ß‚É‚è‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½ï¿½ï¿½é‚±ï¿½Æ‚Í‚Æ‚Ä‚ï¿½ï¿½ï¿½ï¿½ã‚¤ï¿½æ‚¤ï¿½Å‚ï¿½ï¿½ï¿½B
 2023-07-14 18:44:39,903 --- process : 2488 --- message : App Exit
 2023-07-14 18:45:23,344 --- process : 12312 --- message : App Start
-2023-07-14 18:45:36,256 --- process : 12312 --- message : AnswerPerson_sub1 : ƒAƒƒŠƒJl
-2023-07-14 18:45:36,256 --- process : 12312 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-14 18:45:38,365 --- process : 12312 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·‚ÍA“ú–{Œê‚ÅuGood morningv‚Æ‚¢‚¤ˆÓ–¡‚Å‚·B
-2023-07-14 18:45:47,090 --- process : 12312 --- message : AnswerPerson_sub1 : ƒAƒƒŠƒJl
-2023-07-14 18:45:47,090 --- process : 12312 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-14 18:45:50,040 --- process : 12312 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·B
-2023-07-14 18:46:00,613 --- process : 12312 --- message : AnswerPerson_sub1 : ‚¹‚ñ‚¹‚¢
-2023-07-14 18:46:00,628 --- process : 12312 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-14 18:46:02,535 --- process : 12312 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·‚ÌˆÓ–¡‚ÍAu’©‚Ìˆ¥ŽAv‚Æ‚µ‚ÄŽg‚í‚ê‚éŒ¾—t‚Å‚·B
+2023-07-14 18:45:36,256 --- process : 12312 --- message : AnswerPerson_sub1 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+2023-07-14 18:45:36,256 --- process : 12312 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-14 18:45:38,365 --- process : 12312 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ÍAï¿½ï¿½ï¿½{ï¿½ï¿½ÅuGood morningï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Ó–ï¿½ï¿½Å‚ï¿½ï¿½B
+2023-07-14 18:45:47,090 --- process : 12312 --- message : AnswerPerson_sub1 : ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½l
+2023-07-14 18:45:47,090 --- process : 12312 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-14 18:45:50,040 --- process : 12312 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+2023-07-14 18:46:00,613 --- process : 12312 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ñ‚¹‚ï¿½
+2023-07-14 18:46:00,628 --- process : 12312 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-14 18:46:02,535 --- process : 12312 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ÌˆÓ–ï¿½ï¿½ÍAï¿½uï¿½ï¿½ï¿½Ìˆï¿½ï¿½Aï¿½vï¿½Æ‚ï¿½ï¿½ÄŽgï¿½ï¿½ï¿½éŒ¾ï¿½tï¿½Å‚ï¿½ï¿½B
 2023-07-14 18:46:13,811 --- process : 12312 --- message : App Exit
 2023-07-14 18:46:37,447 --- process : 4256 --- message : App Start
-2023-07-14 18:46:58,614 --- process : 4256 --- message : AnswerPerson_sub1 : ‚¨‚±‚Á‚Ä‚é‚Ð‚Æ
-2023-07-14 18:46:58,614 --- process : 4256 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-14 18:47:02,617 --- process : 4256 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·‚ÍAˆ¥ŽA‚Ìˆê‚Â‚Å‚·B’©‚ÌŽžŠÔ‚ÉŽg‚í‚ê‚é‚±‚Æ‚ª‘½‚­A‘ŠŽè‚É‘Î‚µ‚Äu‚¨‚Í‚æ‚¤v‚Æ‚¢‚¤‹CŽ‚¿‚ð“`‚¦‚éŒ¾—t‚Å‚·B“ú–{‚Å‚ÍA’©‚©‚çŒ³‹C‚Éˆ¥ŽA‚·‚é‚±‚Æ‚ª‘åØ‚Æ‚³‚ê‚Ä‚¢‚Ü‚·B
-2023-07-14 18:47:53,877 --- process : 4256 --- message : AnswerPerson_sub1 : ‚¨‚±‚Á‚Ä‚é‚Ð‚Æ
-2023-07-14 18:47:53,877 --- process : 4256 --- message : TypeQuestion_sub1 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-14 18:47:58,963 --- process : 4256 --- message : AI_answer : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·B‚¨‚±‚Á‚Ä‚é•û‚ª‚¢‚ç‚Á‚µ‚á‚é‚æ‚¤‚Å‚µ‚½‚çA‚Ç‚¤‚µ‚Ü‚µ‚½‚©HŽ„‚É˜b‚µ‚Ä‚¢‚½‚¾‚¯‚ê‚ÎA‚¨Žè“`‚¢‚Å‚«‚é‚©‚à‚µ‚ê‚Ü‚¹‚ñB
+2023-07-14 18:46:58,614 --- process : 4256 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½Ð‚ï¿½
+2023-07-14 18:46:58,614 --- process : 4256 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-14 18:47:02,617 --- process : 4256 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ÍAï¿½ï¿½ï¿½Aï¿½Ìˆï¿½Â‚Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½ÌŽï¿½ï¿½Ô‚ÉŽgï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½É‘Î‚ï¿½ï¿½Äuï¿½ï¿½ï¿½Í‚æ‚¤ï¿½vï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½éŒ¾ï¿½tï¿½Å‚ï¿½ï¿½Bï¿½ï¿½ï¿½{ï¿½Å‚ÍAï¿½ï¿½ï¿½ï¿½ï¿½çŒ³ï¿½Cï¿½Éˆï¿½ï¿½Aï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½ï¿½Ø‚Æ‚ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B
+2023-07-14 18:47:53,877 --- process : 4256 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½Ð‚ï¿½
+2023-07-14 18:47:53,877 --- process : 4256 --- message : TypeQuestion_sub1 : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
+2023-07-14 18:47:58,963 --- process : 4256 --- message : AI_answer : ï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½Å‚ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ç‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Hï¿½ï¿½ï¿½É˜bï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎAï¿½ï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½Å‚ï¿½ï¿½é‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½B
 2023-07-14 18:50:27,445 --- process : 4256 --- message : App Exit
 2023-07-14 18:50:29,738 --- process : 17780 --- message : App Start
-2023-07-14 18:51:39,442 --- process : 17780 --- message : AnswerPerson_sub1 : ‚¨‚±‚Á‚Ä‚é‚Ð‚Æ
-2023-07-14 18:51:39,459 --- process : 17780 --- message : TypeQuestion_sub1 : ‚í‚½‚µ‚Í‚¾[‚ê
-2023-07-14 18:51:41,540 --- process : 17780 --- message : AI_answer : ‚í ‚½ ‚µ
-2023-07-18 08:19:58,161 --- process : 17440 --- message : App Start
-2023-07-18 08:20:11,645 --- process : 17440 --- message : App Exit
-2023-07-18 08:26:02,219 --- process : 7124 --- message : App Start
-2023-07-18 08:26:11,605 --- process : 7124 --- message : App Exit
-2023-07-18 08:26:53,357 --- process : 7352 --- message : App Start
-2023-07-18 08:27:06,906 --- process : 7352 --- message : App Exit
-2023-07-18 08:28:10,998 --- process : 5836 --- message : App Start
-2023-07-18 08:28:35,683 --- process : 5836 --- message : App Exit
-2023-07-18 08:31:55,642 --- process : 19776 --- message : App Start
-2023-07-18 08:32:09,017 --- process : 19776 --- message : App Exit
-2023-07-18 08:38:20,290 --- process : 11396 --- message : App Start
-2023-07-18 08:39:27,762 --- process : 11396 --- message : AnswerPerson_sub1 : ƒTƒbƒJ[‘IŽè
-2023-07-18 08:39:27,778 --- process : 11396 --- message : TypeQuestion_sub1 : ‚æ‚È‚²‚±‚¤‚¹‚ñ‚Ì‚Æ‚­‚¿‚å‚¤‚Í‚È‚É
-2023-07-18 08:39:33,860 --- process : 11396 --- message : App Exit
-2023-07-18 12:24:49,098 --- process : 2664 --- message : App Start
-2023-07-18 12:25:00,705 --- process : 2664 --- message : App Exit
-2023-07-18 12:28:52,649 --- process : 5544 --- message : App Start
-2023-07-18 12:29:48,866 --- process : 5544 --- message : App Exit
-2023-07-18 12:30:52,308 --- process : 8488 --- message : App Start
-2023-07-18 12:31:02,120 --- process : 8488 --- message : App Exit
-2023-07-18 12:31:20,262 --- process : 8972 --- message : App Start
-2023-07-18 12:31:31,781 --- process : 8972 --- message : App Exit
-2023-07-18 12:31:45,516 --- process : 1080 --- message : App Start
-2023-07-18 12:31:59,534 --- process : 1080 --- message : App Exit
-2023-07-18 12:32:44,332 --- process : 12392 --- message : App Start
-2023-07-18 12:33:03,668 --- process : 12392 --- message : App Exit
-2023-07-18 12:33:18,021 --- process : 2688 --- message : App Start
-2023-07-18 12:33:26,231 --- process : 2688 --- message : App Exit
-2023-07-18 12:33:35,698 --- process : 9224 --- message : App Start
-2023-07-18 12:33:47,668 --- process : 9224 --- message : App Exit
-2023-07-18 12:33:54,979 --- process : 8568 --- message : App Start
-2023-07-18 12:34:17,231 --- process : 8568 --- message : App Exit
-2023-07-18 12:35:14,095 --- process : 8668 --- message : App Start
-2023-07-18 12:35:19,627 --- process : 8668 --- message : App Exit
-2023-07-18 12:35:54,097 --- process : 8684 --- message : App Start
-2023-07-18 12:36:17,935 --- process : 8684 --- message : App Exit
-2023-07-18 12:36:29,233 --- process : 11708 --- message : App Start
-2023-07-18 12:40:50,105 --- process : 11708 --- message : App Exit
-2023-07-18 12:40:56,611 --- process : 3340 --- message : App Start
-2023-07-18 12:41:13,114 --- process : 3340 --- message : App Start
-2023-07-18 12:41:26,781 --- process : 3340 --- message : App Start
-2023-07-18 12:41:36,278 --- process : 3340 --- message : AnswerPerson_sub3 : ƒTƒbƒJ[‘IŽè
-2023-07-18 12:41:36,312 --- process : 3340 --- message : TypeQuestion_sub3 : ‚í‚½‚µ‚Í‚¾[‚êH
-2023-07-18 12:41:40,956 --- process : 3340 --- message : App Start
-2023-07-18 12:42:04,509 --- process : 3340 --- message : App Exit
-2023-07-18 12:43:05,903 --- process : 17148 --- message : App Start
-2023-07-18 12:43:15,385 --- process : 17148 --- message : App Exit
-2023-07-18 12:43:40,597 --- process : 9396 --- message : App Start
-2023-07-18 12:43:49,804 --- process : 9396 --- message : App Exit
-2023-07-18 12:44:10,464 --- process : 16856 --- message : App Start
-2023-07-18 12:44:23,089 --- process : 16856 --- message : App Exit
-2023-07-18 12:44:33,213 --- process : 7076 --- message : App Start
-2023-07-18 12:44:42,757 --- process : 7076 --- message : App Exit
-2023-07-19 16:22:35,961 --- process : 17696 --- message : App Start
-2023-07-19 16:22:46,996 --- process : 17696 --- message : App Exit
-2023-07-19 16:29:07,594 --- process : 20212 --- message : App Start
-2023-07-19 16:29:17,574 --- process : 20212 --- message : App Exit
-2023-07-19 16:30:21,681 --- process : 3452 --- message : App Start
-2023-07-19 16:30:25,057 --- process : 3452 --- message : App Start
-2023-07-19 16:30:27,415 --- process : 3452 --- message : App Start
-2023-07-19 16:30:37,579 --- process : 3452 --- message : App Start
-2023-07-19 16:31:03,351 --- process : 3452 --- message : AnswerPerson_sub3 : ‚±‚¢‚Ñ‚Æ
-2023-07-19 16:31:03,351 --- process : 3452 --- message : TypeQuestion_sub3 : ‚¨‚Í‚æ‚¤‚²‚´‚¢‚Ü‚·
-2023-07-19 16:31:06,687 --- process : 3452 --- message : App Start
-2023-07-19 16:31:12,509 --- process : 3452 --- message : App Exit
-2023-07-19 16:32:00,117 --- process : 17276 --- message : App Start
-2023-07-19 16:32:04,983 --- process : 17276 --- message : continue
-2023-07-19 16:32:05,691 --- process : 8364 --- message : App Start
-2023-07-19 16:32:24,614 --- process : 8364 --- message : App Exit
-2023-07-19 16:47:16,514 --- process : 1340 --- message : App Start
-2023-07-19 16:47:25,080 --- process : 1340 --- message : App Exit
-2023-07-19 16:48:28,958 --- process : 18740 --- message : App Start
-2023-07-19 16:48:50,489 --- process : 18740 --- message : App Exit
-2023-07-19 17:27:44,476 --- process : 19584 --- message : App Start
-2023-07-19 17:27:50,145 --- process : 19584 --- message : App Exit
-2023-07-19 17:30:58,492 --- process : 1412 --- message : App Start
-2023-07-19 17:31:20,754 --- process : 1412 --- message : App Exit
-2023-07-19 17:32:23,036 --- process : 14232 --- message : App Start
-2023-07-19 17:32:31,695 --- process : 14232 --- message : App Exit
-2023-07-19 17:39:45,272 --- process : 9348 --- message : App Start
-2023-07-19 17:43:52,267 --- process : 9348 --- message : App Exit
-2023-07-19 17:43:53,310 --- process : 19008 --- message : App Start
-2023-07-19 17:43:58,067 --- process : 19008 --- message : App Exit
-2023-07-19 17:44:05,319 --- process : 14992 --- message : App Start
-2023-07-19 17:44:26,605 --- process : 14992 --- message : App Exit
-2023-07-19 17:46:01,899 --- process : 20392 --- message : App Start
-2023-07-19 17:46:15,325 --- process : 20392 --- message : App Exit
-2023-07-19 17:46:32,229 --- process : 20184 --- message : App Start
-2023-07-19 17:46:43,866 --- process : 20184 --- message : App Exit
-2023-07-19 17:47:11,507 --- process : 13896 --- message : App Start
-2023-07-19 17:47:19,372 --- process : 13896 --- message : App Exit
-2023-07-19 17:47:27,372 --- process : 18436 --- message : App Start
-2023-07-19 17:47:51,067 --- process : 18436 --- message : App Exit
-2023-07-19 17:48:37,948 --- process : 17360 --- message : App Start
-2023-07-19 17:48:44,240 --- process : 17360 --- message : App Exit
-2023-07-19 17:49:01,965 --- process : 12996 --- message : App Start
-2023-07-19 17:49:21,444 --- process : 12996 --- message : App Exit
-2023-07-19 17:49:45,582 --- process : 11876 --- message : App Start
-2023-07-19 17:49:58,957 --- process : 11876 --- message : App Exit
-2023-07-19 17:56:58,007 --- process : 8500 --- message : App Start
-2023-07-19 17:59:13,975 --- process : 8500 --- message : App Exit
-2023-07-19 17:59:16,397 --- process : 10868 --- message : App Start
-2023-07-19 18:00:34,351 --- process : 10868 --- message : App Exit
-2023-07-19 18:00:38,267 --- process : 10996 --- message : App Start
-2023-07-19 18:00:50,316 --- process : 10996 --- message : App Exit
-2023-07-19 18:01:22,023 --- process : 14944 --- message : App Start
-2023-07-19 18:01:25,251 --- process : 14944 --- message : App Start
-2023-07-19 18:01:32,201 --- process : 14944 --- message : App Start
-2023-07-19 18:02:18,752 --- process : 14944 --- message : App Start
-2023-07-19 18:02:23,707 --- process : 14944 --- message : App Start
-2023-07-19 18:02:44,348 --- process : 14944 --- message : App Exit
+2023-07-14 18:51:39,442 --- process : 17780 --- message : AnswerPerson_sub1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½Ð‚ï¿½
+2023-07-14 18:51:39,459 --- process : 17780 --- message : TypeQuestion_sub1 : ï¿½í‚½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½[ï¿½ï¿½
+2023-07-14 18:51:41,540 --- process : 17780 --- message : AI_answer : ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½

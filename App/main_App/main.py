@@ -29,7 +29,7 @@ from voicevox import text_to_voice
 
 # -------- APIKey設定 --------
 #openai.api_key = os.environ["OPENAI_API_KEY"] #環境変数に指定する場合
-openai.api_key = ""
+openai.api_key = "" 
 
 
 
