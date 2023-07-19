@@ -5,20 +5,23 @@ from tkinter import scrolledtext
 import tkinter.ttk as ttk
 import PySimpleGUI as sg
 #import pyautogui as pg
+#「pyautoguiでウィンドウの大きさを測るとバグってしまう
 import openai
 from io import BytesIO
 import os
 import logging
 import speech_recognition as sr
-import pyaudio
-import requests
+#import pyaudio
+#import requests
 #import simpleaudio
 import wave
 import json
+import pyttsx3 #voicevoxの代役
 import time
 import random as rand
 import sys
 import atexit
+import webbrowser
 #カレントディレクトリ内
 from mic_now import voice_to_text
 from voicevox import text_to_voice
@@ -68,18 +71,28 @@ sub1_btn_bg = "#cfd6e6"
 sub2_btn_bg = "#cfd6e6"
 sub3_btn_bg = "#cfd6e6"
 sub4_btn_bg = "#191970"
+link_fg = "#2f4f4f"
+link_bg = "#cfd6e6"
 title_font = "Arial"
 main_font = "Arial"
 
-button_1 = "オプション"
+button_1 = "しょうかい"
 button_2 = "せってい"
 button_3 = "たいとるへ"
-button_4 = "ろぐ"
+button_4 = "くれじっと"
 
 #ひらがなON, OFF
 hiragana_on = True
 
-#音声ON, OFF
+#音声大きさ
+engine = pyttsx3.init()
+engine.setProperty('volume', 1.0) #デフォルト値は1.0
+volume = engine.getProperty('volume')
+
+#音声スピード
+engine = pyttsx3.init()
+engine.setProperty('rate', 200)#デフォルト値は200
+rate = engine.getProperty('rate')
 
 # ウィンドウが生成されたフラグを取得するため（各ウィンドウが開いたときTrue、閉じたときFalseへ）
 #global count_main, count_sub1, count_sub2, count_sub3, .....
@@ -113,19 +126,14 @@ global all_person_list_window_size
 all_person_list_window_size = "500x600+400+100"
 # 設定ウィンドウの大きさと初期配置を決める
 global config_window_size
-config_window_size = "500x450+400+100"
+config_window_size = "500x650+400+100"
 # オプション or 右クリックウィンドウの大きさと初期配置
+global option_window_size
 option_window_size = "800x500"
-# def option_window_open():
-#     posi_x, posi_y = pg.position()
-#     print(posi_x, posi_y)
-#     global option_window_size
-#     posi_x_str = str(posi_x)
-#     posi_y_str = str(posi_y)
-#     option_window_size = f"800x500+{posi_x_str}+{posi_y_str}"
-#     print("option_window_size : " + option_window_size)
-    
-#     return 0
+#くれじっとウィンドウの大きさと初期配置
+global credit_window_size
+credit_window_size = "500x600+400+100"
+
 
 
 # アプリケーション（GUI）クラス
@@ -171,7 +179,7 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         
@@ -227,7 +235,7 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         space_label = tk.Label(fm_sub1, text="", bg=sub1_bg, height=2)
@@ -283,7 +291,7 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         space_label = tk.Label(fm_sub2, text="", bg=sub2_bg, height=2)
@@ -320,6 +328,8 @@ class Application(tk.Frame):
         global fm_sub3, pw_sub3
         pw_main.destroy()
         
+        global config_window
+        
         pw_sub3 = tk.PanedWindow(self.master, bg=sub3_bg, orient="vertical")
         pw_sub3.pack(expand=True, fill=tk.BOTH, side="left")
         
@@ -337,7 +347,7 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         space_label = tk.Label(fm_sub3, text="", bg=sub3_bg, height=2)
@@ -388,25 +398,92 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
-        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), width=30, height=1)
-        space.pack(side=tk.TOP)
-        label = tk.Label(fm_sub4, text="---- ひらがなのみモード ----", bg=sub4_bg, font=(main_font, 25), width=30, height=3)
-        label.pack(side=tk.TOP, pady=10)
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
+        label = tk.Label(fm_sub4, text="---- おとのおおきさ ----", bg=sub4_bg, font=(main_font, 25), width=30)
+        label.pack()
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
         
-        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), width=30, height=1)
-        space.pack(side=tk.TOP)
-        label = tk.Label(fm_sub4, text="---- おとのおおきさ ----", bg=sub4_bg, font=(main_font, 25), width=30, height=3)
-        label.pack(side=tk.TOP, pady=10)
+        #サウンドバー
+        self.sound_var = tk.DoubleVar()
+        soundH = tk.Scale(
+            fm_sub4, 
+            variable=self.sound_var, 
+            orient=tk.HORIZONTAL, 
+            bg="#e6e6fa",
+            fg="#191970", 
+            font=(main_font, 10),
+            length=400, 
+            width=30, 
+            sliderlength=20, 
+            from_=0, 
+            to=10,
+            resolution=1, 
+            tickinterval=2,
+            command=self.slider_scroll_1
+        )
+        soundH.pack()
         
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
+        label = tk.Label(fm_sub4, text="---- おとのスピード ----", bg=sub4_bg, font=(main_font, 25), width=30)
+        label.pack()
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
         
+        #スピードバー
+        self.speed_var = tk.DoubleVar()
+        speedH = tk.Scale(
+            fm_sub4, 
+            variable=self.speed_var, 
+            orient=tk.HORIZONTAL, 
+            bg="#e6e6fa",
+            fg="#191970", 
+            font=(main_font, 10),
+            length=400, 
+            width=30, 
+            sliderlength=20, 
+            from_=0, 
+            to=10,
+            resolution=1, 
+            tickinterval=2,
+            command=self.slider_scroll_2
+        )
+        speedH.pack()
+        
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=4)
+        space.pack()
+        label = tk.Label(fm_sub4, text="---- ひらがなのみモード ----", bg=sub4_bg, font=(main_font, 25), width=30)
+        label.pack(pady=1)
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        #space.pack()
+
+        label = tk.Button(fm_sub4, text="OK", font=(main_font, 22), bg="#e6e6fa", width=5, command=self.exit_sub4)
+        label.pack(side=tk.RIGHT, padx=80)
+        
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=1)
+        space.pack(side=tk.RIGHT, padx=100)
+        
+        hiragana_off_button = tk.Button(fm_sub4, text=" OFF ", font=(main_font, 20), bg="#e6e6fa", command=self.hiragana_off)
+        hiragana_off_button.pack(side=tk.RIGHT, padx=20)
+        hiragana_on_button = tk.Button(fm_sub4, text=" ON ", font=(main_font, 20), bg="#e6e6fa", command=self.hiragana_on)
+        hiragana_on_button.pack(side=tk.RIGHT, padx=20)
+        
+        space = tk.Label(fm_sub4, text="", bg=sub4_bg, font=(main_font, 10), height=1)
+        space.pack()
+
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
         
 
     #config Toplevelウィンドウ（設定）
     def config(self):
+        
+        global config_window
+        
         config_window = tk.Toplevel(bg=sub4_bg, bd=2)
         config_window.geometry(config_window_size)
         config_window.title("config_window")
@@ -434,9 +511,36 @@ class Application(tk.Frame):
             to=10,
             resolution=1, 
             tickinterval=2,
-            command=self.slider_scroll
+            command=self.slider_scroll_1
         )
         soundH.pack()
+        
+        space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
+        label = tk.Label(config_window, text="---- おとのスピード ----", bg=sub4_bg, font=(main_font, 25), width=30)
+        label.pack()
+        space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=2)
+        space.pack()
+        
+        #スピードバー
+        self.speed_var = tk.DoubleVar()
+        speedH = tk.Scale(
+            config_window, 
+            variable=self.speed_var, 
+            orient=tk.HORIZONTAL, 
+            bg="#e6e6fa",
+            fg="#191970", 
+            font=(main_font, 10),
+            length=400, 
+            width=30, 
+            sliderlength=20, 
+            from_=0, 
+            to=10,
+            resolution=1, 
+            tickinterval=2,
+            command=self.slider_scroll_2
+        )
+        speedH.pack()
         
         space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=4)
         space.pack()
@@ -445,8 +549,11 @@ class Application(tk.Frame):
         space = tk.Label(config_window, text="", bg=sub4_bg, font=(main_font, 10), height=2)
         #space.pack()
         
+        label = tk.Button(config_window, text="OK", font=(main_font, 22), bg="#e6e6fa", width=4, command=self.exit_config)
+        label.pack(side=tk.RIGHT, padx=80)
+        
         hiragana_off_button = tk.Button(config_window, text=" OFF ", font=(main_font, 18), bg="#e6e6fa", command=self.hiragana_off)
-        hiragana_off_button.pack(side=tk.RIGHT, padx=50)
+        hiragana_off_button.pack(side=tk.RIGHT, padx=30)
         hiragana_on_button = tk.Button(config_window, text=" ON ", font=(main_font, 18), bg="#e6e6fa", command=self.hiragana_on)
         hiragana_on_button.pack(side=tk.RIGHT, padx=10)
         
@@ -475,24 +582,120 @@ class Application(tk.Frame):
     
     
     #sound_varが動かされたとき
-    def slider_scroll(self, event=None):
+    def slider_scroll_1(self, event=None):
+        
+        global volume
         #sound_valueの大きさをリアルタイムで取得する
         sound_value = self.sound_var.get()
         print(sound_value)
+        engine = pyttsx3.init()
+        # 「/5」については実行環境により任意で変更
+        engine.setProperty('volume', sound_value / 5)#デフォルト値は1.0
+        volume = engine.getProperty('volume')
         
     
+    #speed_varが動かされたとき
+    def slider_scroll_2(self, event=None):
+        
+        global rate
+        #speed_valueの大きさをリアルタイムで取得する
+        speed_value = self.speed_var.get()
+        print(speed_value)
+        engine = pyttsx3.init()
+        #「*40」については実行環境により任意で変更
+        engine.setProperty('rate', speed_value * 40)#デフォルト値は200
+        rate = engine.getProperty('rate')
+        
+        
+    #config_windowから戻る
+    def exit_config(self):
+        global config_window
+        config_window.destroy()
     
     
-    #オプション or 右クリックウィンドウ
-    def show_option(self, e):
-        option_window = tk.Toplevel(bg=main_bg, bd=2)
-        option_window.geometry(option_window_size)
-        option_window.title("option_window")
+    #オプション
+    def show_option(self):
+        pass
+    
+    #クレジットに記載するテキスト
+    global programmer_name_1, programmer_name_2
+    programmer_name_1 = "小原和真"
+    programmer_name_2 = "田中友治"
+    
+    global teacher_name
+    teacher_name = "角田直樹"
+    
+    global github_link
+    github_link = "https://github.com/aimlinux/GPT4-app/tree/main/App/main_App"
+    
+    global github_owner
+    github_owner = "aimlinux"
+    
+    global kousen_link
+    kousen_link = "https://www.yonago-k.ac.jp/"
+    
+    
+    #クレジット
+    def credit(self):
         
+        global credit_window
         
+        credit_window = tk.Toplevel(bg=main_bg, bd=2)
+        credit_window.geometry(credit_window_size)
+        credit_window.title("credit")
         
-        pmenu = tk.Menu(option_window)
-        pmenu.post()
+        space_label = tk.Label(credit_window, text="", bg=main_bg, height=3)
+        space_label.pack(side=tk.TOP)
+
+        title_label = tk.Label(credit_window, text=f"作成者 : {programmer_name_1}, {programmer_name_2}", bg=main_bg, font=(main_font, 22))
+        title_label.pack(side=tk.TOP)
+        
+        space_label = tk.Label(credit_window, text="", bg=main_bg, height=2)
+        space_label.pack(side=tk.TOP)
+        
+        label = tk.Label(credit_window, text=f"指導教員 : {teacher_name}", bg=main_bg, font=(main_font, 22))
+        label.pack(side=tk.TOP)
+        
+        space_label = tk.Label(credit_window, text="", bg=sub3_bg, height=3)
+        space_label.pack(side=tk.TOP)
+        
+        github_link_label = tk.Label(credit_window, text=f"GitHubリンク : {github_owner}", bg=link_bg, fg=link_fg, font=(main_font, 22), cursor="hand2")
+        github_link_label.pack(side=tk.TOP)
+        github_link_label.bind("<Button-1>", lambda e: self.open_github_link())
+        
+        space_label = tk.Label(credit_window, text="", bg=main_bg, height=2)
+        space_label.pack(side=tk.TOP)
+        
+        kousen_link_label = tk.Label(credit_window, text=f"米子高専ホームページ", bg=link_bg, fg=link_fg, font=(main_font, 22), cursor="hand2")
+        kousen_link_label.pack(side=tk.TOP)
+        kousen_link_label.bind("<Button-1>", lambda e: self.open_kousen_link())
+        
+        space_label = tk.Label(credit_window, text="", bg=main_bg, height=3)
+        space_label.pack(side=tk.TOP)
+        
+        start_button = tk.Button(credit_window, text="とじる", font=(main_font, 20), bg=title_btn_bg, command=self.exit_credit)
+        start_button.pack()
+        
+        return 0
+    
+    
+    #webブラウザでgithubリンクを開く
+    def open_github_link(self):
+        webbrowser.open_new(github_link)
+        return 0
+    
+    
+    #webブラウザで米子高専ホームページを開く
+    def open_kousen_link(self):
+        webbrowser.open_new(kousen_link)
+        return 0
+        
+
+
+    #credit_windowから戻る
+    def exit_credit(self):
+        global credit_window
+        credit_window.destroy()
         
         
     
@@ -567,7 +770,7 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         space = tk.Label(fm_mic, text="", bg=sub1_bg, height=3)
@@ -649,7 +852,7 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
 
         space = tk.Label(fm_ans_sub1, text="", bg=sub1_bg, height=1)
@@ -731,46 +934,56 @@ class Application(tk.Frame):
         else:
             pass
                         
-        res = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo", 
-            messages=[
-                #role : 役割, 
-                # system :（このチャットのシステム） 
-                # user :（チャットを使う側 = 私たち） 
-                # assistant : ChatGPT側, 
-                # content : メッセージ内容
-                {"role": "system", "content": role_sys_1}, 
-                {"role": "user", "content": question_sub1},
-                #{"role": "assistant", "content": "どういうこと？"},
-                #{"role": "user", "content": "もう少し簡単に教えて！！"},
-            ]
-        )
+        # res = openai.ChatCompletion.create(
+        #     model="gpt-3.5-turbo", 
+        #     messages=[
+        #         #role : 役割, 
+        #         # system :（このチャットのシステム） 
+        #         # user :（チャットを使う側 = 私たち） 
+        #         # assistant : ChatGPT側, 
+        #         # content : メッセージ内容
+        #         {"role": "system", "content": role_sys_1}, 
+        #         {"role": "user", "content": question_sub1},
+        #         #{"role": "assistant", "content": "どういうこと？"},
+        #         #{"role": "user", "content": "もう少し簡単に教えて！！"},
+        #     ]
+        # )
         
-        #ChatGPTからの返答の内容
+        # #ChatGPTからの返答の内容
+        # global res_content_sub1
+        # res_content_sub1 = res["choices"][0]["message"]["content"]
+        # print("AI_answer : " + res_content_sub1)
+        # logger.log(100, f"AI_answer : {res_content_sub1}")
+        
+        #ChatGPTが使えない場合
         global res_content_sub1
-        res_content_sub1 = res["choices"][0]["message"]["content"]
-        print("AI_answer : " + res_content_sub1)
-        logger.log(100, f"AI_answer : {res_content_sub1}")
+        res_content_sub1 = "おおはよう"
         
-        global new_answer
-        new_answer = f"{selected_value_sub1}：{res_content_sub1}"
-        print(new_answer)
+        # global new_answer
+        # new_answer = f"{selected_value_sub1}：{res_content_sub1}"
+        # print(new_answer)
         
         #エラー防止
         time.sleep(0.1)
         
         self.output_now_sub1()
 
+
     def output_now_sub1(self):
         
         print("output_now_sub1")
         #ウィンドウのテキストを表示
         self.text_output_sub1.delete("0.0", tk.END) 
-        self.text_output_sub1.insert(tk.END, new_answer)
+        self.text_output_sub1.insert(tk.END, res_content_sub1)
         
-        #Voicevoxで音声を読み上げる
-        print(res_content_sub1)
-        text_to_voice(res_content_sub1)
+        # Voicevoxで音声を読み上げる
+        #print(res_content_sub1)
+        #text_to_voice(res_content_sub1)
+        
+        # pyttsx3で音声を読み上げる
+        engine = pyttsx3.init()
+        engine.say(res_content_sub1) 
+        engine.runAndWait()
         
         return 0
             
@@ -894,7 +1107,7 @@ class Application(tk.Frame):
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
         toolbar_button3.pack(side=tk.LEFT, padx=2, pady=2)
-        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS)
+        toolbar_button4 = tk.Button(fm_toolbar, text=button_4, **TOOLBAR_OPUTIONS, command=self.credit)
         toolbar_button4.pack(side=tk.LEFT, padx=2, pady=2)
         
         space = tk.Label(fm_type, text="", bg=sub3_bg, height=1)
@@ -970,33 +1183,37 @@ class Application(tk.Frame):
         else:
             pass
                         
-        res = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo", 
-            messages=[
-                #role : 役割, 
-                # system :（このチャットのシステム） 
-                # user :（チャットを使う側 = 私たち） 
-                # assistant : ChatGPT側, 
-                # content : メッセージ内容
-                {"role": "system", "content": role_sys_1}, 
-                {"role": "user", "content": question_sub3},
-                #{"role": "assistant", "content": "どういうこと？"},
-                #{"role": "user", "content": "もう少し簡単に教えて！！"},
-            ]
-        )
+        # res = openai.ChatCompletion.create(
+        #     model="gpt-3.5-turbo", 
+        #     messages=[
+        #         #role : 役割, 
+        #         # system :（このチャットのシステム） 
+        #         # user :（チャットを使う側 = 私たち） 
+        #         # assistant : ChatGPT側, 
+        #         # content : メッセージ内容
+        #         {"role": "system", "content": role_sys_1}, 
+        #         {"role": "user", "content": question_sub3},
+        #         #{"role": "assistant", "content": "どういうこと？"},
+        #         #{"role": "user", "content": "もう少し簡単に教えて！！"},
+        #     ]
+        # )
         
-        #ChatGPTからの返答の内容
+        # #ChatGPTからの返答の内容
+        # global res_content_sub3
+        # res_content_sub3 = res["choices"][0]["message"]["content"]
+        # print("AI_Answer : " + res_content_sub3)
+        # logger.log(100, f"AI_answer : {res_content_sub3}")
+        
+        # global new_answer
+        # new_answer = f"{selected_value_sub3}：{res_content_sub3}"
+        # print(new_answer)
+        
+        #ChatGPTが使えない場合
         global res_content_sub3
-        res_content_sub3 = res["choices"][0]["message"]["content"]
-        print("AI_Answer : " + res_content_sub3)
-        logger.log(100, f"AI_answer : {res_content_sub3}")
+        res_content_sub3 = "おはよう"
         
-        global new_answer
-        new_answer = f"{selected_value_sub3}：{res_content_sub3}"
-        print(new_answer)
-        
-        #エラー防止
-        time.sleep(0.1)
+        # #エラー防止
+        # time.sleep(0.1)
         
         self.output_now_sub3()
 
@@ -1004,8 +1221,13 @@ class Application(tk.Frame):
         
         print("output_now_sub3")
         #ウィンドウのテキストを表示
-        self.text_output.delete("0.0", tk.END) 
-        self.text_output.insert(tk.END, new_answer)
+        #self.text_output.delete("0.0", tk.END) 
+        #self.text_output.insert(tk.END, new_answer)
+        
+        # pyttsx3で音声を読み上げる
+        engine = pyttsx3.init()
+        engine.say(res_content_sub3) 
+        engine.runAndWait()
         
         return 0
 
@@ -1084,9 +1306,27 @@ class Application(tk.Frame):
         count_type = False
         
         self.create_3()
-        
-        return 0
     
+    
+    #sub4（設定ウィンドウを閉じる）
+    def exit_sub4(self):
+        global count_main, count_sub1, count_sub2, count_sub3, count_sub4, count_mic, count_ans_sub1, count_type
+
+        if count_sub4 == True:
+            pw_sub4.destroy()
+        else:
+            print("Error")
+            
+        count_main = False
+        count_sub1 = False
+        count_sub2 = False
+        count_sub3 = False
+        count_sub4 = False
+        count_mic = False
+        count_ans_sub1 = False
+        count_type = False
+        
+        self.create_widgets()
     
 
     # タイトルへ戻る
@@ -1124,8 +1364,6 @@ class Application(tk.Frame):
         count_type = False
         
         self.create_widgets()
-        
-        return 0
 
 
 #アプリケーションが終了されたとき

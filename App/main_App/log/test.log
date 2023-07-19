@@ -287,3 +287,114 @@ Bさん：おはようございます。
 2023-07-14 18:51:39,442 --- process : 17780 --- message : AnswerPerson_sub1 : おこってるひと
 2023-07-14 18:51:39,459 --- process : 17780 --- message : TypeQuestion_sub1 : わたしはだーれ
 2023-07-14 18:51:41,540 --- process : 17780 --- message : AI_answer : わ た し
+2023-07-18 08:19:58,161 --- process : 17440 --- message : App Start
+2023-07-18 08:20:11,645 --- process : 17440 --- message : App Exit
+2023-07-18 08:26:02,219 --- process : 7124 --- message : App Start
+2023-07-18 08:26:11,605 --- process : 7124 --- message : App Exit
+2023-07-18 08:26:53,357 --- process : 7352 --- message : App Start
+2023-07-18 08:27:06,906 --- process : 7352 --- message : App Exit
+2023-07-18 08:28:10,998 --- process : 5836 --- message : App Start
+2023-07-18 08:28:35,683 --- process : 5836 --- message : App Exit
+2023-07-18 08:31:55,642 --- process : 19776 --- message : App Start
+2023-07-18 08:32:09,017 --- process : 19776 --- message : App Exit
+2023-07-18 08:38:20,290 --- process : 11396 --- message : App Start
+2023-07-18 08:39:27,762 --- process : 11396 --- message : AnswerPerson_sub1 : サッカー選手
+2023-07-18 08:39:27,778 --- process : 11396 --- message : TypeQuestion_sub1 : よなごこうせんのとくちょうはなに
+2023-07-18 08:39:33,860 --- process : 11396 --- message : App Exit
+2023-07-18 12:24:49,098 --- process : 2664 --- message : App Start
+2023-07-18 12:25:00,705 --- process : 2664 --- message : App Exit
+2023-07-18 12:28:52,649 --- process : 5544 --- message : App Start
+2023-07-18 12:29:48,866 --- process : 5544 --- message : App Exit
+2023-07-18 12:30:52,308 --- process : 8488 --- message : App Start
+2023-07-18 12:31:02,120 --- process : 8488 --- message : App Exit
+2023-07-18 12:31:20,262 --- process : 8972 --- message : App Start
+2023-07-18 12:31:31,781 --- process : 8972 --- message : App Exit
+2023-07-18 12:31:45,516 --- process : 1080 --- message : App Start
+2023-07-18 12:31:59,534 --- process : 1080 --- message : App Exit
+2023-07-18 12:32:44,332 --- process : 12392 --- message : App Start
+2023-07-18 12:33:03,668 --- process : 12392 --- message : App Exit
+2023-07-18 12:33:18,021 --- process : 2688 --- message : App Start
+2023-07-18 12:33:26,231 --- process : 2688 --- message : App Exit
+2023-07-18 12:33:35,698 --- process : 9224 --- message : App Start
+2023-07-18 12:33:47,668 --- process : 9224 --- message : App Exit
+2023-07-18 12:33:54,979 --- process : 8568 --- message : App Start
+2023-07-18 12:34:17,231 --- process : 8568 --- message : App Exit
+2023-07-18 12:35:14,095 --- process : 8668 --- message : App Start
+2023-07-18 12:35:19,627 --- process : 8668 --- message : App Exit
+2023-07-18 12:35:54,097 --- process : 8684 --- message : App Start
+2023-07-18 12:36:17,935 --- process : 8684 --- message : App Exit
+2023-07-18 12:36:29,233 --- process : 11708 --- message : App Start
+2023-07-18 12:40:50,105 --- process : 11708 --- message : App Exit
+2023-07-18 12:40:56,611 --- process : 3340 --- message : App Start
+2023-07-18 12:41:13,114 --- process : 3340 --- message : App Start
+2023-07-18 12:41:26,781 --- process : 3340 --- message : App Start
+2023-07-18 12:41:36,278 --- process : 3340 --- message : AnswerPerson_sub3 : サッカー選手
+2023-07-18 12:41:36,312 --- process : 3340 --- message : TypeQuestion_sub3 : わたしはだーれ？
+2023-07-18 12:41:40,956 --- process : 3340 --- message : App Start
+2023-07-18 12:42:04,509 --- process : 3340 --- message : App Exit
+2023-07-18 12:43:05,903 --- process : 17148 --- message : App Start
+2023-07-18 12:43:15,385 --- process : 17148 --- message : App Exit
+2023-07-18 12:43:40,597 --- process : 9396 --- message : App Start
+2023-07-18 12:43:49,804 --- process : 9396 --- message : App Exit
+2023-07-18 12:44:10,464 --- process : 16856 --- message : App Start
+2023-07-18 12:44:23,089 --- process : 16856 --- message : App Exit
+2023-07-18 12:44:33,213 --- process : 7076 --- message : App Start
+2023-07-18 12:44:42,757 --- process : 7076 --- message : App Exit
+2023-07-19 16:22:35,961 --- process : 17696 --- message : App Start
+2023-07-19 16:22:46,996 --- process : 17696 --- message : App Exit
+2023-07-19 16:29:07,594 --- process : 20212 --- message : App Start
+2023-07-19 16:29:17,574 --- process : 20212 --- message : App Exit
+2023-07-19 16:30:21,681 --- process : 3452 --- message : App Start
+2023-07-19 16:30:25,057 --- process : 3452 --- message : App Start
+2023-07-19 16:30:27,415 --- process : 3452 --- message : App Start
+2023-07-19 16:30:37,579 --- process : 3452 --- message : App Start
+2023-07-19 16:31:03,351 --- process : 3452 --- message : AnswerPerson_sub3 : こいびと
+2023-07-19 16:31:03,351 --- process : 3452 --- message : TypeQuestion_sub3 : おはようございます
+2023-07-19 16:31:06,687 --- process : 3452 --- message : App Start
+2023-07-19 16:31:12,509 --- process : 3452 --- message : App Exit
+2023-07-19 16:32:00,117 --- process : 17276 --- message : App Start
+2023-07-19 16:32:04,983 --- process : 17276 --- message : continue
+2023-07-19 16:32:05,691 --- process : 8364 --- message : App Start
+2023-07-19 16:32:24,614 --- process : 8364 --- message : App Exit
+2023-07-19 16:47:16,514 --- process : 1340 --- message : App Start
+2023-07-19 16:47:25,080 --- process : 1340 --- message : App Exit
+2023-07-19 16:48:28,958 --- process : 18740 --- message : App Start
+2023-07-19 16:48:50,489 --- process : 18740 --- message : App Exit
+2023-07-19 17:27:44,476 --- process : 19584 --- message : App Start
+2023-07-19 17:27:50,145 --- process : 19584 --- message : App Exit
+2023-07-19 17:30:58,492 --- process : 1412 --- message : App Start
+2023-07-19 17:31:20,754 --- process : 1412 --- message : App Exit
+2023-07-19 17:32:23,036 --- process : 14232 --- message : App Start
+2023-07-19 17:32:31,695 --- process : 14232 --- message : App Exit
+2023-07-19 17:39:45,272 --- process : 9348 --- message : App Start
+2023-07-19 17:43:52,267 --- process : 9348 --- message : App Exit
+2023-07-19 17:43:53,310 --- process : 19008 --- message : App Start
+2023-07-19 17:43:58,067 --- process : 19008 --- message : App Exit
+2023-07-19 17:44:05,319 --- process : 14992 --- message : App Start
+2023-07-19 17:44:26,605 --- process : 14992 --- message : App Exit
+2023-07-19 17:46:01,899 --- process : 20392 --- message : App Start
+2023-07-19 17:46:15,325 --- process : 20392 --- message : App Exit
+2023-07-19 17:46:32,229 --- process : 20184 --- message : App Start
+2023-07-19 17:46:43,866 --- process : 20184 --- message : App Exit
+2023-07-19 17:47:11,507 --- process : 13896 --- message : App Start
+2023-07-19 17:47:19,372 --- process : 13896 --- message : App Exit
+2023-07-19 17:47:27,372 --- process : 18436 --- message : App Start
+2023-07-19 17:47:51,067 --- process : 18436 --- message : App Exit
+2023-07-19 17:48:37,948 --- process : 17360 --- message : App Start
+2023-07-19 17:48:44,240 --- process : 17360 --- message : App Exit
+2023-07-19 17:49:01,965 --- process : 12996 --- message : App Start
+2023-07-19 17:49:21,444 --- process : 12996 --- message : App Exit
+2023-07-19 17:49:45,582 --- process : 11876 --- message : App Start
+2023-07-19 17:49:58,957 --- process : 11876 --- message : App Exit
+2023-07-19 17:56:58,007 --- process : 8500 --- message : App Start
+2023-07-19 17:59:13,975 --- process : 8500 --- message : App Exit
+2023-07-19 17:59:16,397 --- process : 10868 --- message : App Start
+2023-07-19 18:00:34,351 --- process : 10868 --- message : App Exit
+2023-07-19 18:00:38,267 --- process : 10996 --- message : App Start
+2023-07-19 18:00:50,316 --- process : 10996 --- message : App Exit
+2023-07-19 18:01:22,023 --- process : 14944 --- message : App Start
+2023-07-19 18:01:25,251 --- process : 14944 --- message : App Start
+2023-07-19 18:01:32,201 --- process : 14944 --- message : App Start
+2023-07-19 18:02:18,752 --- process : 14944 --- message : App Start
+2023-07-19 18:02:23,707 --- process : 14944 --- message : App Start
+2023-07-19 18:02:44,348 --- process : 14944 --- message : App Exit

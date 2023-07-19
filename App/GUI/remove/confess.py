@@ -1102,7 +1102,7 @@ while True:
         engine.runAndWait()
 
     # --ボタンを押したら繰り返し再生--
-    #if event == '-speak_1-' and cc_sub1 == 'NULL':
+    #if event == '-speak_1-' and cc_sub1 == 'NULL':f
         #sg.popup_ok('新単語が生成されていません。', font=('Arial', 12), text_color='#ff1493', keep_on_top=True)
         
     elif event == '-speak_1-':
