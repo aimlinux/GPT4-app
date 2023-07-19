@@ -132,7 +132,7 @@ global option_window_size
 option_window_size = "800x500"
 #くれじっとウィンドウの大きさと初期配置
 global credit_window_size
-credit_window_size = "500x600+400+100"
+credit_window_size = "500x700+400+100"
 
 
 
@@ -620,19 +620,22 @@ class Application(tk.Frame):
     #クレジットに記載するテキスト
     global programmer_name_1, programmer_name_2
     programmer_name_1 = "小原和真"
-    programmer_name_2 = "田中友治"
+    programmer_name_2 = "田中友陽"
     
     global teacher_name
     teacher_name = "角田直樹"
     
     global github_link
-    github_link = "https://github.com/aimlinux/GPT4-app/tree/main/App/main_App"
+    github_link = "https://github.com/aimlinux/GPT4-app/tree/main/App/main_App/main.py"
     
     global github_owner
     github_owner = "aimlinux"
     
     global kousen_link
     kousen_link = "https://www.yonago-k.ac.jp/"
+    
+    global used_library
+    used_library = "Tkinter, PySimpleGUI, openai, pyautogui, BytesIO, os, logging, speech_recognition, pyaudio, simpleaudio, wave, json, pyttsx3, time, random, sys, atexit, webbrowser, requests"
     
     
     #クレジット
@@ -673,6 +676,19 @@ class Application(tk.Frame):
         space_label = tk.Label(credit_window, text="", bg=main_bg, height=3)
         space_label.pack(side=tk.TOP)
         
+        label = tk.Label(credit_window, text="python使用ライブラリ : ", bg=main_bg, font=(main_font, 18))
+        label.pack(side=tk.TOP)
+        space_label = tk.Label(credit_window, text="", bg=main_bg, height=1)
+        space_label.pack()
+        #オブジェクト配置初期はstateの値を変更できるようにしなければならない
+        self.text_new_question_sub1 = scrolledtext.ScrolledText(credit_window, width=40, height=3, font=(main_font, 20), bg="#fff", state="normal")
+        self.text_new_question_sub1.pack()
+        self.text_new_question_sub1.insert(tk.END, used_library)
+        #stateの値を変更できないよう（normalからtk.DISABLED）に設定
+        self.text_new_question_sub1.config(state=tk.DISABLED)
+        
+        space_label = tk.Label(credit_window, text="", bg=main_bg, height=3)
+        space_label.pack()
         start_button = tk.Button(credit_window, text="とじる", font=(main_font, 20), bg=title_btn_bg, command=self.exit_credit)
         start_button.pack()
         
@@ -684,21 +700,17 @@ class Application(tk.Frame):
         webbrowser.open_new(github_link)
         return 0
     
-    
     #webブラウザで米子高専ホームページを開く
     def open_kousen_link(self):
         webbrowser.open_new(kousen_link)
         return 0
         
 
-
     #credit_windowから戻る
     def exit_credit(self):
         global credit_window
         credit_window.destroy()
         
-        
-    
     
     
     #on_select_sub1

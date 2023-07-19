@@ -287,3 +287,17 @@ B����F���͂悤�������܂��B
 2023-07-14 18:51:39,442 --- process : 17780 --- message : AnswerPerson_sub1 : �������Ă�Ђ�
 2023-07-14 18:51:39,459 --- process : 17780 --- message : TypeQuestion_sub1 : �킽���͂��[��
 2023-07-14 18:51:41,540 --- process : 17780 --- message : AI_answer : �� �� ��
+2023-07-20 07:36:56,606 --- process : 16612 --- message : App Start
+2023-07-20 07:41:19,753 --- process : 16612 --- message : App Exit
+2023-07-20 07:41:22,448 --- process : 13100 --- message : App Start
+2023-07-20 07:42:17,364 --- process : 13100 --- message : App Exit
+2023-07-20 07:42:25,364 --- process : 4652 --- message : App Start
+2023-07-20 07:49:59,655 --- process : 4652 --- message : App Exit
+2023-07-20 07:50:01,329 --- process : 14884 --- message : App Start
+2023-07-20 07:50:08,918 --- process : 14884 --- message : App Exit
+2023-07-20 07:50:12,433 --- process : 12420 --- message : App Start
+2023-07-20 07:50:36,495 --- process : 12420 --- message : App Exit
+2023-07-20 07:53:00,144 --- process : 8956 --- message : App Start
+2023-07-20 08:04:21,842 --- process : 8956 --- message : App Start
+2023-07-20 08:06:43,428 --- process : 15456 --- message : App Start
+2023-07-20 08:08:37,864 --- process : 15456 --- message : App Exit
