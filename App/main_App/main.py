@@ -120,7 +120,7 @@ TOOLBAR_OPUTIONS = {
 
 # 各person_list_windowに表示するリストの初期値
 global all_person_list
-all_person_list = ["せんせい", "おかあさん", "あかちゃん", "こいびと", "ちゅうがくせい", "かしこいはかせ", "うま", "おこってるひと", "サッカー選手", "アメリカ人", "こうせんせい", "関西人"]
+all_person_list = ["せんせい", "おかあさん", "おじいさん", "ともだち", "ちゅうがくせい", "かしこいはかせ", "えいごのせんせい", "こいびと", "ろぼっと", "がいこくじん", "かんさいじん", "こうせんせい"]
 # 各person_list_windowの大きさと初期配置を決める（メインウィンドウに関してはコード最下部）
 global all_person_list_window_size
 all_person_list_window_size = "500x600+400+100"
@@ -173,8 +173,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_main, bg=main_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -193,13 +193,13 @@ class Application(tk.Frame):
         space_label.pack(side=tk.TOP)
     
         start_button = tk.Button(fm_main, text=" ことばでおはなし ", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_1)
-        start_button.pack(side=tk.TOP, pady=10)
-        start_button = tk.Button(fm_main, text=" てがきでおはなし", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_2)
-        start_button.pack(side=tk.TOP, pady=10)
+        start_button.pack(side=tk.TOP, pady=12)
+        #start_button = tk.Button(fm_main, text=" てがきでおはなし", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_2)
+        #start_button.pack(side=tk.TOP, pady=10)
         start_button = tk.Button(fm_main, text=" てうちでおはなし ", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_3)
-        start_button.pack(side=tk.TOP, pady=10)
+        start_button.pack(side=tk.TOP, pady=12)
         start_button = tk.Button(fm_main, text=" せってい ", font=(main_font, 20), bg=title_btn_bg, width=30, command=self.create_4)
-        start_button.pack(side=tk.TOP, pady=10)
+        start_button.pack(side=tk.TOP, pady=12)
         
         print('DEBUG:----{}----'.format(sys._getframe().f_code.co_name)) if self.DEBUG_LOG else ""
 
@@ -229,8 +229,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub1, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -285,8 +285,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub2, bg=sub2_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -341,8 +341,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub3, bg=sub3_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -362,8 +362,8 @@ class Application(tk.Frame):
         label.pack(side=tk.TOP, pady=10)
         space_label = tk.Label(fm_sub3, text="", bg=sub3_bg, height=1)
         space_label.pack(side=tk.TOP)
-        label = tk.Label(fm_sub3, text="しょうがくせいにはむずかしいかも", bg=sub3_bg, font=(main_font, 25), width=30)
-        label.pack(side=tk.TOP, pady=10)
+        #label = tk.Label(fm_sub3, text="しょうがくせいにはむずかしいかも", bg=sub3_bg, font=(main_font, 25), width=30)
+        #label.pack(side=tk.TOP, pady=10)
         
         start_button = tk.Button(fm_sub3, text=" てうちでしつもん ", font=(main_font, 35), bg=sub3_btn_bg, width=30, command=self.ans_person_sub3)
         start_button.pack(side=tk.BOTTOM, pady=50)
@@ -392,8 +392,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_sub4, bg=sub4_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -619,11 +619,11 @@ class Application(tk.Frame):
     
     #クレジットに記載するテキスト
     global programmer_name_1, programmer_name_2
-    programmer_name_1 = "小原和真"
-    programmer_name_2 = "田中友陽"
+    programmer_name_1 = "田中友陽"
+    programmer_name_2 = "小原和真"
     
     global teacher_name
-    teacher_name = "角田直樹"
+    teacher_name = "角田直輝"
     
     global github_link
     github_link = "https://github.com/aimlinux/GPT4-app/tree/main/App/main_App/main.py"
@@ -776,8 +776,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_mic, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -858,8 +858,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_ans_sub1, bg=sub1_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -946,34 +946,34 @@ class Application(tk.Frame):
         else:
             pass
                         
-        # res = openai.ChatCompletion.create(
-        #     model="gpt-3.5-turbo", 
-        #     messages=[
-        #         #role : 役割, 
-        #         # system :（このチャットのシステム） 
-        #         # user :（チャットを使う側 = 私たち） 
-        #         # assistant : ChatGPT側, 
-        #         # content : メッセージ内容
-        #         {"role": "system", "content": role_sys_1}, 
-        #         {"role": "user", "content": question_sub1},
-        #         #{"role": "assistant", "content": "どういうこと？"},
-        #         #{"role": "user", "content": "もう少し簡単に教えて！！"},
-        #     ]
-        # )
+        res = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo", 
+            messages=[
+                #role : 役割, 
+                # system :（このチャットのシステム） 
+                # user :（チャットを使う側 = 私たち） 
+                # assistant : ChatGPT側, 
+                # content : メッセージ内容
+                {"role": "system", "content": role_sys_1}, 
+                {"role": "user", "content": question_sub1},
+                #{"role": "assistant", "content": "どういうこと？"},
+                #{"role": "user", "content": "もう少し簡単に教えて！！"},
+            ]
+        )
         
         # #ChatGPTからの返答の内容
-        # global res_content_sub1
-        # res_content_sub1 = res["choices"][0]["message"]["content"]
-        # print("AI_answer : " + res_content_sub1)
-        # logger.log(100, f"AI_answer : {res_content_sub1}")
+        global res_content_sub1
+        res_content_sub1 = res["choices"][0]["message"]["content"]
+        print("AI_answer : " + res_content_sub1)
+        logger.log(100, f"AI_answer : {res_content_sub1}")
         
         #ChatGPTが使えない場合
-        global res_content_sub1
-        res_content_sub1 = "おおはよう"
+        #global res_content_sub1
+        #res_content_sub1 = "おおはよう"
         
-        # global new_answer
-        # new_answer = f"{selected_value_sub1}：{res_content_sub1}"
-        # print(new_answer)
+        global new_answer
+        new_answer = f"{selected_value_sub1}：{res_content_sub1}"
+        print(new_answer)
         
         #エラー防止
         time.sleep(0.1)
@@ -987,6 +987,9 @@ class Application(tk.Frame):
         #ウィンドウのテキストを表示
         self.text_output_sub1.delete("0.0", tk.END) 
         self.text_output_sub1.insert(tk.END, res_content_sub1)
+        
+        #テキストが表示されてから音声を読み上げる
+        time.sleep(0.5)
         
         # Voicevoxで音声を読み上げる
         #print(res_content_sub1)
@@ -1113,8 +1116,8 @@ class Application(tk.Frame):
         fm_toolbar = tk.Frame(fm_type, bg=sub3_bg)
         fm_toolbar.pack(anchor="nw")
         
-        toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
-        toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
+        #toolbar_button1 = tk.Button(fm_toolbar, text=button_1, **TOOLBAR_OPUTIONS, command=self.show_option)
+        #toolbar_button1.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button2 = tk.Button(fm_toolbar, text=button_2, **TOOLBAR_OPUTIONS, command=self.config)
         toolbar_button2.pack(side=tk.LEFT, padx=2, pady=2)
         toolbar_button3 = tk.Button(fm_toolbar, text=button_3, **TOOLBAR_OPUTIONS, command=self.return_title)
@@ -1195,46 +1198,54 @@ class Application(tk.Frame):
         else:
             pass
                         
-        # res = openai.ChatCompletion.create(
-        #     model="gpt-3.5-turbo", 
-        #     messages=[
-        #         #role : 役割, 
-        #         # system :（このチャットのシステム） 
-        #         # user :（チャットを使う側 = 私たち） 
-        #         # assistant : ChatGPT側, 
-        #         # content : メッセージ内容
-        #         {"role": "system", "content": role_sys_1}, 
-        #         {"role": "user", "content": question_sub3},
-        #         #{"role": "assistant", "content": "どういうこと？"},
-        #         #{"role": "user", "content": "もう少し簡単に教えて！！"},
-        #     ]
-        # )
+        res = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo", 
+            messages=[
+                #role : 役割, 
+                # system :（このチャットのシステム） 
+                # user :（チャットを使う側 = 私たち） 
+                # assistant : ChatGPT側, 
+                # content : メッセージ内容
+                {"role": "system", "content": role_sys_1}, 
+                {"role": "user", "content": question_sub3},
+                #{"role": "assistant", "content": "どういうこと？"},
+                #{"role": "user", "content": "もう少し簡単に教えて！！"},
+            ]
+        )
         
-        # #ChatGPTからの返答の内容
-        # global res_content_sub3
-        # res_content_sub3 = res["choices"][0]["message"]["content"]
-        # print("AI_Answer : " + res_content_sub3)
-        # logger.log(100, f"AI_answer : {res_content_sub3}")
+        #ChatGPTからの返答の内容
+        global res_content_sub3
+        res_content_sub3 = res["choices"][0]["message"]["content"]
+        print("AI_Answer : " + res_content_sub3)
+        logger.log(100, f"AI_answer : {res_content_sub3}")
         
-        # global new_answer
-        # new_answer = f"{selected_value_sub3}：{res_content_sub3}"
-        # print(new_answer)
+        global new_answer
+        new_answer = f"{selected_value_sub3}：{res_content_sub3}"
+        print(new_answer)
         
         #ChatGPTが使えない場合
-        global res_content_sub3
-        res_content_sub3 = "おはよう"
+        #global res_content_sub3
+        #res_content_sub3 = "おはよう"
         
         # #エラー防止
         # time.sleep(0.1)
         
         self.output_now_sub3()
 
+
     def output_now_sub3(self):
         
         print("output_now_sub3")
         #ウィンドウのテキストを表示
-        #self.text_output.delete("0.0", tk.END) 
-        #self.text_output.insert(tk.END, new_answer)
+        self.text_output.delete("0.0", tk.END) 
+        self.text_output.insert(tk.END, new_answer)
+        
+        #テキストが表示されてから音声を読み上げる
+        time.sleep(0.5)
+        
+        # Voicevoxで音声を読み上げる
+        #print(res_content_sub1)
+        #text_to_voice(res_content_sub1)
         
         # pyttsx3で音声を読み上げる
         engine = pyttsx3.init()
@@ -1380,7 +1391,7 @@ class Application(tk.Frame):
 
 #アプリケーションが終了されたとき
 def goodbye():
-    popup = sg.popup_ok_cancel('アプリケーションを終了しますか？', font=(main_font, 14), text_color='#ff1493', background_color=main_bg)
+    popup = sg.popup_ok_cancel('アプリケーションを終了しますか？', font=(main_font, 16), text_color='#000000', background_color=main_bg)
     print(popup)
     
     if popup == "OK":
@@ -1410,7 +1421,7 @@ def restart(restart_message):
 #pythonプログラムが終了したことを取得してgoodbye関数を実行
 atexit.register(goodbye)
 
-        
+
         
 # 実行
 main_window = tk.Tk()       
