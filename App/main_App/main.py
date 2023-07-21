@@ -29,7 +29,7 @@ from voicevox import text_to_voice
 
 # -------- APIKey設定 --------
 #openai.api_key = os.environ["OPENAI_API_KEY"] #環境変数に指定する場合
-openai.api_key = "" 
+openai.api_key = "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" 
 
 
 
@@ -1239,6 +1239,7 @@ class Application(tk.Frame):
         #ウィンドウのテキストを表示
         self.text_output.delete("0.0", tk.END) 
         self.text_output.insert(tk.END, new_answer)
+<<<<<<< Updated upstream
         
         #テキストが表示されてから音声を読み上げる
         time.sleep(0.5)
@@ -1246,6 +1247,8 @@ class Application(tk.Frame):
         # Voicevoxで音声を読み上げる
         #print(res_content_sub1)
         #text_to_voice(res_content_sub1)
+=======
+>>>>>>> Stashed changes
         
         # pyttsx3で音声を読み上げる
         engine = pyttsx3.init()

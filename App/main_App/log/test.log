@@ -301,6 +301,7 @@ Bï¿½ï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 2023-07-20 08:04:21,842 --- process : 8956 --- message : App Start
 2023-07-20 08:06:43,428 --- process : 15456 --- message : App Start
 2023-07-20 08:08:37,864 --- process : 15456 --- message : App Exit
+<<<<<<< Updated upstream
 2023-07-20 20:20:40,636 --- process : 20164 --- message : App Start
 2023-07-20 20:21:29,928 --- process : 20164 --- message : App Exit
 2023-07-20 20:23:17,581 --- process : 14696 --- message : App Start
@@ -364,3 +365,24 @@ Bï¿½ï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½Í‚æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 2023-07-20 20:40:15,937 --- process : 17656 --- message : App Start
 2023-07-20 20:40:17,548 --- process : 17656 --- message : App Start
 2023-07-20 20:40:24,711 --- process : 17656 --- message : App Exit
+=======
+2023-07-20 12:33:15,016 --- process : 992 --- message : App Start
+2023-07-20 12:33:55,414 --- process : 992 --- message : App Exit
+2023-07-20 12:33:57,524 --- process : 7988 --- message : App Start
+2023-07-20 12:34:40,083 --- process : 7988 --- message : AnswerPerson_sub3 : ‚¹‚ñ‚¹‚¢
+2023-07-20 12:34:40,088 --- process : 7988 --- message : TypeQuestion_sub3 : ’¹ŽæŒ§‚Í‚Ç‚±‚É‚ ‚éH
+2023-07-20 12:34:41,306 --- process : 7988 --- message : AI_answer : ‚Æ‚è‚ª‚¿‚¯‚ñ
+2023-07-20 12:35:08,511 --- process : 7988 --- message : AnswerPerson_sub3 : ‚¹‚ñ‚¹‚¢
+2023-07-20 12:35:08,511 --- process : 7988 --- message : TypeQuestion_sub3 : ’¹ŽæŒ§‚Í‚Ç‚±‚É‚ ‚éH
+2023-07-20 12:35:11,877 --- process : 7988 --- message : AI_answer : ‚Æ‚¶‚Æ‚è‚¯‚ñ‚ÍA‚É‚Ù‚ñ‚Ì‚¿‚ã‚¤‚¨‚¤‚Ì‚Ù‚­‚Æ‚¤‚Ì‚Ð‚É‚ ‚è‚Ü‚·B
+2023-07-20 12:35:34,537 --- process : 7988 --- message : App Exit
+2023-07-20 12:35:37,958 --- process : 14488 --- message : App Start
+2023-07-20 12:36:22,757 --- process : 14488 --- message : AnswerPerson_sub3 : ‚¹‚ñ‚¹‚¢
+2023-07-20 12:36:22,757 --- process : 14488 --- message : TypeQuestion_sub3 : ’¹ŽæŒ§‚Í‚Ç‚±H
+2023-07-20 12:36:23,978 --- process : 14488 --- message : AI_answer : ‚Æ‚è‚Æ‚è‚¯‚ñ‚Í‚Ç‚±‚Å‚·‚©H
+2023-07-20 12:36:29,572 --- process : 14488 --- message : AnswerPerson_sub3 : ‚¹‚ñ‚¹‚¢
+2023-07-20 12:36:29,573 --- process : 14488 --- message : TypeQuestion_sub3 : ’¹ŽæŒ§‚Í‚Ç‚±H
+2023-07-20 12:36:31,240 --- process : 14488 --- message : AI_answer : ‚Æ’m‚è‚½‚¢‚ñ‚Å‚·B’¹Žæ‚¯‚ñ‚Í“ú–{‚Ì‚¿‚ã‚¤‚Ô‚É‚ ‚é‚æB
+2023-07-20 12:36:35,486 --- process : 14488 --- message : App Start
+2023-07-20 12:36:43,887 --- process : 14488 --- message : App Exit
+>>>>>>> Stashed changes
