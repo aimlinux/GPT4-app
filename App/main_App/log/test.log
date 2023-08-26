@@ -386,3 +386,33 @@ BÔøΩÔøΩÔøΩÔøΩFÔøΩÔøΩÔøΩÕÇÊÇ§ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩB
 2023-07-20 12:36:35,486 --- process : 14488 --- message : App Start
 2023-07-20 12:36:43,887 --- process : 14488 --- message : App Exit
 >>>>>>> Stashed changes
+2023-08-26 13:35:26,877 --- process : 11988 --- message : App Start
+2023-08-26 13:43:45,359 --- process : 11988 --- message : App Start
+2023-08-26 13:43:58,910 --- process : 11988 --- message : App Start
+2023-08-26 13:44:10,627 --- process : 11988 --- message : App Start
+2023-08-26 13:46:21,110 --- process : 11988 --- message : App Start
+2023-08-26 13:47:17,271 --- process : 11988 --- message : AnswerPerson_sub3 : ÇπÇÒÇπÇ¢
+2023-08-26 13:47:17,271 --- process : 11988 --- message : TypeQuestion_sub3 : [ó·] íπéÊåßÇÃñ êœÇÕÇ«ÇÃÇ≠ÇÁÇ¢ÅH
+2023-08-26 13:51:43,518 --- process : 11988 --- message : AnswerPerson_sub3 : ÇπÇÒÇπÇ¢
+2023-08-26 13:51:43,518 --- process : 11988 --- message : TypeQuestion_sub3 : [ó·] íπéÊåßÇÃñ êœÇÕÇ«ÇÃÇ≠ÇÁÇ¢ÅH
+2023-08-26 13:58:49,001 --- process : 4924 --- message : App Start
+2023-08-26 14:00:08,931 --- process : 4924 --- message : AnswerPerson_sub3 : ÇπÇÒÇπÇ¢
+2023-08-26 14:00:08,931 --- process : 4924 --- message : TypeQuestion_sub3 : íπéÊåßÇÃñ êœÇÕÇ«ÇÃÇ≠ÇÁÇ¢ÅH
+2023-08-26 14:00:39,380 --- process : 10996 --- message : App Start
+2023-08-26 14:01:02,349 --- process : 10996 --- message : AnswerPerson_sub3 : ÇπÇÒÇπÇ¢
+2023-08-26 14:01:02,349 --- process : 10996 --- message : TypeQuestion_sub3 : íπéÊåßÇÃñ êœÇÕÇ«ÇÃÇ≠ÇÁÇ¢ÅH
+2023-08-26 14:02:23,198 --- process : 5788 --- message : App Start
+2023-08-26 14:02:50,398 --- process : 5788 --- message : AnswerPerson_sub3 : ÇπÇÒÇπÇ¢
+2023-08-26 14:02:50,398 --- process : 5788 --- message : TypeQuestion_sub3 : íπéÊåßÇÃêlå˚ÇÕâΩêlÇ≈Ç∑Ç©ÅH
+2023-08-26 14:04:32,064 --- process : 8268 --- message : App Start
+2023-08-26 14:04:42,458 --- process : 8268 --- message : AnswerPerson_sub3 : Ç®Ç∂Ç¢Ç≥ÇÒ
+2023-08-26 14:04:42,469 --- process : 8268 --- message : TypeQuestion_sub3 : ÇÌÇΩÇµÇÕÇæÅ[ÇÍÅH
+2023-08-26 14:14:56,119 --- process : 9512 --- message : App Start
+2023-08-26 14:15:04,289 --- process : 9512 --- message : AnswerPerson_sub3 : Ç±Ç¢Ç—Ç∆
+2023-08-26 14:15:04,293 --- process : 9512 --- message : TypeQuestion_sub3 : Ç®ÇÕÇÊÇ§Ç›Ç†
+2023-08-26 14:15:06,333 --- process : 9512 --- message : AnswerPerson_sub3 : Ç±Ç¢Ç—Ç∆
+2023-08-26 14:15:06,333 --- process : 9512 --- message : TypeQuestion_sub3 : Ç®ÇÕÇÊÇ§Ç›Ç†
+2023-08-26 14:28:12,771 --- process : 9512 --- message : App Start
+2023-08-26 14:29:47,743 --- process : 9512 --- message : App Start
+2023-08-26 14:30:07,438 --- process : 9512 --- message : App Start
+2023-08-26 14:55:05,548 --- process : 9512 --- message : App Exit

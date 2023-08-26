@@ -42,7 +42,7 @@ logger.setLevel(10)
 sh = logging.StreamHandler()
 logger.addHandler(sh)
 #logのファイル出力先設定
-fh = logging.FileHandler('./log/test.log')
+fh = logging.FileHandler('App/main_App/log/test.log')
 logger.addHandler(fh)
 #全てのフォーマットオプションとその役割
 # %(asctime)s	実行時刻
@@ -1239,6 +1239,7 @@ class Application(tk.Frame):
         #ウィンドウのテキストを表示
         self.text_output.delete("0.0", tk.END) 
         self.text_output.insert(tk.END, new_answer)
+<<<<<<< Updated upstream
         
         #テキストが表示されてから音声を読み上げる
         time.sleep(0.5)
@@ -1246,6 +1247,8 @@ class Application(tk.Frame):
         # Voicevoxで音声を読み上げる
         #print(res_content_sub1)
         #text_to_voice(res_content_sub1)
+=======
+>>>>>>> Stashed changes
         
         # pyttsx3で音声を読み上げる
         #engine = pyttsx3.init()
