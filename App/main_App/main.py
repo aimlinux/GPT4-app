@@ -996,9 +996,9 @@ class Application(tk.Frame):
         #text_to_voice(res_content_sub1)
         
         # pyttsx3で音声を読み上げる
-        engine = pyttsx3.init()
-        engine.say(res_content_sub1) 
-        engine.runAndWait()
+        #engine = pyttsx3.init()
+        #engine.say(res_content_sub1) 
+        #engine.runAndWait()
         
         return 0
             
@@ -1239,7 +1239,6 @@ class Application(tk.Frame):
         #ウィンドウのテキストを表示
         self.text_output.delete("0.0", tk.END) 
         self.text_output.insert(tk.END, new_answer)
-<<<<<<< Updated upstream
         
         #テキストが表示されてから音声を読み上げる
         time.sleep(0.5)
@@ -1247,13 +1246,11 @@ class Application(tk.Frame):
         # Voicevoxで音声を読み上げる
         #print(res_content_sub1)
         #text_to_voice(res_content_sub1)
-=======
->>>>>>> Stashed changes
         
         # pyttsx3で音声を読み上げる
-        engine = pyttsx3.init()
-        engine.say(res_content_sub3) 
-        engine.runAndWait()
+        #engine = pyttsx3.init()
+        #engine.say(res_content_sub3) 
+        #engine.runAndWait()
         
         return 0
 
