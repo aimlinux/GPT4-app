@@ -416,3 +416,11 @@ B����F���͂悤�������܂��B
 2023-08-26 14:29:47,743 --- process : 9512 --- message : App Start
 2023-08-26 14:30:07,438 --- process : 9512 --- message : App Start
 2023-08-26 14:55:05,548 --- process : 9512 --- message : App Exit
+2023-08-28 11:44:33,920 --- process : 6400 --- message : App Start
+2023-08-28 11:44:40,243 --- process : 6400 --- message : App Exit
+2023-08-28 16:26:58,803 --- process : 29852 --- message : App Start
+2023-08-28 16:27:04,363 --- process : 29852 --- message : App Exit
+2023-08-28 17:44:44,604 --- process : 32148 --- message : App Start
+2023-08-28 17:44:48,485 --- process : 32148 --- message : App Exit
+2023-08-30 10:31:35,934 --- process : 6732 --- message : App Start
+2023-08-30 10:31:47,054 --- process : 6732 --- message : App Exit
